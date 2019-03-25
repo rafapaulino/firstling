@@ -40,7 +40,8 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/jquery/dist/jquery.min.js',
 					   '<%= config.bower_components %>/bootstrap/dist/js/bootstrap.bundle.min.js',
 					   '<%= config.bower_components %>/jquery-validation/dist/jquery.validate.min.js',
-					   '<%= config.bower_components %>/jquery-validation/dist/additional-methods.min.js'
+					   '<%= config.bower_components %>/jquery-validation/dist/additional-methods.min.js',
+					   '<%= config.bower_components %>/jquery-scroll-top/js/backToTop.min.js'
 				   ],
 				   '<%= config.js %>/app.min.js': [
 					   '<%= config.devjs %>/app.js',
@@ -64,7 +65,8 @@ module.exports = function(grunt) {
 			   files: {
 				   '<%= config.css %>/library.min.css': [
 					   '<%= config.bower_components %>/font-awesome/css/all.min.css',
-					   '<%= config.bower_components %>/bootstrap/dist/css/bootstrap.min.css'
+					   '<%= config.bower_components %>/bootstrap/dist/css/bootstrap.min.css',
+					   '<%= config.bower_components %>/jquery-scroll-top/css/backToTop.css'
 				   ],
 				   '<%= config.css %>/app.min.css': [
 					   '<%= config.css %>/app.css'
