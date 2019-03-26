@@ -1,5 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
     margin: 0;
+    background-color: #F2F2F2;
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -21,6 +26,7 @@ body {
     margin: 0;
     float: right;
     line-height: 24px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #footer nav ul {
