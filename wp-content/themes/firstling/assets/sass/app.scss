@@ -7,7 +7,98 @@ body {
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* 
+ MENU - https://codepen.io/andornagy/pen/RNeydj
+ https://codepen.io/una/pen/pVvXmK
+   */
 
+#header {
+    width: 100%;
+    padding: 17px;
+    box-sizing: border-box;
+    background-color: #313233;
+    color: #999;
+    display: inline-block;
+    border-top: 5px solid #3396FF;
+}
+#header h1 {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+#header h1 a {
+    color: #dadada;
+}
+#header strong {
+    font-size: 11px;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #dadada;
+}
+
+#branding {
+    float: left;
+    width: 30%;
+}
+
+#header nav {
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+#header nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    line-height: 39px;
+}
+#header nav ul li {
+    margin: 0 8px;
+    float: left;
+}
+#header nav ul li a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 13px;
+}
+#header nav ul li a i {
+    margin-left: 3px;
+}
+
+#header nav ul li ul {
+	background: orange;
+	visibility: hidden;
+    opacity: 0;
+    min-width: 6rem;
+	position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 0;
+	left: 0;
+    display: none;
+    z-index: 4;
+}
+
+#header nav ul li:hover > ul,
+#header nav ul li:focus-within > ul,
+#header nav ul li ul:hover,
+#header nav ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+#header nav ul li ul li {
+	clear: both;
+    width: 100%;
+}
+
+
+/* RODAPE */
 #footer {
     width: 100%;
     padding: 20px;
@@ -15,7 +106,7 @@ body {
     background-color: #313233;
     color: #999;
     display: inline-block;
-    border-bottom: 10px solid #3396FF;
+    border-bottom: 5px solid #3396FF;
 }
 #footer a {
     text-decoration: none;

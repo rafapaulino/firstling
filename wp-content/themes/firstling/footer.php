@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<nav role="navigation" class="col-md-6">
-					<ul id="menu-flat-footer" class="nav footer-nav clearfix">
+					<ul id="menu-footer" class="nav footer-nav clearfix">
 						<li><a href="https://colorlib.com/sparkling/" aria-current="page">Home</a></li>
 						<li><a href="https://colorlib.com/sparkling/full-width/">Full-Width Page</a></li>
 						<li><a href="https://colorlib.com/sparkling/sample-page/">Sample Page</a></li>
