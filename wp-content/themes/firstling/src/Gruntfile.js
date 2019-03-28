@@ -66,7 +66,8 @@ module.exports = function(grunt) {
 				   '<%= config.css %>/library.min.css': [
 					   '<%= config.bower_components %>/font-awesome/css/all.min.css',
 					   '<%= config.bower_components %>/bootstrap/dist/css/bootstrap.min.css',
-					   '<%= config.bower_components %>/jquery-scroll-top/css/backToTop.css'
+					   '<%= config.bower_components %>/jquery-scroll-top/css/backToTop.css',
+					   '<%= config.bower_components %>/barra-topo/css/barra-topo.min.css'
 				   ],
 				   '<%= config.css %>/app.min.css': [
 					   '<%= config.css %>/app.css'

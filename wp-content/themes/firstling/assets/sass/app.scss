@@ -3,6 +3,7 @@
 
 body {
     margin: 0;
+    padding-top: 160px;
     background-color: #F2F2F2;
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -12,37 +13,47 @@ body {
  https://codepen.io/una/pen/pVvXmK
    */
 
+.navContainer {
+    position: relative;
+    background-color: #3396FF;
+}
 #header {
     width: 100%;
-    padding: 17px;
+    padding: 0;
     box-sizing: border-box;
     background-color: #313233;
-    color: #999;
     display: inline-block;
-    border-top: 5px solid #3396FF;
+    clear: both;
 }
-#header h1 {
+.headerContainer {
+    width: 100%;
+    padding: 17px; 
+    box-sizing: border-box;
+    display: inline-block;
+    clear: both;
+}
+
+#branding h1 {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 15px;
     font-weight: bold;
     margin: 0;
     padding: 0;
 }
-#header h1 a {
-    color: #dadada;
+#branding h1 a {
+    color: #fff;
+    text-decoration: none;
 }
-#header strong {
+#branding strong {
     font-size: 11px;
     margin: 0;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #dadada;
 }
 
-#branding {
-    float: left;
-    width: 30%;
-}
+
+/*
 
 #header nav {
     float: right;
@@ -96,6 +107,45 @@ body {
 	clear: both;
     width: 100%;
 }
+*/
+
+
+#wrapper {
+    padding: 40px 0;
+}
+
+/* botão que abre o menu */
+#menu {
+    cursor: pointer;
+
+    i {
+        font-size: 22px;
+        line-height: 40px;
+        color: #fff;
+        float: left;
+    }
+
+    span {
+        margin-left: 8px;
+        line-height: 40px;
+        color: #fff;
+        display: block;
+        float: left;
+        text-transform: uppercase;
+    }
+}
+
+/* botão que mostra o formulário de busca */
+#search-content {
+    text-align: right;
+
+    i {
+        font-size: 22px;
+        line-height: 40px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
 
 
 /* RODAPE */
@@ -107,32 +157,39 @@ body {
     color: #999;
     display: inline-block;
     border-bottom: 5px solid #3396FF;
-}
-#footer a {
-    text-decoration: none;
-    color: #ffffff;
-}
-#footer p {
-    font-size: 11px;
-    margin: 0;
-    float: right;
-    line-height: 24px;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    /* copyright */
+    p {
+        font-size: 11px;
+        margin: 0;
+        float: right;
+        line-height: 24px;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* menu */
+    nav ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0 5px;
+            
+            a {
+                text-transform: uppercase;
+                color: #ffffff;
+                font-size: 13px;
+            }
+        }
+    }
 }
 
-#footer nav ul {
-    padding: 0;
-    margin: 0;
-}
-#footer nav ul li {
-    margin: 0 5px;
-}
-#footer nav ul li a {
-    text-transform: uppercase;
-    color: #ffffff;
-    font-size: 13px;
-}
-
+/* seta para voltar ao topo */
 .backToTop .fas {
     color: #FFF;
     font-size: 15px;

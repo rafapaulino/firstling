@@ -8,7 +8,6 @@
         var $public = {};
 
         $public.top = function () {
-            console.log('ssss');
             $('#stop').backToTop();
         };
         return $public;
