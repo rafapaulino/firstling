@@ -126,9 +126,15 @@
 					<strong><?php bloginfo( 'description' ); ?></strong>
 				</div>
 
-				<div class="col-sm-4 text-right" id="search-content">
-					<i class="fas fa-search"></i>
-				</div>
+                <!-- search -->
+				<div class="col-sm-12" id="search-content">
+                    <i class="fas fa-search" id="open-search"></i>
+                    <form method="get" id="search" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+		                <input type="search" name="s" id="search-header" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Digite sua busca e tecle enter...', 'odin' ); ?>" />
+                    </form>
+                    <i class="fas fa-times" id="close-search"></i>
+                </div>
+                <!-- /search -->
 			</div>
 		</div>
 	</div>

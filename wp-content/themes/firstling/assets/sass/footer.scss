@@ -1,0 +1,50 @@
+
+
+/* RODAPE */
+#footer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #313233;
+    color: #999;
+    display: inline-block;
+    border-bottom: 5px solid #3396FF;
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    /* copyright */
+    p {
+        font-size: 11px;
+        margin: 0;
+        float: right;
+        line-height: 24px;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    /* menu */
+    nav ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0 5px;
+            
+            a {
+                text-transform: uppercase;
+                color: #ffffff;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+/* seta para voltar ao topo */
+.backToTop .fas {
+    color: #FFF;
+    font-size: 15px;
+    display: block;
+    margin: 0;
+}

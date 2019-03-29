@@ -1,0 +1,141 @@
+
+/* barra no topo */
+.navContainer {
+    position: relative;
+    background-color: #3396FF;
+}
+/* plano de fundo do logo */
+#header {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #313233;
+    display: inline-block;
+    clear: both;
+}
+.headerContainer {
+    width: 100%;
+    padding: 0; 
+    box-sizing: border-box;
+    clear: both;
+    overflow: hidden;
+    position: relative;
+
+    .container {
+
+        .row {
+            position: relative;
+            overflow: hidden;
+
+            #search-content.open {
+                background: #525354;
+                left: 0;
+            }
+            
+            #search-content {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                background: transparent;
+                padding: 17px; 
+                box-sizing: border-box;
+                min-height: 40px;
+                transition: all ease .3s;
+                left: 96%;
+
+                /* botão que mostra o formulário de busca */
+                i.fa-search {
+                    font-size: 22px;
+                    line-height: 40px;
+                    color: #fff;
+                    cursor: pointer;
+                    float: left; 
+                    margin-right: 8px;
+                }
+
+                form {
+                    width: 90%;
+                    height: inherit;
+                    min-height: 40px;
+                    padding: 0;
+                    margin: 0;
+                    float: left;
+
+                    input {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        padding: 0;
+                        margin: 0;
+                        height: 40px;
+                        width: 100%;
+                        color: #fff;
+                    }
+                    input::placeholder {
+                        color: #fdfdfd;
+                    }
+                }
+
+                /* botão que fecha o formulário de busca */
+                i.fa-times {
+                    font-size: 22px;
+                    line-height: 40px;
+                    color: #fff;
+                    cursor: pointer;
+                    float: right; 
+                }
+            }
+        }
+    }
+}
+
+#branding {
+    padding: 17px 0; 
+    box-sizing: border-box;
+
+    /* logo */
+    h1 {
+        text-transform: uppercase;
+        font-size: 20px;
+        line-height: 15px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    strong {
+        font-size: 11px;
+        margin: 0;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #dadada;
+    }
+}
+
+
+/* botão que abre o menu */
+#menu {
+    cursor: pointer;
+    padding: 17px 0; 
+    box-sizing: border-box;
+
+    i {
+        font-size: 22px;
+        line-height: 40px;
+        color: #fff;
+        float: left;
+    }
+
+    span {
+        margin-left: 8px;
+        line-height: 40px;
+        color: #fff;
+        display: block;
+        float: left;
+        text-transform: uppercase;
+    }
+}
