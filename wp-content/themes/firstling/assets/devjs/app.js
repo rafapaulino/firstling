@@ -21,6 +21,20 @@
             });
         };
 
+        $public.toogleMenu = function () {
+            $('#close-menu').on('click', function() {
+                $(this).removeClass('open');
+                $('#primary-menu').removeClass('open');
+                $('#main').removeClass('open');
+            });
+
+            $('#menu').on('click', function() {
+                $('#close-menu').addClass('open');
+                $('#primary-menu').addClass('open');
+                $('#main').addClass('open');
+            });
+        };
+
         return $public;
     })();
 
@@ -28,5 +42,6 @@
     window.app = app;
     app.top();
     app.animateSearch();
+    app.toogleMenu();
 
 })(window, document, jQuery);

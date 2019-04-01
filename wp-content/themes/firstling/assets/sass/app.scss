@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+html, body {overflow-x: hidden;}
 body {
     margin: 0;
     padding-top: 160px;
@@ -13,6 +14,19 @@ body {
  MENU - https://codepen.io/andornagy/pen/RNeydj
  https://codepen.io/una/pen/pVvXmK
 */
+
+#main {
+    transform: translateX(0);
+    transition: all .25s linear;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+}
+#main.open {
+    transform: translateX(280px);
+}
 
 @import 'header.scss';
 

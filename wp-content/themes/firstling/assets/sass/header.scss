@@ -18,7 +18,7 @@
     padding: 0; 
     box-sizing: border-box;
     clear: both;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
 
     .container {
@@ -139,3 +139,100 @@
         text-transform: uppercase;
     }
 }
+/* botão que fecha o menu */
+#close-menu {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    width: 150px;
+    top: 0;
+    left: 0;
+    min-height: 40px;
+    padding: 17px;
+    display: none;
+    background-color: #313233;
+
+    i {
+        font-size: 22px;
+        line-height: 40px;
+        color: #fff;
+        float: left;
+    }
+
+    span {
+        margin-left: 8px;
+        line-height: 40px;
+        color: #fff;
+        display: block;
+        float: left;
+        text-transform: uppercase;
+    }
+}
+#close-menu.open {
+    display: block;
+}
+
+/* menu com as listas */
+#primary-menu {
+    width: 280px;
+    height: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+
+    .mainmenu, .submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mainmenu {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+
+        a {
+            display: block;
+            background-color: #CCC;
+            text-decoration: none;
+            padding: 10px;
+            color: #000;
+        }
+
+        a:hover {
+            background-color: #C5C5C5;
+        }
+
+        li:hover .submenu {
+            display: block;
+            max-height: 200px;
+        }
+    }
+
+    .submenu a {
+        background-color: #999;
+    }
+    .submenu a:hover {
+        background-color: #666;
+    }
+
+    .submenu {
+        overflow: hidden;
+        max-height: 0;
+       transition: all 0.5s ease-out;
+    }
+}
+#primary-menu.open {
+    transform: translateX(0);
+}
+
+#primary-menu {
+    transform: translateX(-280px);
+    transition: all .25s linear;
+}
+
+/* https://tableless.com.br/fazendo-um-slide-menu-mobile-sem-plugin/ */
