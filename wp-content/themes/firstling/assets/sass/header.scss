@@ -1,4 +1,5 @@
 
+@charset "UTF-8";
 /* barra no topo */
 .navContainer {
     position: relative;
@@ -180,10 +181,14 @@
     top: 0;
     left: 0;
     margin: 0;
-    padding: 0;
+    padding: 71px 0 40px 0;
     display: block;
+    background-color: #313233;
+    border-bottom: 5px solid #3396FF;
+    border-top: 35px solid #3396FF;
+    height: 100vh;
 
-    .mainmenu, .submenu {
+    .mainmenu, .sub-menu {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -197,30 +202,30 @@
 
         a {
             display: block;
-            background-color: #CCC;
+            background-color: #313233;
             text-decoration: none;
             padding: 10px;
-            color: #000;
+            color: #ffffff;
         }
 
         a:hover {
-            background-color: #C5C5C5;
+            background-color: #434344;
         }
 
-        li:hover .submenu {
+        li:hover .sub-menu {
             display: block;
             max-height: 200px;
         }
     }
 
-    .submenu a {
-        background-color: #999;
+    .sub-menu a {
+        background-color: #555;
     }
-    .submenu a:hover {
+    .sub-menu a:hover {
         background-color: #666;
     }
 
-    .submenu {
+    .sub-menu {
         overflow: hidden;
         max-height: 0;
        transition: all 0.5s ease-out;

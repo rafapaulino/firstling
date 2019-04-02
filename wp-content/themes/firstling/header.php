@@ -22,18 +22,17 @@
 <body <?php body_class(); ?>>
 <!-- navigation -->
 <nav id="primary-menu">
-    <ul class="mainmenu">
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Products</a>
-            <ul class="submenu">
-                <li><a href="">Tops</a></li>
-                <li><a href="">Bottoms</a></li>
-                <li><a href="">Footwear</a></li>
-            </ul>
-        </li>
-        <li><a href="">Contact us</a></li>
-    </ul>
+    <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'main-menu',
+                'depth'          => 2,
+                'container'      => false,
+                'menu_class'     => 'mainmenu',
+                'items_wrap'     => '<ul class="%2$s">%3$s</ul>'
+            )
+        );
+    ?>
 </nav>
 <!-- /navigation -->
 
