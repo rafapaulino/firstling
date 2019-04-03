@@ -10,6 +10,8 @@
     display: inline-block;
     border-bottom: 5px solid #3396FF;
     margin-top: 9px;
+    transform: translateX(0);
+    transition: all .25s linear;
 
     a {
         text-decoration: none;
@@ -31,7 +33,7 @@
         margin: 0;
 
         li {
-            margin: 0 5px;
+            margin: 0 5px 0 0;
             
             a {
                 text-transform: uppercase;
@@ -40,6 +42,9 @@
             }
         }
     }
+}
+#footer.open {
+    transform: translateX(280px);
 }
 
 /* seta para voltar ao topo */

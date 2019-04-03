@@ -20,8 +20,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
 <!-- navigation -->
-<nav id="primary-menu">
+<nav id="primary-menu" class="d-print-none">
     <?php
         wp_nav_menu(
             array(
@@ -36,131 +37,131 @@
 </nav>
 <!-- /navigation -->
 
-<main id="main">
-    <header class="fixed-top" id="header">
-        
-        <!-- redes sociais -->
-        <div class="navContainer d-print-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <ul class="socialNav">
-                            <li class="socialBrand">
-                                <a href="index.html" accesskey="3" title="SITE" target="_blank">
-                                    SITE
-                                </a>
-                            </li>
-                            <li class="socialBrand">
-                                <a href="index.html" accesskey="2" title="SITE" target="_blank">
-                                    SITE
-                                </a>
-                            </li> 
-                            <li class="socialBrand">
-                                <a href="index.html" accesskey="2" title="SITE" target="_blank">
-                                    SITE
-                                </a>
-                            </li>                          
-                            <li class="social facebook bgAnimated">
-                                <a href="index.html" accesskey="f" title="Facebook">
-                                    <i class="fab fa-facebook" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o Facebook</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social youtube bgAnimated">
-                                <a href="index.html" accesskey="y" title="YouTube">
-                                    <i class="fab fa-youtube" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o YouTube</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social twitter bgAnimated">
-                                <a href="index.html" accesskey="t" title="Twitter">
-                                    <i class="fab fa-twitter" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o Twitter</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social linkedin bgAnimated">
-                                <a href="index.html" accesskey="l" title="Linkedin">
-                                    <i class="fab fa-linkedin" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o Linkedin</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social slideshare bgAnimated">
-                                <a href="index.html" accesskey="s" title="Slideshare">
-                                    <i class="fab fa-slideshare" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o Slideshare</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social flickr bgAnimated">
-                                <a href="index.html" accesskey="k" title="Flickr">
-                                    <i class="fab fa-flickr" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o Flickr</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social instagram bgAnimated">
-                                <a href="index.html" accesskey="i" title="Instagram">
-                                    <i class="fab fa-instagram" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o Instagram</span>
-                                    </i>
-                                </a>
-                            </li>
-                            <li class="social rss bgAnimated">
-                                <a href="index.html" accesskey="r" title="RSS">
-                                    <i class="fa fa-rss" aria-hidden="true">
-                                        <span class="sr-only">Clique aqui para acessar o RSS</span>
-                                    </i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /barra redes sociais -->
-        
-        <!-- logo/busca/menu -->
-        <div class="headerContainer d-print-none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div id="menu">
-                            <i class="fas fa-bars"></i>
-                            <span>Menu</span>
-                        </div>
-                        <div id="close-menu">
-                            <i class="fas fa-times"></i>
-                            <span>Fechar</span>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 text-center" id="branding">
-                        <h1>
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                                <?php bloginfo( 'name' ); ?>
+<!-- header -->
+<header class="fixed-top" id="header">
+    
+    <!-- redes sociais -->
+    <div class="navContainer d-print-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="socialNav">
+                        <li class="socialBrand">
+                            <a href="index.html" accesskey="3" title="SITE" target="_blank">
+                                SITE
                             </a>
-                        </h1>
-                        <strong><?php bloginfo( 'description' ); ?></strong>
-                    </div>
-
-                    <!-- search -->
-                    <div class="col-sm-12" id="search-content">
-                        <i class="fas fa-search" id="open-search"></i>
-                        <form method="get" id="search" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-                            <input type="search" name="s" id="search-header" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Digite sua busca e tecle enter...', 'odin' ); ?>" />
-                        </form>
-                        <i class="fas fa-times" id="close-search"></i>
-                    </div>
-                    <!-- /search -->
+                        </li>
+                        <li class="socialBrand">
+                            <a href="index.html" accesskey="2" title="SITE" target="_blank">
+                                SITE
+                            </a>
+                        </li> 
+                        <li class="socialBrand">
+                            <a href="index.html" accesskey="2" title="SITE" target="_blank">
+                                SITE
+                            </a>
+                        </li>                          
+                        <li class="social facebook bgAnimated">
+                            <a href="index.html" accesskey="f" title="Facebook">
+                                <i class="fab fa-facebook" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o Facebook</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social youtube bgAnimated">
+                            <a href="index.html" accesskey="y" title="YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o YouTube</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social twitter bgAnimated">
+                            <a href="index.html" accesskey="t" title="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o Twitter</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social linkedin bgAnimated">
+                            <a href="index.html" accesskey="l" title="Linkedin">
+                                <i class="fab fa-linkedin" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o Linkedin</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social slideshare bgAnimated">
+                            <a href="index.html" accesskey="s" title="Slideshare">
+                                <i class="fab fa-slideshare" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o Slideshare</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social flickr bgAnimated">
+                            <a href="index.html" accesskey="k" title="Flickr">
+                                <i class="fab fa-flickr" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o Flickr</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social instagram bgAnimated">
+                            <a href="index.html" accesskey="i" title="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o Instagram</span>
+                                </i>
+                            </a>
+                        </li>
+                        <li class="social rss bgAnimated">
+                            <a href="index.html" accesskey="r" title="RSS">
+                                <i class="fa fa-rss" aria-hidden="true">
+                                    <span class="sr-only">Clique aqui para acessar o RSS</span>
+                                </i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- /logo/busca/menu -->
-    </header>
+    </div>
+    <!-- /barra redes sociais -->
+    
+    <!-- logo/busca/menu -->
+    <div class="headerContainer d-print-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div id="menu">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </div>
+                    <div id="close-menu">
+                        <i class="fas fa-times"></i>
+                        <span>Fechar</span>
+                    </div>
+                </div>
 
-	<div id="wrapper" class="container">
-		<div class="row">
+                <div class="col-sm-4 text-center" id="branding">
+                    <h1>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                            <?php bloginfo( 'name' ); ?>
+                        </a>
+                    </h1>
+                    <strong><?php bloginfo( 'description' ); ?></strong>
+                </div>
+
+                <!-- search -->
+                <div class="col-sm-12" id="search-content">
+                    <i class="fas fa-search" id="open-search"></i>
+                    <form method="get" id="search" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+                        <input type="search" name="s" id="search-header" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Digite sua busca e tecle enter...', 'odin' ); ?>" />
+                    </form>
+                    <i class="fas fa-times" id="close-search"></i>
+                </div>
+                <!-- /search -->
+            </div>
+        </div>
+    </div>
+    <!-- /logo/busca/menu -->
+
+</header>
+<!--/ header -->
+<main>

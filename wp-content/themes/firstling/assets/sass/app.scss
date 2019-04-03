@@ -2,13 +2,13 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-/*html, body {
+html, body {
     overflow: auto;
     overflow-x: hidden;
-}*/
+}
 body {
     margin: 0;
-    padding-top: 160px;
+    padding: 160px 0 0 0;
     background-color: #F2F2F2;
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -18,25 +18,15 @@ body {
  https://codepen.io/una/pen/pVvXmK
 */
 
-#main {
+main {
     transform: translateX(0);
     transition: all .25s linear;
-    position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
-    /*min-height: 100vh;*/
-
 }
-#main.open {
+main.open {
     transform: translateX(280px);
 }
 
 @import 'header.scss';
-
-#wrapper {
-    padding: 40px 0;
-}
-
 @import 'footer.scss';
 @import '404.scss';
