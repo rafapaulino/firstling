@@ -128,10 +128,10 @@
     <div class="headerContainer d-print-none">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-3 col-sm-4">
                     <div id="menu">
                         <i class="fas fa-bars"></i>
-                        <span>Menu</span>
+                        <span class="d-none d-md-block">Menu</span>
                     </div>
                     <div id="close-menu">
                         <i class="fas fa-times"></i>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4 text-center" id="branding">
+                <div class="col-6 col-sm-4 text-center" id="branding">
                     <h1>
                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                             <?php bloginfo( 'name' ); ?>

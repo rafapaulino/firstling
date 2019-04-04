@@ -19,7 +19,7 @@
     padding: 0; 
     box-sizing: border-box;
     clear: both;
-    /*overflow: hidden;*/
+    overflow: hidden;
     position: relative;
 
     .container {
@@ -31,6 +31,10 @@
             #search-content.open {
                 background: #525354;
                 left: 0;
+
+                form {
+                    display: block;
+                }
             }
             
             #search-content {
@@ -42,7 +46,29 @@
                 box-sizing: border-box;
                 min-height: 40px;
                 transition: all ease .3s;
-                left: 96%;
+                left: 78%;
+
+                @media (min-width: 320px) {
+                    left: 83%;
+                }
+                @media (min-width: 360px) {
+                    left: 85%;
+                }
+                @media (min-width: 384px) {
+                    left: 86%;
+                }
+                @media (min-width: 412px) {
+                    left: 87%;
+                }
+                @media (min-width: 568px) {
+                    left: 91%;
+                }
+                @media (min-width: 800px) {
+                    left: 93%;
+                }
+                @media (min-width: 1024px) {
+                    left: 96%;
+                }
 
                 /* botão que mostra o formulário de busca */
                 i.fa-search {
@@ -51,16 +77,25 @@
                     color: #fff;
                     cursor: pointer;
                     float: left; 
-                    margin-right: 8px;
+                    margin-right: 16px;
+                    
+                    @media (min-width: 1024px) {
+                        margin-right: 8px;
+                    }
                 }
 
                 form {
-                    width: 90%;
+                    width: 65%;
                     height: inherit;
                     min-height: 40px;
                     padding: 0;
                     margin: 0;
                     float: left;
+                    display: none;
+
+                    @media (min-width: 1024px) {
+                        width: 90%;
+                    }
 
                     input {
                         background: transparent;
@@ -71,6 +106,7 @@
                         height: 40px;
                         width: 100%;
                         color: #fff;
+                        font-size: 13px;
                     }
                     input::placeholder {
                         color: #fdfdfd;
@@ -97,11 +133,18 @@
     /* logo */
     h1 {
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 15px;
         line-height: 15px;
         font-weight: bold;
         margin: 0;
         padding: 0;
+
+        @media (min-width: 800px) {
+            font-size: 17px;
+        }
+        @media (min-width: 1024px) {
+            font-size: 20px;
+        }
 
         a {
             color: #fff;
@@ -110,10 +153,14 @@
     }
 
     strong {
-        font-size: 11px;
+        font-size: 9px;
         margin: 0;
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #dadada;
+
+        @media (min-width: 800px) {
+            font-size: 11px;
+        }
     }
 }
 
