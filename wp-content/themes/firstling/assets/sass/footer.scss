@@ -10,8 +10,7 @@
     display: inline-block;
     border-bottom: 5px solid #3396FF;
     margin-top: 9px;
-    transform: translateX(0);
-    transition: all .25s linear;
+    clear: both;
 
     a {
         text-decoration: none;
@@ -43,10 +42,6 @@
         }
     }
 }
-#footer.open {
-    transform: translateX(280px);
-}
-
 /* seta para voltar ao topo */
 .backToTop .fas {
     color: #FFF;

@@ -192,13 +192,17 @@
     cursor: pointer;
     position: absolute;
     z-index: 1;
-    width: 150px;
+    width: 50px;
     top: 0;
     left: 0;
     min-height: 40px;
     padding: 17px;
     display: none;
     background-color: #313233;
+
+    @media (min-width: 720px) {
+        width: 150px;
+    }
 
     i {
         font-size: 22px;
@@ -222,19 +226,18 @@
 
 /* menu com as listas */
 #primary-menu {
-    width: 280px;
-    height: inherit;
-    position: fixed;
-    top: 0;
-    left: 0;
+    width: 280px; 
     margin: 0;
-    padding: 71px 0 40px 0;
+    padding: 120px 0 20px 0;
     display: block;
     background-color: #313233;
-    border-bottom: 5px solid #3396FF;
-    border-top: 35px solid #3396FF;
-    height: 100vh;
-
+    height: inherit;
+    position: absolute;
+    z-index: 3;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+ 
     .mainmenu, .sub-menu {
         list-style: none;
         padding: 0;
@@ -286,5 +289,3 @@
     transform: translateX(-280px);
     transition: all .25s linear;
 }
-
-/* https://tableless.com.br/fazendo-um-slide-menu-mobile-sem-plugin/ */

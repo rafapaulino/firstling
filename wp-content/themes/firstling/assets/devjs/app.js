@@ -25,15 +25,11 @@
             $('#close-menu').on('click', function() {
                 $(this).removeClass('open');
                 $('#primary-menu').removeClass('open');
-                $('#footer').removeClass('open');
-                $('main').removeClass('open');
             });
 
             $('#menu').on('click', function() {
                 $('#close-menu').addClass('open');
                 $('#primary-menu').addClass('open');
-                $('#footer').addClass('open');
-                $('main').addClass('open');
             });
         };
 
