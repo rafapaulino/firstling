@@ -11,7 +11,7 @@
 		<input type="search" class="form-control" name="s" id="s" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Search', 'odin' ); ?>" />
 		<span class="input-group-btn">
 			<button type="submit" class="btn btn-default" value="<?php esc_attr_e( 'Search', 'odin' ); ?>">
-				<i class="glyphicon glyphicon-search"></i>
+				<i class="fas fa-search"></i>
 			</button>
 		</span><!-- /input-group-btn -->
     </div><!-- /input-group -->

@@ -4,7 +4,19 @@
 
 .page-404 {
     position: relative;
-    height: 80vh;
+    min-height: 100vh;
+    padding: 100px 20px;
+
+    @media (min-width: 330px) {
+        min-height: 80vh;
+        padding: 40% 20px;
+    }
+
+    @media (min-width: 800px) {
+        height: auto;
+        min-height: auto;
+        padding: 30% 20px;
+    }
 }
 
 .page-404 .notfound {
@@ -23,11 +35,31 @@
     width: 100%;
     line-height: 1.4;
     text-align: center;
+
+    form {
+
+        .input-group {
+            width: 100%;
+
+            .btn-default {
+                background: $dark;
+                border: 1px solid $dark;
+                color: #fff;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
 }
 
 .notfound .notfound-404 {
     position: relative;
     height: 240px;
+    display: none;
+
+    @media (min-width: 330px) {
+        display: block;
+    }
 }
   
 .notfound .notfound-404 h3 {
@@ -46,7 +78,7 @@
 }
   
 .notfound .notfound-404 h3 > span {
-    text-shadow: -8px 0px 0px #fff;
+    text-shadow: -8px 0px 0px $background;
 }
   
 .notfound .notfound-404 h2 {

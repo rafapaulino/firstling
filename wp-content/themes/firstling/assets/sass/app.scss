@@ -2,6 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,600);
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+$background: #F2F2F2;
+$dark: #313233;
+
 html, body {
     overflow: auto;
     overflow-x: hidden;
@@ -11,7 +14,7 @@ html, body {
 }
 body {
     padding: 108px 0 0 0;
-    background-color: #F2F2F2;
+    background-color: $background;
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
