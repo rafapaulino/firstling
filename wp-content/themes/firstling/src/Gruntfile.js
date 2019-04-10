@@ -67,7 +67,12 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/font-awesome/css/all.min.css',
 					   '<%= config.bower_components %>/bootstrap/dist/css/bootstrap.min.css',
 					   '<%= config.bower_components %>/jquery-scroll-top/css/backToTop.css',
-					   '<%= config.bower_components %>/barra-topo/css/barra-topo.min.css'
+					   '<%= config.bower_components %>/barra-topo/css/barra-topo.min.css',
+					   '<%= config.bower_components %>/redes-sociais-mini/css/redes-sociais-mini.min.css',
+					   '<%= config.bower_components %>/categories/css/categories.min.css',
+					   '<%= config.bower_components %>/tagcloud/css/tags.css',
+					   '<%= config.bower_components %>/ultimas-noticias/css/ultimas-noticias.min.css',
+					   '<%= config.bower_components %>/Pure-CSS3-Animated-Border/css/animated-border/animated-border.min.css'
 				   ],
 				   '<%= config.css %>/app.min.css': [
 					   '<%= config.css %>/app.css'

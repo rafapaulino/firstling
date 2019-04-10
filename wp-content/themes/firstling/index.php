@@ -14,11 +14,17 @@
  */
 
 get_header(); ?>
-<div class="content">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
-				aaaaaaaaaa
+				carrossel
 		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			conteúdo
+		</div>
+		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php

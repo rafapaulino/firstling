@@ -1,0 +1,67 @@
+
+@charset "UTF-8";
+
+#sidebar {
+    @extend .box-default;
+    padding: 10px 30px;
+
+    .widget {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        display: inline-block;
+        width: 100%;
+
+        .widget-title {
+            font-family: $fontDefault;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .redes-sociais-mini {
+        width: 100%;
+        display: inline-block;
+
+        li {
+            a {
+                border-radius: 0;
+            }
+        }
+    }
+
+    /* formulario de busca */
+    form {
+        display: inline-block;
+
+        .input-group {
+            width: 100%;
+
+            .btn-default {
+                background: $dark;
+                border: 1px solid $dark;
+                color: #fff;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+
+    .categories-list li a:before {
+        content: "\f054";
+    }
+
+
+    .ultimasNoticias {
+        padding-bottom: 0;
+    }
+    
+}

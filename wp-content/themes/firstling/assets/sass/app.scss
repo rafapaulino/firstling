@@ -4,6 +4,7 @@
 
 $background: #F2F2F2;
 $dark: #313233;
+$fontDefault: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 html, body {
     overflow: auto;
@@ -13,9 +14,9 @@ html, body {
     margin: 0;
 }
 body {
-    padding: 108px 0 0 0;
+    padding: 158px 0 0 0;
     background-color: $background;
-    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $fontDefault;
 }
 
 /* 
@@ -32,6 +33,14 @@ main.open {
     transform: translateX(280px);
 }
 
+/* bordas e plano de fundo das caixa */
+.box-default {
+    border: 1px solid #DADADA;
+    background: #fff;
+    box-sizing: border-box;
+}
+
 @import 'header.scss';
 @import 'footer.scss';
+@import 'sidebar.scss';
 @import '404.scss';
