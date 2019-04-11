@@ -9,6 +9,12 @@
  */
 ?>
 <aside id="sidebar" class="col-md-4">
+
+	<?php 
+		if ( is_active_sidebar( 'main-sidebar' ) ):
+			dynamic_sidebar( 'main-sidebar' );
+		endif;
+	?>
 	
 	<!-- redes sociais -->
 	<aside id="redes-sociais-sidebar" class="widget">
@@ -24,97 +30,10 @@
 	</aside>
 	<!--/ redes sociais -->
 
-	<!-- posts recentes -->
-	<aside id="posts-sidebar" class="widget">
-		<h3 class="widget-title">Últimas Notícias</h3>
-
-		<!-- ultimas noticias -->
-		<div class="ultimasNoticias">
-				
-			<!-- noticias -->
-			<ul itemscope itemtype="http://schema.org/Article">
-				<li>
-					<a href="http://www.rafapaulino.com" title="Clique aqui para acessar essa notícia" itemprop="url" class="ui-box topBottom-leftRightCorner">
-						<span class="ui-border-element">
-							<img src="http://placehold.it/640x440" alt="Descrição da Imagem" itemprop="image" class="img-fluid">
-						</span>
-					</a>
-					<div class="titleDate">
-						<h3 itemprop="headline"><a href="http://www.rafapaulino.com" title="O que realmente interessa ao Brasil" itemprop="url">O que realmente interessa ao Brasil</a></h3>
-						<a class="time" href="http://www.rafapaulino.com" title="O que realmente interessa ao Brasil" itemprop="url">19/09/2018</a>
-					</div>
-				</li>
-				<li>
-					<a href="http://www.rafapaulino.com" title="Clique aqui para acessar essa notícia" itemprop="url" class="ui-box topBottom-leftRightCorner">
-						<span class="ui-border-element">
-							<img src="http://placehold.it/640x440" alt="Descrição da Imagem" itemprop="image" class="img-fluid">
-						</span>
-					</a>
-					<div class="titleDate">
-						<h3 itemprop="headline"><a href="http://www.rafapaulino.com" title="Hoje nós iremos debater experiências de propriedade intelectual no Brasil e na Europa" itemprop="url">Hoje nós iremos debater experiências de propriedade intelectual no Brasil e na Europa</a></h3>
-						<a class="time" href="http://www.rafapaulino.com" title="Hoje nós iremos debater experiências de propriedade intelectual no Brasil e na Europa" itemprop="url">19/09/2018</a>
-					</div>
-				</li>
-				<li>
-					<a href="http://www.rafapaulino.com" title="Clique aqui para acessar essa notícia" itemprop="url" class="ui-box topBottom-leftRightCorner">
-						<span class="ui-border-element">
-							<img src="http://placehold.it/640x440" alt="Descrição da Imagem" itemprop="image" class="img-fluid">
-						</span>
-					</a>
-					<div class="titleDate">
-						<h3 itemprop="headline"><a href="http://www.rafapaulino.com" title="O que realmente interessa ao Brasil" itemprop="url">O que realmente interessa ao Brasil</a></h3>
-						<a class="time" href="http://www.rafapaulino.com" title="O que realmente interessa ao Brasil" itemprop="url">19/09/2018</a>
-					</div>
-				</li>
-				<li>
-					<a href="http://www.rafapaulino.com" title="Clique aqui para acessar essa notícia" itemprop="url" class="ui-box topBottom-leftRightCorner">
-						<span class="ui-border-element">
-							<img src="http://placehold.it/640x440" alt="Descrição da Imagem" itemprop="image" class="img-fluid">
-						</span>
-					</a>
-					<div class="titleDate">
-						<h3 itemprop="headline"><a href="http://www.rafapaulino.com" title="Hoje nós iremos debater experiências de propriedade intelectual no Brasil e na Europa" itemprop="url">Hoje nós iremos debater experiências de propriedade intelectual no Brasil e na Europa</a></h3>
-						<a class="time" href="http://www.rafapaulino.com" title="Hoje nós iremos debater experiências de propriedade intelectual no Brasil e na Europa" itemprop="url">19/09/2018</a>
-					</div>
-				</li>
-				<li>
-					<a href="http://www.rafapaulino.com" title="Clique aqui para acessar essa notícia" itemprop="url" class="ui-box topBottom-leftRightCorner">
-						<span class="ui-border-element">
-							<img src="http://placehold.it/640x440" alt="Descrição da Imagem" itemprop="image" class="img-fluid">
-						</span>
-					</a>
-					<div class="titleDate">
-						<h3 itemprop="headline"><a href="http://www.rafapaulino.com" title="O que realmente interessa ao Brasil" itemprop="url">O que realmente interessa ao Brasil</a></h3>
-						<a class="time" href="http://www.rafapaulino.com" title="O que realmente interessa ao Brasil" itemprop="url">19/09/2018</a>
-					</div>
-				</li>
-			</ul>
-			<!-- /noticias -->
-
-		</div>
-		<!-- /ultimas noticias -->
-	</aside>
-	<!-- /posts recentes -->
 
 	<aside id="form-sidebar" class="widget">
 		<?php get_search_form(); ?>
 	</aside>
-
-	<!-- categories -->
-	<aside id="categories-sidebar" class="widget">
-		<h3 class="widget-title">Categorias</h3>
-		<ul class="categories-list">
-			<li><a href="#">Business <span>(5)</span></a></li>
-			<li><a href="#">Editor's Picks <span>(10)</span></a></li>
-			<li><a href="#">Fashion <span>(6)</span></a></li>
-			<li><a href="#">Fitness <span>(5)</span></a></li>
-			<li><a href="#">Food <span>(6)</span></a></li>
-			<li><a href="#">Travel <span>(7)</span></a></li>
-			<li><a href="#">Videos <span>(4)</span></a></li>
-		</ul>
-	</aside>
-	<!--/ categories -->
-
 
 	<!-- tags -->
 	<aside id="tags-sidebar" class="widget">

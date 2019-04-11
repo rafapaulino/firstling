@@ -1,18 +1,15 @@
 <?php
 
-function remove_widgets()
-{
-    unregister_widget( 'WP_Widget_Archives' );
-	unregister_widget( 'WP_Widget_Calendar' );
-	unregister_widget( 'WP_Widget_Categories' );
-	unregister_widget( 'WP_Widget_Links' );
-	unregister_widget( 'WP_Widget_Meta' );
-	unregister_widget( 'WP_Widget_Pages' );
-	unregister_widget( 'WP_Widget_Recent_Comments' );
-	unregister_widget( 'WP_Widget_Recent_Posts' );
-	unregister_widget( 'WP_Widget_RSS' );
-	unregister_widget( 'WP_Widget_Search' );
-	unregister_widget( 'WP_Widget_Tag_Cloud' );
-}
+if ( ! defined('ABSPATH')) exit('restricted access');
 
-add_action( 'widgets_init', 'remove_widgets' );
+//pega o valor src da imagem 
+function getImageSRC($id, $size = 'thumbnail')
+{
+    $post_thumbnail_id = get_post_thumbnail_id( intval($id) );
+    $image_attributes = wp_get_attachment_image_src( intval($post_thumbnail_id), $size );
+    if ( $image_attributes ) :
+        return esc_attr($image_attributes[0]);
+    else :
+        return esc_url('http://placehold.it/640x440');
+    endif;
+}

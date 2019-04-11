@@ -13,6 +13,9 @@
  * @since 2.2.0
  */
 
+define('THEME_ASSETS', esc_attr(get_template_directory_uri() . '/assets/') );
+define('THEME_PATH', get_template_directory() );
+
 /**
  * Sets content width.
  */
@@ -23,27 +26,23 @@ if ( ! isset( $content_width ) ) {
 /**
  * Odin Classes.
  */
-require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
-require_once get_template_directory() . '/core/classes/class-shortcodes.php';
-//require_once get_template_directory() . '/core/classes/class-shortcodes-menu.php';
-require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
-// require_once get_template_directory() . '/core/classes/class-theme-options.php';
-// require_once get_template_directory() . '/core/classes/class-options-helper.php';
-// require_once get_template_directory() . '/core/classes/class-post-type.php';
-// require_once get_template_directory() . '/core/classes/class-taxonomy.php';
-// require_once get_template_directory() . '/core/classes/class-metabox.php';
-// require_once get_template_directory() . '/core/classes/abstracts/abstract-front-end-form.php';
-// require_once get_template_directory() . '/core/classes/class-contact-form.php';
-// require_once get_template_directory() . '/core/classes/class-post-form.php';
-// require_once get_template_directory() . '/core/classes/class-user-meta.php';
-// require_once get_template_directory() . '/core/classes/class-post-status.php';
-//require_once get_template_directory() . '/core/classes/class-term-meta.php';
-require_once get_template_directory() . '/custom/helpers.php';
-
-/**
- * Odin Widgets.
- */
-require_once get_template_directory() . '/core/classes/widgets/class-widget-like-box.php';
+require_once THEME_PATH . '/core/classes/class-bootstrap-nav.php';
+require_once THEME_PATH . '/core/classes/class-shortcodes.php';
+//require_once THEME_PATH . '/core/classes/class-shortcodes-menu.php';
+require_once THEME_PATH . '/core/classes/class-thumbnail-resizer.php';
+// require_once THEME_PATH . '/core/classes/class-theme-options.php';
+// require_once THEME_PATH . '/core/classes/class-options-helper.php';
+// require_once THEME_PATH . '/core/classes/class-post-type.php';
+// require_once THEME_PATH . '/core/classes/class-taxonomy.php';
+// require_once THEME_PATH . '/core/classes/class-metabox.php';
+// require_once THEME_PATH . '/core/classes/abstracts/abstract-front-end-form.php';
+// require_once THEME_PATH . '/core/classes/class-contact-form.php';
+// require_once THEME_PATH . '/core/classes/class-post-form.php';
+// require_once THEME_PATH . '/core/classes/class-user-meta.php';
+// require_once THEME_PATH . '/core/classes/class-post-status.php';
+//require_once THEME_PATH . '/core/classes/class-term-meta.php';
+require_once THEME_PATH . '/custom/helpers.php';
+require_once THEME_PATH . '/widgets/sidebar.php';
 
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
@@ -73,6 +72,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 * Add post_thumbnails suport.
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'news-sidebar', 640, 440, true );
 
 		/**
 		 * Add feed link.
