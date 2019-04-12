@@ -9,6 +9,8 @@ if ( ! defined('ABSPATH')) exit('restricted access');
 
 include 'PopularNews_Widget.php';
 include 'Categories_Widget.php';
+include 'Form_Widget.php';
+include 'SocialSidebar_Widget.php';
 
 function remove_widgets()
 {
@@ -29,6 +31,8 @@ function firstling_load_widget()
 {
     remove_widgets();
     register_widget( 'PopularNews_Widget' );
-    register_widget( 'Categories_Widget' );
+	register_widget( 'Categories_Widget' );
+	register_widget( 'Form_Widget' );
+	register_widget( 'SocialSidebar_Widget' );
 }
 add_action( 'widgets_init', 'firstling_load_widget' );

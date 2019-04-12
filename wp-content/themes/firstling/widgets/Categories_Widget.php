@@ -12,7 +12,7 @@ class Categories_Widget extends WP_Widget
     {
         $widget_options = array( 
             'classname' => 'categories-box',
-            'description' => 'With this Widget you put the categories in the sidebar.',
+            'description' => __('With this Widget you put the categories in the sidebar.'),
         );        
         parent::__construct( 'categories-box', __('Categories'), $widget_options );
     }
@@ -38,7 +38,7 @@ class Categories_Widget extends WP_Widget
 
     public function widget( $args, $instance ) 
     {
-        $title = apply_filters( 'categories_title', $instance[ 'categories_title' ] );
+        $title = apply_filters( 'widget_title', $instance[ 'categories_title' ] );
 
         $categories = get_categories(array(
             'hide_empty' => true,

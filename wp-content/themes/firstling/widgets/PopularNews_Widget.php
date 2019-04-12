@@ -12,7 +12,7 @@ class PopularNews_Widget extends WP_Widget
     {
         $widget_options = array( 
             'classname' => 'popular-news-box',
-            'description' => 'With this Widget you put the popular news in the sidebar.',
+            'description' => __('With this Widget you put the popular news in the sidebar.'),
         );        
         parent::__construct( 'popular-news-box', __('Popular News'), $widget_options );
     }
@@ -44,8 +44,8 @@ class PopularNews_Widget extends WP_Widget
 
     public function widget( $args, $instance ) 
     {
-        $total = apply_filters( 'popular_news_total', $instance[ 'popular_news_total' ] );
-        $title = apply_filters( 'popular_news_title', $instance[ 'popular_news_title' ] );
+        $total = apply_filters( 'widget_title', $instance[ 'popular_news_total' ] );
+        $title = apply_filters( 'widget_title', $instance[ 'popular_news_title' ] );
 
         $widget = new WP_Query(array(
             'post_type' => 'post',
