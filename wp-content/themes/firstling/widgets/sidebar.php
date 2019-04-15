@@ -11,6 +11,7 @@ include 'PopularNews_Widget.php';
 include 'Categories_Widget.php';
 include 'Form_Widget.php';
 include 'SocialSidebar_Widget.php';
+include 'TopSocialSidebar_Widget.php';
 
 function remove_widgets()
 {
@@ -29,10 +30,25 @@ function remove_widgets()
 
 function firstling_load_widget() 
 {
-    remove_widgets();
+	remove_widgets();
+	
+    //entidades do topo
+    register_sidebar(
+        array(
+            'name' => __( 'Top', 'odin' ),
+            'id' => 'top-sidebar',
+            'description' => __( 'Sidebar with top items.', 'odin' ),
+            'before_widget' => '',
+            'after_widget' => '',
+            'before_title' => '',
+            'after_title' => '',
+        )
+    );
+
     register_widget( 'PopularNews_Widget' );
 	register_widget( 'Categories_Widget' );
 	register_widget( 'Form_Widget' );
 	register_widget( 'SocialSidebar_Widget' );
+	register_widget( 'TopSocialSidebar_Widget' );
 }
 add_action( 'widgets_init', 'firstling_load_widget' );

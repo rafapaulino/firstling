@@ -24,90 +24,12 @@
 <!-- header -->
 <header class="fixed-top" id="header">
     
-    <!-- redes sociais -->
-    <div class="navContainer d-print-none">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="socialNav">
-                        <li class="socialBrand">
-                            <a href="index.html" accesskey="3" title="SITE" target="_blank">
-                                SITE
-                            </a>
-                        </li>
-                        <li class="socialBrand">
-                            <a href="index.html" accesskey="2" title="SITE" target="_blank">
-                                SITE
-                            </a>
-                        </li> 
-                        <li class="socialBrand">
-                            <a href="index.html" accesskey="2" title="SITE" target="_blank">
-                                SITE
-                            </a>
-                        </li>                          
-                        <li class="social facebook bgAnimated">
-                            <a href="index.html" accesskey="f" title="Facebook">
-                                <i class="fab fa-facebook" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o Facebook</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social youtube bgAnimated">
-                            <a href="index.html" accesskey="y" title="YouTube">
-                                <i class="fab fa-youtube" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o YouTube</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social twitter bgAnimated">
-                            <a href="index.html" accesskey="t" title="Twitter">
-                                <i class="fab fa-twitter" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o Twitter</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social linkedin bgAnimated">
-                            <a href="index.html" accesskey="l" title="Linkedin">
-                                <i class="fab fa-linkedin" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o Linkedin</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social slideshare bgAnimated">
-                            <a href="index.html" accesskey="s" title="Slideshare">
-                                <i class="fab fa-slideshare" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o Slideshare</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social flickr bgAnimated">
-                            <a href="index.html" accesskey="k" title="Flickr">
-                                <i class="fab fa-flickr" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o Flickr</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social instagram bgAnimated">
-                            <a href="index.html" accesskey="i" title="Instagram">
-                                <i class="fab fa-instagram" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o Instagram</span>
-                                </i>
-                            </a>
-                        </li>
-                        <li class="social rss bgAnimated">
-                            <a href="index.html" accesskey="r" title="RSS">
-                                <i class="fa fa-rss" aria-hidden="true">
-                                    <span class="sr-only">Clique aqui para acessar o RSS</span>
-                                </i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /barra redes sociais -->
-    
+    <?php 
+		if ( is_active_sidebar( 'top-sidebar' ) ):
+			dynamic_sidebar( 'top-sidebar' );
+		endif;
+	?>
+   
     <!-- logo/busca/menu -->
     <div class="headerContainer d-print-none">
         <div class="container">
