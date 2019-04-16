@@ -12,6 +12,7 @@ include 'Categories_Widget.php';
 include 'Form_Widget.php';
 include 'SocialSidebar_Widget.php';
 include 'TopSocialSidebar_Widget.php';
+include 'Tags_Widget.php';
 
 function remove_widgets()
 {
@@ -50,5 +51,6 @@ function firstling_load_widget()
 	register_widget( 'Form_Widget' );
 	register_widget( 'SocialSidebar_Widget' );
 	register_widget( 'TopSocialSidebar_Widget' );
+	register_widget( 'Tags_Widget' );
 }
 add_action( 'widgets_init', 'firstling_load_widget' );
