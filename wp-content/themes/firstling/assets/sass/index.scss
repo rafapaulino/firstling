@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CARROSSEL */
+.wrapCarousel {
+    max-width: inherit;
+    margin-bottom: 25px;
+}
+
+.carousel-item .carousel-caption h5,
+.carousel-item .carousel-caption p {
+    font-family: $fontSecound;
+}

@@ -5,6 +5,7 @@
 $background: #F2F2F2;
 $dark: #313233;
 $fontDefault: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontSecound: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 html, body {
     overflow: auto;
@@ -13,7 +14,7 @@ html, body {
     margin: 0;
 }
 body {
-    padding: 158px 0 0 0;
+    padding: 100px 0 0 0;
     background-color: $background;
     font-family: $fontDefault;
 }
@@ -39,7 +40,13 @@ main.open {
     box-sizing: border-box;
 }
 
+/* retira o padding do item */
+.no-padding {
+    padding: 0 !important;
+}
+
 @import 'header.scss';
 @import 'footer.scss';
 @import 'sidebar.scss';
 @import '404.scss';
+@import 'index.scss';

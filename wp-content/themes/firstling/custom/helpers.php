@@ -10,6 +10,6 @@ function getImageSRC($id, $size = 'thumbnail')
     if ( $image_attributes ) :
         return esc_attr($image_attributes[0]);
     else :
-        return esc_url('http://placehold.it/640x440');
+        return esc_url('http://placehold.it/1140x426');
     endif;
 }
