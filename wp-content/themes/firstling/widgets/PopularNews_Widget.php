@@ -49,7 +49,7 @@ class PopularNews_Widget extends WP_Widget
 
         $widget = new WP_Query(array(
             'post_type' => 'post',
-            'total' => intval($total),
+            'posts_per_page' => intval($total),
             'orderby' => 'date',
             'order'   => 'DESC',
         ));

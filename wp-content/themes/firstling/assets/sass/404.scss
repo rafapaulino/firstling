@@ -3,10 +3,11 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:900");
 
 .page-404 {
+    @extend .box-default;
     position: relative;
     min-height: 100vh;
     padding: 100px 20px;
-
+    
     @media (min-width: 330px) {
         min-height: 80vh;
         padding: 40% 20px;
@@ -78,7 +79,7 @@
 }
   
 .notfound .notfound-404 h3 > span {
-    text-shadow: -8px 0px 0px $background;
+    text-shadow: -8px 0px 0px #fff;
 }
   
 .notfound .notfound-404 h2 {

@@ -15,7 +15,6 @@
 
 get_header(); ?>
 <div class="container">
-
 	<?php 
 		$latest_posts = get_posts(array(
 			'numberposts' => 5,
@@ -70,11 +69,37 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
+	<?php wp_reset_postdata(); ?>
 	<?php endif; ?>
 
 	<div class="row">
-		<div class="col-md-8">
-			conteúdo
+		<div class="col-md-8 no-padding">
+			<main class="content-home">
+				<?php if ( have_posts() ) : ?>
+					<?php 
+						while ( have_posts() ) : the_post(); 
+						$id = intval(get_the_ID());
+						$img = getImageSRC($id,'news-sidebar');
+					?>
+						<article id="post-<?php echo $id; ?>" <?php post_class(); ?> itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+
+							<div class="thumb">
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
+									<span class="ui-border-element">
+										<img src="<?php echo $img; ?>" alt="<?php the_title(); ?>" itemprop="image" class="img-fluid">
+									</span>
+								</a>
+							</div>
+							<div class="details">
+								<h2 itemprop="headline"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url"><?php the_title(); ?></a></h2>
+								<a class="time" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" itemprop="url"><?php echo esc_html(get_the_date()); ?></a>
+								<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo getExcerpt(200); ?>...</a></p>
+							</div>
+
+						</article>
+					<?php endwhile; odin_paging_nav(); ?>
+				<?php endif; ?>
+			</main>
 		</div>
 		<?php get_sidebar(); ?>
 	</div>

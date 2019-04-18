@@ -13,3 +13,14 @@ function getImageSRC($id, $size = 'thumbnail')
         return esc_url('http://placehold.it/1140x426');
     endif;
 }
+
+function getExcerpt($limit = 150)
+{
+    $excerpt = odin_excerpt('excerpt', $limit);
+
+    if (strlen($excerpt) > $limit) {
+		$excerpt = substr(trim($excerpt),0,$limit);
+    }
+    
+    return $excerpt;
+}
