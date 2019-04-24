@@ -19,11 +19,6 @@ body {
     font-family: $fontDefault;
 }
 
-/* 
- MENU - https://codepen.io/andornagy/pen/RNeydj
- https://codepen.io/una/pen/pVvXmK
-*/
-
 main {
     transform: translateX(0);
     transition: all .25s linear;
@@ -95,3 +90,5 @@ main.open {
 @import 'sidebar.scss';
 @import '404.scss';
 @import 'index.scss';
+@import 'image.scss';
+@import 'single.scss';

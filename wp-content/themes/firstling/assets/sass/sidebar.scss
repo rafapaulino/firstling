@@ -62,6 +62,10 @@
 
     .ultimasNoticias {
         padding-bottom: 0;
+
+        ul li .titleDate h3 {
+            font-family: $fontSecound;
+        }
     }
     
 }

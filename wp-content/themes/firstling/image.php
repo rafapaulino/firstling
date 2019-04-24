@@ -9,42 +9,49 @@
  */
 
 get_header(); ?>
-
-	<main id="content" class="<?php echo odin_classes_page_sidebar(); ?>" tabindex="-1" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<article <?php post_class(); ?>>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="entry-meta entry-content">
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 no-padding">
+			<main class="content-home">
+				<?php 
+					if ( have_posts() ) : 
+						while ( have_posts() ) : the_post(); 
+				?>
+					<header class="page-header">
+						<?php the_title(); ?>
+						<div class="image-description">
 							<?php
 								$metadata = wp_get_attachment_metadata();
 								printf( __( 'Image total size: %s pixels', 'odin' ), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'odin' ) ), $metadata['width'], $metadata['height'] ) );
+								
+								$metadata = wp_get_attachment_metadata();
+								printf( __( 'Image total size: %s pixels', 'odin' ), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'odin' ) ), $metadata['width'], $metadata['height'] ) );
 							?>
-						</div><!-- .entry-meta -->
-					</header><!-- .entry-header -->
+						</div>
+					</header><!-- .page-header -->
+					<p class="attachment">
+						<a href="<?php echo wp_get_attachment_url( $post->ID, 'full' ); ?>" title="<?php the_title_attribute(); ?>">
+							<?php 
+								$img = getImageSRC($post->ID,'carrossel');
+							?>
+							<img src="<?php echo $img; ?>" class="img-fluid" alt="<?php the_title(); ?>">
+						</a>
+					</p>
+					<div class="entry-caption">
+						<em><?php if ( ! empty( $post->post_excerpt ) ) the_excerpt(); ?></em>
+					</div>
+					<?php the_content(); ?>
 
-					<div class="entry-content entry-attachment">
-						<p class="attachment"><a href="<?php echo wp_get_attachment_url( $post->ID, 'full' ); ?>" title="<?php the_title_attribute(); ?>"><?php echo wp_get_attachment_image( $post->ID, 'full' ); ?></a></p>
-						<div class="entry-caption"><em><?php if ( ! empty( $post->post_excerpt ) ) the_excerpt(); ?></em></div>
-						<?php the_content(); ?>
-
-						<ul class="pager">
-							<li class="previous"><?php previous_image_link( false, __( '&larr; Previous image', 'odin' ) ); ?></li>
-							<li class="next"><?php next_image_link( false, __( 'Next image &rarr;', 'odin' ) ); ?></li>
-						</ul><!-- .pager -->
-
-						<?php if ( ! empty( $post->post_parent ) ) : ?>
-							<ul class="pager page-title">
-								<li class="previous"><a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'Back to %s', 'odin' ), strip_tags( get_the_title( $post->post_parent ) ) ) ); ?>" rel="gallery"><?php printf( __( '<span class="meta-nav">&larr;</span> %s', 'odin' ), get_the_title( $post->post_parent ) ); ?></a></li>
-							</ul><!-- .pager -->
-						<?php endif; ?>
-					</div><!-- .entry-content -->
-				</article>
-			<?php endwhile; ?>
-
-	</main><!-- #main -->
-
+				<?php 
+						endwhile; 
+					else:
+						get_template_part( 'content-none' );
+					endif; 
+				?>
+			</main>
+		</div>
+		<?php get_sidebar(); ?>
+	</div>
+</div>
 <?php
-get_sidebar();
 get_footer();

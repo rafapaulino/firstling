@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* SINGLE */
+.content-single {
+    @extend .box-default;
+    padding: 0 0 30px 0;
+    width: 97%;
+
+    img.img-fluid {
+        width: 100%;
+    }
+
+    article {
+        padding: 30px 30px 0 30px;
+        min-height: 300px;
+
+        header {
+            margin-bottom: 30px;
+
+            .entry-meta {
+                font-family: $fontSecound;
+                font-size: 12px;
+                color: #9e9e9e;
+                margin: 30px 0 0 0;
+            }
+        }
+
+        h1 {
+            font-size: 25px;
+            font-family: $fontDefault;
+        }
+
+        footer {
+            margin: 30px 0;
+        }
+    }
+}

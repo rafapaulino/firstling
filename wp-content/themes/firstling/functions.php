@@ -74,6 +74,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'news-sidebar', 640, 440, true );
 		add_image_size( 'carrossel', 1140, 426, true );
+		add_image_size( 'single', 750, 410, true );
 
 		/**
 		 * Add feed link.
