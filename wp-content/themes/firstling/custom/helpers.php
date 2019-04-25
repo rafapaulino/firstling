@@ -14,13 +14,23 @@ function getImageSRC($id, $size = 'thumbnail')
     endif;
 }
 
-function getExcerpt($limit = 150)
+function getExcerpt($limit = 150, $type = 'excerpt')
 {
-    $excerpt = odin_excerpt('excerpt', $limit);
+    $excerpt = odin_excerpt($type, $limit);
 
     if (strlen($excerpt) > $limit) {
 		$excerpt = substr(trim($excerpt),0,$limit);
     }
     
     return $excerpt;
+}
+
+function wpSubstr($string, $limit = 150)
+{
+    $new_string = substr(trim($string), 0, $limit);
+    
+    if (strlen($string) > $limit) {
+        $new_string = $new_string . '...';
+    }
+    return esc_attr($new_string);
 }

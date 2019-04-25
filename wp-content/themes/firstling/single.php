@@ -52,6 +52,14 @@ get_header(); ?>
 						<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
 							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'odin' ), __( '1 Comment', 'odin' ), __( '% Comments', 'odin' ) ); ?></span>
 						<?php endif; ?>
+
+						<div class="prev-next-content">
+							<?php 
+								get_template_part( 'prev-post' );
+								get_template_part( 'next-post' );
+							?>
+						</div>
+						<?php get_template_part( 'related-posts' ); ?>
 					</footer>
 
 				<?php 

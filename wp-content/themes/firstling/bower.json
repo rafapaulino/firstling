@@ -16,6 +16,7 @@
     "tagcloud": "^1.0.0",
     "noticias-relacionadas": "^1.0.0",
     "ultimas-noticias": "^1.0.0",
-    "rafa-carrossel": "^1.0.0"
+    "rafa-carrossel": "^1.0.0",
+    "prev-next": "^1.0.0"
   }
 }

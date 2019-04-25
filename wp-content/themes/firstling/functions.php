@@ -75,6 +75,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		add_image_size( 'news-sidebar', 640, 440, true );
 		add_image_size( 'carrossel', 1140, 426, true );
 		add_image_size( 'single', 750, 410, true );
+		add_image_size( 'next-prev', 70, 70, true );
 
 		/**
 		 * Add feed link.
