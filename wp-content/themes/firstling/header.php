@@ -61,7 +61,7 @@
                 <div class="col-sm-12" id="search-content">
                     <i class="fas fa-search" id="open-search"></i>
                     <form method="get" id="search" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-                        <input type="search" name="s" id="search-header" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Digite sua busca e tecle enter...', 'odin' ); ?>" />
+                        <input type="search" name="s" id="search-header" value="<?php echo get_search_query(); ?>" placeholder="<?php esc_attr_e( 'Digite sua busca e tecle enter...', 'odin' ); ?>" required="required" />
                     </form>
                     <i class="fas fa-times" id="close-search"></i>
                 </div>

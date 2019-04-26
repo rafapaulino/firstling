@@ -33,6 +33,11 @@
             });
         };
 
+        $public.formValidate = function () {
+            $(".formValidate").validate();
+            $("#commentform").validate();
+        };
+
         return $public;
     })();
 
@@ -41,5 +46,6 @@
     app.top();
     app.animateSearch();
     app.toogleMenu();
+    app.formValidate();
 
 })(window, document, jQuery);

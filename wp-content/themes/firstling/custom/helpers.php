@@ -34,3 +34,4 @@ function wpSubstr($string, $limit = 150)
     }
     return esc_attr($new_string);
 }
+
