@@ -55,6 +55,13 @@ get_header(); ?>
 							</div>
 						<?php endif; ?>
 
+						<?php if ( get_the_author_meta( 'description' ) ) : ?>
+							<div class="author-biography">
+								<span class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?></span>
+								<span class="author-description"><?php the_author_meta( 'description' ); ?></span>
+							</div><!-- .author-biography -->
+						<?php endif; ?>
+
 						<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
 							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'odin' ), __( '1 Comment', 'odin' ), __( '% Comments', 'odin' ) ); ?></span>
 						<?php endif; ?>
