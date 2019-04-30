@@ -7,28 +7,51 @@
  * @package Odin
  * @since 2.2.0
  */
+get_header(); ?>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 no-padding">
+			<main class="content-single">
+				<?php 
+					if ( have_posts() ) : 
+						while ( have_posts() ) : the_post(); 
 
-get_header();
-?>
+						if ( has_post_thumbnail() ):
+							$img = getImageSRC(get_the_ID(),'single');
+				?>
+						<img src="<?php echo $img; ?>" class="img-fluid" alt="<?php the_title(); ?>">
+						<?php endif; ?>
+				
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						
+						<?php if ( 'post' == get_post_type() ) : ?>
+							<div class="entry-meta">
+								<?php odin_posted_on(); ?>
+							</div><!-- .entry-meta -->
+						<?php endif; ?>
+					</header>
 
-	<main id="content" class="<?php echo odin_classes_page_sidebar(); ?>" tabindex="-1" role="main">
+					<div class="entry-content">
+						<?php the_content(); ?>
+					</div><!-- .entry-content -->
 
-			<?php
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
-
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				endwhile;
-			?>
-
-	</main><!-- #main -->
-
+				<?php 
+							// If comments are open or we have at least one comment, load up the comment template.
+							if ( comments_open() || get_comments_number() ) :
+								comments_template();
+							endif;
+						endwhile; 
+					else:
+						get_template_part( 'content-none' );
+					endif; 
+				?>
+				</article>
+			</main>
+		</div>
+		<?php get_sidebar(); ?>
+	</div>
+</div>
 <?php
-get_sidebar();
 get_footer();
