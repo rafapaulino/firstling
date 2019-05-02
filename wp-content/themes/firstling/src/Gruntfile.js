@@ -26,6 +26,12 @@ module.exports = function(grunt) {
 				 dest: '<%= config.webfonts %>'
 			   },
 			   {
+				expand: true,
+				cwd: '<%= config.bower_components %>/plyr/dist',
+				src: 'plyr.svg',
+				dest: '<%= config.js %>'
+			   },
+			   {
 				 expand: true,
 				 cwd: '<%= config.bower_components %>/jquery-validation/src',
 				 src: 'localization/*',
@@ -45,7 +51,8 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/jquery-scroll-top/js/backToTop.min.js',
 					   '<%= config.bower_components %>/jquery-touchswipe/jquery.touchSwipe.min.js',
 					   '<%= config.bower_components %>/rafa-carrossel/js/carrossel.min.js',
-					   '<%= config.bower_components %>/noticias-relacionadas/js/noticias-relacionadas.min.js'
+					   '<%= config.bower_components %>/noticias-relacionadas/js/noticias-relacionadas.min.js',
+					   '<%= config.bower_components %>/plyr/dist/plyr.min.js'
 				   ],
 				   '<%= config.js %>/app.min.js': [
 					   '<%= config.devjs %>/app.js',
@@ -82,6 +89,7 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/rafa-carrossel/css/carrossel.min.css',
 					   '<%= config.bower_components %>/prev-next/css/prev-next.min.css',
 					   '<%= config.bower_components %>/noticias-relacionadas/css/noticias-relacionadas.css',
+					   '<%= config.bower_components %>/plyr/dist/plyr.css',
 				   ],
 				   '<%= config.css %>/app.min.css': [
 					   '<%= config.css %>/app.css'

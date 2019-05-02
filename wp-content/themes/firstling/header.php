@@ -17,7 +17,8 @@
 	<?php if ( ! get_option( 'site_icon' ) ) : ?>
 		<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<?php endif; ?>
-	<?php wp_head(); ?>
+
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 

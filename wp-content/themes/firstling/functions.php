@@ -130,22 +130,17 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		/**
 		 * Add support for Post Formats.
 		 */
-		// add_theme_support( 'post-formats', array(
-		//     'aside',
-		//     'gallery',
-		//     'link',
-		//     'image',
-		//     'quote',
-		//     'status',
-		//     'video',
-		//     'audio',
-		//     'chat'
-		// ) );
+		add_theme_support( 'post-formats', array(
+			'gallery',
+			'image',
+			'video',
+			'audio',
+		) );
 
 		/**
 		 * Support The Excerpt on pages.
 		 */
-		// add_post_type_support( 'page', 'excerpt' );
+		add_post_type_support( 'page', 'excerpt' );
 
 		/**
 		 * Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -293,4 +288,13 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/hooks.php';
 	require get_template_directory() . '/inc/woocommerce/functions.php';
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
+}
+
+
+add_filter( 'wp_audio_shortcode', 'short2_so_23875654', 10, 5 );
+
+function short2_so_23875654( $html, $atts, $audio, $post_id, $library )
+{
+	echo 'aaaaaaaaaaaaaaaaa';
+    return $html . '---------------------------';   
 }
