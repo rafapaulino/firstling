@@ -290,11 +290,3 @@ if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/template-tags.php';
 }
 
-
-add_filter( 'wp_audio_shortcode', 'short2_so_23875654', 10, 5 );
-
-function short2_so_23875654( $html, $atts, $audio, $post_id, $library )
-{
-	echo 'aaaaaaaaaaaaaaaaa';
-    return $html . '---------------------------';   
-}

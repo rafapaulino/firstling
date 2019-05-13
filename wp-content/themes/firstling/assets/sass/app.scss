@@ -35,6 +35,10 @@ main.open {
     box-sizing: border-box;
 }
 
+.wrap {
+    margin: 0 auto 10px auto;
+}
+
 /* retira o padding do item */
 .no-padding {
     padding: 0 !important;

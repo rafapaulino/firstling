@@ -14,34 +14,41 @@
 .content-home {
     @extend .box-default;
     padding: 30px;
-    width: 97%;
+    /*width: 97%; */
+    width: 100%;
 
     article {
         padding-bottom: 40px;
         width: 100%;
         display: inline-block;
+        box-sizing: border-box;
 
         .thumb {
-            float: left;
+            /* float: left; */
             display: inline-block;
+            width: 98%;
+            margin: 0 1%;
 
             a {
                 display: block;
                 margin: 0;
                 padding: 0;
+                width: 100%;
 
                 span.ui-border-element {
                     img {
-                        max-width: 218px;
-                        width: 218px;
+                        /* max-width: 218px;*/
+                        width: 100%;
                     }
                 }
             }
         }
         .details {
-            float: right;
+            /* float: right;
             margin-left: 10px;
-            width: 440px;
+            width: 440px; */
+            width: 98%;
+            margin: 1%;
 
             h2 {
                 font-size: 20px;

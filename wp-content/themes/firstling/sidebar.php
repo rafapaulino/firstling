@@ -8,10 +8,12 @@
  * @since 2.2.0
  */
 ?>
-<aside id="sidebar" class="col-md-4">
-	<?php 
-		if ( is_active_sidebar( 'main-sidebar' ) ):
-			dynamic_sidebar( 'main-sidebar' );
-		endif;
-	?>
-</aside><!-- #sidebar -->
+<div class="wrap-sidebar col-12 col-md-4">
+	<aside id="sidebar">
+		<?php 
+			if ( is_active_sidebar( 'main-sidebar' ) ):
+				dynamic_sidebar( 'main-sidebar' );
+			endif;
+		?>
+	</aside><!-- #sidebar -->
+</div>

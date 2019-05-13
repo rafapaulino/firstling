@@ -73,7 +73,7 @@ get_header(); ?>
 	<?php endif; ?>
 
 	<div class="row">
-		<div class="col-md-8 no-padding">
+		<div class="col-12 col-md-8 wrap">
 			<main class="content-home">
 				<?php 
 					if ( have_posts() ) : 

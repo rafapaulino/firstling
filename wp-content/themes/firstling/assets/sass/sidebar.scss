@@ -4,6 +4,8 @@
 #sidebar {
     @extend .box-default;
     padding: 10px 30px;
+    /* width: 97%; */
+    width: 100%; 
 
     .widget {
         margin-bottom: 20px;
