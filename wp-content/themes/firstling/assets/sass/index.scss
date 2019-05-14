@@ -14,7 +14,6 @@
 .content-home {
     @extend .box-default;
     padding: 30px;
-    /*width: 97%; */
     width: 100%;
 
     article {
@@ -24,10 +23,15 @@
         box-sizing: border-box;
 
         .thumb {
-            /* float: left; */
             display: inline-block;
             width: 98%;
             margin: 0 1%;
+
+            @media (min-width: 1280px) {
+                float: left;
+                margin: 0 0 10px 0;
+                width: 240px;
+            }
 
             a {
                 display: block;
@@ -37,23 +41,29 @@
 
                 span.ui-border-element {
                     img {
-                        /* max-width: 218px;*/
                         width: 100%;
                     }
                 }
             }
         }
         .details {
-            /* float: right;
-            margin-left: 10px;
-            width: 440px; */
             width: 98%;
             margin: 1%;
+
+            @media (min-width: 1280px) {
+                float: right;
+                margin: 0 0 10px 0;
+                width: 62%;
+            }
 
             h2 {
                 font-size: 20px;
                 font-family: $fontDefault;
-                margin: 0;
+                margin: 10px 0 0 0;
+
+                @media (min-width: 1280px) {
+                    margin: 0;
+                }
                 
                 a {
                     color: #000;
