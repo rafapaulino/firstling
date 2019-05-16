@@ -110,6 +110,44 @@
             return exp.exec(url);         
         };
 
+        $public.initMenu = function () {
+            window.onload = function() {
+                $private.correctMenuHeight();
+            };
+            $( window ).resize(function() {
+                $private.correctMenuHeight();
+            });
+            window.screen.orientation.addEventListener('change', function() {
+                $private.correctMenuHeight();
+            }, false);
+        };
+
+        $private.correctMenuHeight = function () {
+            console.log('mudou');
+
+            var orientation = screen.orientation    ||
+            screen.mozOrientation ||
+            screen.msOrientation  ||
+            null;
+            
+            console.log(orientation);
+            var $elm = $('#primary-menu');
+            var paddingTop = parseInt($elm.css('padding-top').replace("px", ""));
+            var paddingBottom = parseInt($elm.css('padding-bottom').replace("px", ""));
+            var padding = paddingTop + paddingBottom;
+            var height = $(document).height() - padding;
+            
+            if (typeof orientation === 'object') {
+                if (orientation.type == 'landscape-primary') {
+                    height = $('body').height() - padding;
+                    console.log(height);
+                }
+            } 
+            console.log(height);   
+            
+            $elm.height( height + 'px' );
+        };
+
         return $public;
     })();
 
@@ -122,5 +160,6 @@
     app.customAudioPlayer();
     app.customVideoPlayer();
     //app.customIframeMediaPlayer();
+    //app.initMenu();
 
 })(window, document, jQuery);

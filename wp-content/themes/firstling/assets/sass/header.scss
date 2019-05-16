@@ -229,9 +229,9 @@
     width: 280px; 
     margin: 0;
     padding: 120px 0 20px 0;
-    display: block;
+    display: table;
     background-color: #313233;
-    height: inherit;
+    height: 100%;
     position: absolute;
     z-index: 3;
     box-sizing: border-box;

@@ -6,6 +6,7 @@
     padding: 10px 30px;
     /* width: 97%; */
     width: 100%; 
+    margin-bottom: 30px;
 
     .widget {
         margin-bottom: 20px;
@@ -58,9 +59,9 @@
 
 
     .categories-list li a:before {
-        content: "\f054";
+        content: "\f054" !important;
+        font-family: "Font Awesome\ 5 Free"
     }
-
 
     .ultimasNoticias {
         padding-bottom: 0;

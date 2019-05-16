@@ -7,23 +7,33 @@ $dark: #313233;
 $fontDefault: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fontSecound: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-html, body {
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
     overflow: auto;
     overflow-x: hidden;
     width: 100%;
     margin: 0;
-}
-body {
     padding: 130px 0 0 0;
     background-color: $background;
     font-family: $fontDefault;
+    height: 100%;
+    box-sizing: border-box;   
+    position: relative; 
 }
 
 main {
     transform: translateX(0);
     transition: all .25s linear;
     width: 100%;
+    min-height: 100%;
 }
+
 main.open {
     transform: translateX(280px);
 }
@@ -36,7 +46,7 @@ main.open {
 }
 
 .wrap {
-    margin: 0 auto 10px auto;
+    margin: 0 auto 30px auto;
 }
 
 /* retira o padding do item */

@@ -22,6 +22,22 @@
 </head>
 <body <?php body_class(); ?>>
 
+<!-- navigation -->
+<nav id="primary-menu" class="d-print-none">
+    <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'main-menu',
+                'depth'          => 2,
+                'container'      => false,
+                'menu_class'     => 'mainmenu',
+                'items_wrap'     => '<ul class="%2$s">%3$s</ul>'
+            )
+        );
+    ?>
+</nav>
+<!-- /navigation -->
+
 <!-- header -->
 <header class="fixed-top" id="header">
     
@@ -75,20 +91,5 @@
 </header>
 <!--/ header -->
 
-<!-- navigation -->
-<nav id="primary-menu" class="d-print-none">
-    <?php
-        wp_nav_menu(
-            array(
-                'theme_location' => 'main-menu',
-                'depth'          => 2,
-                'container'      => false,
-                'menu_class'     => 'mainmenu',
-                'items_wrap'     => '<ul class="%2$s">%3$s</ul>'
-            )
-        );
-    ?>
-</nav>
-<!-- /navigation -->
 
 <main>
