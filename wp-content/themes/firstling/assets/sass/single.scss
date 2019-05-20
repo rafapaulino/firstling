@@ -86,6 +86,11 @@
                 clear: both;
             }
 
+            .relatedPosts .jcarousel-wrapper ul li h2,
+            .relatedPosts .jcarousel-wrapper ul li h2 a {
+                font-family: $fontDefault !important;            
+            }
+
         }
 
         .comment-notes {
