@@ -3,7 +3,7 @@
 .content-single {
     @extend .box-default;
     padding: 0 0 30px 0;
-    width: 97%;
+    width: 100%;
     margin-bottom: 30px;
 
     img.img-fluid {
@@ -88,7 +88,8 @@
 
             .relatedPosts .jcarousel-wrapper ul li h2,
             .relatedPosts .jcarousel-wrapper ul li h2 a {
-                font-family: $fontDefault !important;            
+                font-family: $fontDefault !important; 
+                color: #000;           
             }
 
         }

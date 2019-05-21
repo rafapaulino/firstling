@@ -39,7 +39,7 @@
         };
 
         $public.customAudioPlayer = function () {
-            window.onload = function() {
+            $( window ).on( "load", function() {
                 //audio
                 var audio = document.querySelectorAll('audio');
                 var total = audio.length;
@@ -49,11 +49,11 @@
                         new Plyr(audio[audio_loop]);
                     }
                 }
-            };
+            });
         };
 
         $public.customVideoPlayer = function () {
-            window.onload = function() {
+            $( window ).on( "load", function() {
                 //video
                 var video = document.querySelectorAll('video');
                 var total = video.length;
@@ -63,12 +63,12 @@
                         new Plyr(video[video_loop]);
                     }
                 }
-            };
+            });
         };
 
         //http://jsfiddle.net/mica/mZdFS/2/
         $public.customIframeMediaPlayer = function () {
-            window.onload = function() {
+            $( window ).on( "load", function() {
                 //iframe (youtube/vimeo)
                 var iframe = document.querySelectorAll('iframe');
                 var total = iframe.length;
@@ -86,7 +86,7 @@
                         }
                     }
                 }
-            };
+            });
         };
 
         $private.testVimeoUrl = function (str) {
