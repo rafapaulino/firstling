@@ -20,7 +20,7 @@
 get_header(); ?>
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 no-padding">
+		<div class="col-12 col-md-8 wrap">
 			<main class="content-home">
 				<header class="page-header">
 					<?php

@@ -10,7 +10,7 @@ get_header();
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-12 wrap">
 			<!-- 404 -->
 			<div class="page-404">
 				

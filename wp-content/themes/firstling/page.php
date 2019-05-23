@@ -13,7 +13,7 @@
 get_header(); ?>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12 no-padding">
+		<div class="col-12 wrap">
 			<main class="content-single">
 				<?php 
 					if ( have_posts() ) : 
