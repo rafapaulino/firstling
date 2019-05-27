@@ -52,7 +52,9 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/jquery-touchswipe/jquery.touchSwipe.min.js',
 					   '<%= config.bower_components %>/rafa-carrossel/js/carrossel.min.js',
 					   '<%= config.bower_components %>/noticias-relacionadas/js/noticias-relacionadas.min.js',
-					   '<%= config.bower_components %>/plyr/dist/plyr.min.js'
+					   '<%= config.bower_components %>/plyr/dist/plyr.min.js',
+					   '<%= config.bower_components %>/smartmenus/dist/jquery.smartmenus.min.js',
+					   '<%= config.bower_components %>/smartmenus/dist/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.min.js'
 				   ],
 				   '<%= config.js %>/app.min.js': [
 					   '<%= config.devjs %>/app.js',
@@ -90,6 +92,7 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/prev-next/css/prev-next.min.css',
 					   '<%= config.bower_components %>/noticias-relacionadas/css/noticias-relacionadas.css',
 					   '<%= config.bower_components %>/plyr/dist/plyr.css',
+					   '<%= config.bower_components %>/smartmenus/dist/bootstrap-4/jquery.smartmenus.bootstrap-4.css',
 				   ],
 				   '<%= config.css %>/app.min.css': [
 					   '<%= config.css %>/app.css'

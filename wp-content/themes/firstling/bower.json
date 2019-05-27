@@ -18,6 +18,7 @@
     "ultimas-noticias": "^1.0.0",
     "rafa-carrossel": "^1.0.0",
     "prev-next": "^1.0.0",
-    "plyr": "^3.5.4"
+    "plyr": "^3.5.4",
+    "smartmenus": "^1.1.0"
   }
 }
