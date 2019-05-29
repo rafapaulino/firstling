@@ -13,7 +13,31 @@
     background-color: #313233;
     display: inline-block;
     clear: both;
+
+    nav.bg-dark {
+        background-color: #313233 !important;
+
+        h1 {
+            a {
+                span {
+                    text-transform: uppercase;
+                    font-family: $fontDefault;
+                    font-weight: bold;
+                }
+
+                .navbar-text {
+                    font-size: 0.6em;
+                    color: rgba(255,255,255,.8);
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    padding: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
 }
+
 .headerContainer {
     width: 100%;
     padding: 0; 
