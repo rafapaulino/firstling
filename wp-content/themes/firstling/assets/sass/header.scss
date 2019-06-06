@@ -16,13 +16,19 @@
 
     nav.bg-dark {
         background-color: #313233 !important;
+        padding: .8rem 1rem;
 
         h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+
             a {
                 span {
                     text-transform: uppercase;
                     font-family: $fontDefault;
                     font-weight: bold;
+                    margin: 0;
                 }
 
                 .navbar-text {
@@ -32,6 +38,21 @@
                     margin-top: -3px;
                     padding: 0;
                     margin-left: 10px;
+                }
+            }
+        }
+
+        ul.navbar-nav {
+            font-size: 0.9rem;
+
+            .dropdown-menu {
+                border-radius: 0;
+
+                a.dropdown-item {
+                    font-size: 0.9rem;
+                }
+                .dropdown-header {
+                    font-size: .850rem !important;
                 }
             }
         }
