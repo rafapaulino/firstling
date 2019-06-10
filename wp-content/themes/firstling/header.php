@@ -30,40 +30,34 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <h1>
+                <?php 
+                    if (has_custom_logo()): 
+                        odin_the_custom_logo();
+                    else: 
+                ?>
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <span><?php bloginfo( 'name' ); ?></span>
                     <strong class="navbar-text"><?php bloginfo( 'description' ); ?></strong>
                 </a>
+                <?php endif; ?>
             </h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="bootstrap-4-navbar.html">Default</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bootstrap-4-navbar-static-top.html">Static top</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bootstrap-4-navbar-fixed-top.html">Fixed top</a></li>
-                    <li class="nav-item"><a class="nav-link" href="bootstrap-4-navbar-fixed-bottom.html">Fixed bottom</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#">Dropdown</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            <li class="dropdown-divider"></li>
-                            <li class="dropdown-header">Nav header</li>
-                            <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">A sub menu</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    <li><a class="dropdown-item disabled" href="#">Disabled item</a></li>
-                                    <li><a class="dropdown-item" href="#">One more link</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="dropdown-item" href="#">A separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <?php 
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'main-menu',
+                            'depth'          => 5,
+                            'container'      => false,
+                            'menu_class'     => 'nav navbar-nav ml-auto',
+                            'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'          => new WP_Bootstrap_Navwalker(),
+                        )
+                    );
+                ?>
             </div>
         </nav>
     </div>

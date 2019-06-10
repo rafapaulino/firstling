@@ -43,6 +43,7 @@ require_once THEME_PATH . '/core/classes/class-thumbnail-resizer.php';
 //require_once THEME_PATH . '/core/classes/class-term-meta.php';
 require_once THEME_PATH . '/custom/helpers.php';
 require_once THEME_PATH . '/widgets/sidebar.php';
+require_once THEME_PATH . '/custom/navwalker.php';
 
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
