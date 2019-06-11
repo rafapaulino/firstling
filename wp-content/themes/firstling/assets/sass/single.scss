@@ -37,7 +37,7 @@
 
             h1, h2, h3, h4, h5, h6 {
                 font-family: $fontDefault;
-                color: #3396FF; 
+                color: $primary; 
             }
             h1 {
                 font-size: 25px;  
@@ -116,6 +116,67 @@
             label {
                 font-size: 12px;
                 margin-left: 5px;
+            }
+        }
+        .comments-link {
+            a {
+                color: $primary;
+            }
+        }
+
+        #comments-title {
+            font-size: 1rem;
+        }
+        .media-heading {
+            a {
+                color: $primary; 
+            }
+        }
+
+        #comments {
+
+            .media-list {
+                margin: 0;
+                padding: 0;
+
+                .comment-body {
+                    width: 100%;
+                    box-sizing: border-box;
+        
+                    .media-left {
+                        display: inline-block;
+                        margin: 0;
+                        float: left;
+                    }
+                    .media-body {
+                        float: right;
+                        margin: 0;
+                        width: 85%;
+
+                        .comment-meta {
+                            margin: 0 0 10px 0;
+                            font-size: 1rem;
+
+                            h5 {
+                                font-size: 1rem;
+                            }
+
+                            .comment-awaiting-moderation {
+                                font-size: 0.8rem;
+                            }
+                        }
+
+                        .comment-content {
+                            font-size: 0.9rem;
+                        }
+                        .comment-metadata {
+                            font-size: 0.9rem;
+                            a {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

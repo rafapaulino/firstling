@@ -5,8 +5,14 @@
 $background: #F2F2F2;
 $dark: #313233;
 $primary: #3396FF;
+$green: #46be8a;
+$red: #ff0000;
+$warning: #f2a654;
+$purple: #926dde;
+$pink: #f96197;
 $fontDefault: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $fontSecound: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 
 html {
     width: 100%;
@@ -143,3 +149,10 @@ h2, h3, h4, h5, h6 {
     background: $primary;
     outline: none;
 }
+
+
+@import 'theme-green.scss';
+@import 'theme-red.scss';
+@import 'theme-warning.scss';
+@import 'theme-purple.scss';
+@import 'theme-pink.scss';

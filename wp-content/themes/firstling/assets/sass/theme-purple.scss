@@ -1,0 +1,70 @@
+/* cor verde */
+body.purple {
+    .navContainer {
+        background-color: $purple;
+    }
+    #footer {
+        border-bottom-color: $purple;   
+    }
+
+    /* cores das bordas */
+    .topBottom-leftRightCorner .ui-border-element::before,
+    .topBottom-leftRightCorner .ui-border-element::after,
+    .topBottom-leftRightCorner::before,
+    .topBottom-leftRightCorner::after {
+        border-color: $purple;
+    }
+
+    .categories-list li a:hover {
+        color: $purple !important;
+    }
+
+    h2, h3, h4, h5, h6 {
+        a:hover {
+            color: $purple !important;
+        }
+    }
+    .entry-content {
+        h1, h2, h3, h4, h5, h6 {
+            color: $purple !important;
+        }
+    }
+
+    /* volume do player de áudio */
+    .plyr--full-ui input[type="range"] {
+        color: $purple;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $purple;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $purple;
+    }
+
+    .author.vcard {
+        a {
+            color: $purple;
+        }
+    }
+
+    .comments-link {
+        a {
+            color: $purple;
+        }
+    }
+    .media-heading {
+        a {
+            color: $purple; 
+        }
+    }
+    .comment-metadata {
+        a {
+            color: $purple;
+        }
+    }
+
+    .pagination-wrap .page-numbers li span {
+        background: $purple;      
+        border: 1px solid $purple;
+    }
+}

@@ -1,0 +1,70 @@
+/* cor verde */
+body.pink {
+    .navContainer {
+        background-color: $pink;
+    }
+    #footer {
+        border-bottom-color: $pink;   
+    }
+
+    /* cores das bordas */
+    .topBottom-leftRightCorner .ui-border-element::before,
+    .topBottom-leftRightCorner .ui-border-element::after,
+    .topBottom-leftRightCorner::before,
+    .topBottom-leftRightCorner::after {
+        border-color: $pink;
+    }
+
+    .categories-list li a:hover {
+        color: $pink !important;
+    }
+
+    h2, h3, h4, h5, h6 {
+        a:hover {
+            color: $pink !important;
+        }
+    }
+    .entry-content {
+        h1, h2, h3, h4, h5, h6 {
+            color: $pink !important;
+        }
+    }
+
+    /* volume do player de áudio */
+    .plyr--full-ui input[type="range"] {
+        color: $pink;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $pink;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $pink;
+    }
+
+    .author.vcard {
+        a {
+            color: $pink;
+        }
+    }
+
+    .comments-link {
+        a {
+            color: $pink;
+        }
+    }
+    .media-heading {
+        a {
+            color: $pink; 
+        }
+    }
+    .comment-metadata {
+        a {
+            color: $pink;
+        }
+    }
+
+    .pagination-wrap .page-numbers li span {
+        background: $pink;      
+        border: 1px solid $pink;
+    }
+}
