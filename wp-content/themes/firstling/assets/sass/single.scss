@@ -73,6 +73,28 @@
                     height: 100% !important;
                 }
             }
+            .wp-block-video {
+                overflow: hidden;
+                width: 100%;
+
+                .plyr {
+                    width: inherit;
+                    .plyr__controls {
+                        width: inherit;
+                    }
+                    .plyr__video-wrapper {
+                        width: inherit;
+
+                        video {
+                            width: inherit;
+                        }
+                    }
+                }
+            }
+            .wp-block-audio {
+                overflow: hidden;
+                width: 100%;
+            }
         }
 
         footer {
@@ -134,6 +156,15 @@
         }
 
         #comments {
+
+            .btn-comment {
+                background: $primary;
+                color: #fff;
+                outline: none;
+                border: 0;
+                border-radius: 0;
+                font-size: .8rem;
+            }
 
             .media-list {
                 margin: 0;

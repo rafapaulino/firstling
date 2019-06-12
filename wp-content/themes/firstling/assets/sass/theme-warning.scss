@@ -63,6 +63,12 @@ body.warning {
         }
     }
 
+    #comments {
+        .btn-comment {
+            background: $warning;
+        }
+    }
+
     .pagination-wrap .page-numbers li span {
         background: $warning;      
         border: 1px solid $warning;

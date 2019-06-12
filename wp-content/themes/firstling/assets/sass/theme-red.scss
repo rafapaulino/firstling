@@ -63,6 +63,12 @@ body.red {
         }
     }
 
+    #comments {
+        .btn-comment {
+            background: $red;
+        }
+    }
+
     .pagination-wrap .page-numbers li span {
         background: $red;      
         border: 1px solid $red;

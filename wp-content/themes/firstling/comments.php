@@ -67,7 +67,7 @@
 			'comment_notes_after' 	=> '',
 			'comment_field' 		=> $comment_field,
 			'fields' 				=> apply_filters( 'comment_form_default_fields', $fields ),
-			'class_submit' 			=> 'submit btn btn-default'
+			'class_submit' 			=> 'submit btn btn-default btn-comment'
 		));
 	?>
 </section><!-- #comments -->

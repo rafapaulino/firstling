@@ -63,6 +63,12 @@ body.pink {
         }
     }
 
+    #comments {
+        .btn-comment {
+            background: $pink;
+        }
+    }
+
     .pagination-wrap .page-numbers li span {
         background: $pink;      
         border: 1px solid $pink;

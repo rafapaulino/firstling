@@ -62,6 +62,12 @@ body.green {
             color: $green;
         }
     }
+    
+    #comments {
+        .btn-comment {
+            background: $green;
+        }
+    }
 
     .pagination-wrap .page-numbers li span {
         background: $green;      

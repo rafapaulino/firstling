@@ -63,6 +63,12 @@ body.purple {
         }
     }
 
+    #comments {
+        .btn-comment {
+            background: $purple;
+        }
+    }
+
     .pagination-wrap .page-numbers li span {
         background: $purple;      
         border: 1px solid $purple;
