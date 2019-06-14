@@ -44,6 +44,8 @@ require_once THEME_PATH . '/core/classes/class-thumbnail-resizer.php';
 require_once THEME_PATH . '/custom/helpers.php';
 require_once THEME_PATH . '/widgets/sidebar.php';
 require_once THEME_PATH . '/custom/navwalker.php';
+require_once THEME_PATH . '/custom/theme-custom-options.php';
+require_once THEME_PATH . '/custom/theme-custom-options-kirki.php';
 
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
@@ -83,50 +85,12 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		add_theme_support( 'automatic-feed-links' );
 
-		/**
-		 * Support Custom Header.
-		 */
-		$default = array(
-			'width'         => 0,
-			'height'        => 0,
-			'flex-height'   => false,
-			'flex-width'    => false,
-			'header-text'   => false,
-			'default-image' => '',
-			'uploads'       => true,
-		);
-
-		add_theme_support( 'custom-header', $default );
-
-		/**
-		 * Support Custom Background.
-		 */
-		$defaults = array(
-			'default-color' => '',
-			'default-image' => '',
-		);
-
-		add_theme_support( 'custom-background', $defaults );
-
+		
+		
 		/**
 		 * Support Custom Editor Style.
 		 */
 		add_editor_style( 'assets/css/editor-style.css' );
-
-		/**
-		 * Add support for infinite scroll.
-		 */
-		add_theme_support(
-			'infinite-scroll',
-			array(
-				'type'           => 'scroll',
-				'footer_widgets' => false,
-				'container'      => 'content',
-				'wrapper'        => false,
-				'render'         => false,
-				'posts_per_page' => get_option( 'posts_per_page' )
-			)
-		);
 
 		/**
 		 * Add support for Post Formats.
