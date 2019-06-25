@@ -73,4 +73,11 @@ body.pink {
         background: $pink;      
         border: 1px solid $pink;
     }
+
+    blockquote {
+        border-color: $pink;
+        &:before, &:after {
+            color: $pink;
+        }
+    }
 }

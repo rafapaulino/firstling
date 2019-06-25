@@ -123,9 +123,14 @@ add_filter('body_class','firstling_custom_body_class');
 function firstling_hook_css() 
 {
     $sobrescrever_cores = Kirki::get_option( 'sobrescrever_cores' );
-    $cor_de_fundo = Kirki::get_option( 'cor_de_fundo' );
+	$cor_de_fundo = Kirki::get_option( 'cor_de_fundo' );
+	
+	if($sobrescrever_cores && trim($cor_de_fundo) !== ""):
 ?><style>
 body.custom-color .navContainer{background-color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color #footer{border-bottom-color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .topBottom-leftRightCorner .ui-border-element::before,body.custom-color .topBottom-leftRightCorner .ui-border-element::after,body.custom-color .topBottom-leftRightCorner::before,body.custom-color .topBottom-leftRightCorner::after{border-color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .categories-list li a:hover{color:<?php esc_attr_e($cor_de_fundo); ?> !important}body.custom-color h2 a:hover,body.custom-color h3 a:hover,body.custom-color h4 a:hover,body.custom-color h5 a:hover,body.custom-color h6 a:hover{color:<?php esc_attr_e($cor_de_fundo); ?> !important}body.custom-color .entry-content h1,body.custom-color .entry-content h2,body.custom-color .entry-content h3,body.custom-color .entry-content h4,body.custom-color .entry-content h5,body.custom-color .entry-content h6{color:<?php esc_attr_e($cor_de_fundo); ?> !important}body.custom-color .plyr--full-ui input[type="range"]{color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .plyr--audio .plyr__control.plyr__tab-focus,body.custom-color .plyr--audio .plyr__control:hover,body.custom-color .plyr--audio .plyr__control[aria-expanded="true"]{background:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .plyr--audio .plyr__control.plyr__tab-focus,body.custom-color .plyr--audio .plyr__control:hover,body.custom-color .plyr--audio .plyr__control[aria-expanded="true"]{background:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .author.vcard a{color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .comments-link a{color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .media-heading a{color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .comment-metadata a{color:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color #comments .btn-comment{background:<?php esc_attr_e($cor_de_fundo); ?>}body.custom-color .pagination-wrap .page-numbers li span{background:<?php esc_attr_e($cor_de_fundo); ?>;border:1px solid <?php esc_attr_e($cor_de_fundo); ?>}
+blockquote{border-color: <?php esc_attr_e($cor_de_fundo); ?>;}
+blockquote:after,blockquote:before{color:<?php esc_attr_e($cor_de_fundo); ?>;}
 </style><?php
+	endif;
 }
 add_action('wp_head', 'firstling_hook_css');

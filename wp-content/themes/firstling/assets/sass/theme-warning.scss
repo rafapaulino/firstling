@@ -73,4 +73,11 @@ body.warning {
         background: $warning;      
         border: 1px solid $warning;
     }
+
+    blockquote {
+        border-color: $warning;
+        &:before, &:after {
+            color: $warning;
+        }
+    }
 }

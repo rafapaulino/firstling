@@ -73,4 +73,11 @@ body.red {
         background: $red;      
         border: 1px solid $red;
     }
+
+    blockquote {
+        border-color: $red;
+        &:before, &:after {
+            color: $red;
+        }
+    }
 }

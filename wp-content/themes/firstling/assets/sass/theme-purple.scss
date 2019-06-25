@@ -73,4 +73,11 @@ body.purple {
         background: $purple;      
         border: 1px solid $purple;
     }
+
+    blockquote {
+        border-color: $purple;
+        &:before, &:after {
+            color: $purple;
+        }
+    }
 }

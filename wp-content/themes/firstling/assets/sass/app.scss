@@ -116,6 +116,94 @@ main.open {
     }
 }
 
+
+blockquote {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 0 0 1em;
+    border-left: 0.2em solid $primary;
+    font-family: $fontDefault;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    font-weight: 100;
+    margin-bottom: 3em;
+
+    p {
+        display: inline;
+        margin: 0;
+        padding: 0 6px 0 6px;
+    }
+
+    &:before, &:after {
+        content: '\201C';
+        font-family: $fontSecound;
+        color: $primary;
+    }
+
+    &:after {
+        content: '\201D';
+    }
+
+    cite {
+        float: right;
+    }
+}
+
+.wp-block-pullquote {
+    blockquote {
+        text-align: left;
+        p {
+            font-size: 1.0em; 
+        }
+
+        cite {
+            float: right;
+        }
+    }
+}
+
+cite {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #747373 !important;
+}
+
+
+pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    font-family: $fontDefault;
+    font-size: 0.9em;
+    background: #f8f8f8;
+}
+
+pre code {
+    border: none;
+    background: none;
+    line-height: 1em;
+    letter-spacing: normal;
+    word-break: break-all;
+}
+
+code {
+    font-family: Monaco, monospace !important;
+    font-size: 0.8em;
+    line-height: 100%;
+    background-color: #eee;
+    padding: 0.2em;
+    letter-spacing: -0.05em;
+    word-break: normal;
+}
+
 @import 'header.scss';
 @import 'footer.scss';
 @import 'sidebar.scss';

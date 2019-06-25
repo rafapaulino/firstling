@@ -58,6 +58,14 @@
                 font-size: 15px; 
             }
 
+            img {
+                max-width: 100%;
+            }
+
+            .wp-block-embed-instagram {
+                margin-bottom: 2em;
+            }
+
             .wp-block-embed__wrapper,
             .wp-block-preformatted {
                 position: relative;

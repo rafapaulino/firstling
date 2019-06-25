@@ -73,4 +73,11 @@ body.green {
         background: $green;      
         border: 1px solid $green;
     }
+
+    blockquote {
+        border-color: $green;
+        &:before, &:after {
+            color: $green;
+        }
+    }
 }

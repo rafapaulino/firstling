@@ -13,7 +13,7 @@ $prev_post = get_previous_post();
 if (!empty( $prev_post )):
     $link = esc_url( get_permalink( $prev_post->ID ) );
     $title = wpSubstr( $prev_post->post_title, 50 );
-    $img = getImageSRC( $next_post->ID, 'next-prev');
+    $img = getImageSRC( $prev_post->ID, 'next-prev');
 ?>
 <div class="postNavigation prevPost d-print-none" itemscope itemtype="http://schema.org/Article">
     <a href="<?php echo $link; ?>" class="img ui-box topBottom-leftRightCorner" title="<?php echo $title; ?>" itemprop="url">
