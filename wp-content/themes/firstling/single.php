@@ -58,7 +58,10 @@ get_header(); ?>
 						<?php if ( get_the_author_meta( 'description' ) ) : ?>
 							<div class="author-biography">
 								<span class="author-avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?></span>
-								<span class="author-description"><?php the_author_meta( 'description' ); ?></span>
+								<span class="author-description">
+									<strong><?php the_author_meta('user_nicename'); ?></strong>
+									<?php the_author_meta( 'description' ); ?>
+								</span>
 							</div><!-- .author-biography -->
 						<?php endif; ?>
 

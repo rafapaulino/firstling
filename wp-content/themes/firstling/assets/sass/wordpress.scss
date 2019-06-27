@@ -303,3 +303,8 @@ table.wp-block-table.is-style-stripes td {
 	border: 1px solid #dddddd;
 	border: 1px solid rgba(0, 0, 0, 0.12);
 }
+
+/* remove  audio player do wordpress */
+.mejs-audio {
+	display: none !important;
+}

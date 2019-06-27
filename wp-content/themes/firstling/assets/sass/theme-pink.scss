@@ -28,6 +28,18 @@ body.pink {
         h1, h2, h3, h4, h5, h6 {
             color: $pink !important;
         }
+
+        h1.su-post-title, 
+        h2.su-post-title, 
+        h3.su-post-title,
+        h4.su-post-title, 
+        h5.su-post-title, 
+        h6.su-post-title {
+            color: $pink;
+            a {
+                color: $pink;
+            }
+        }
     }
 
     /* volume do player de áudio */
@@ -77,6 +89,12 @@ body.pink {
     blockquote {
         border-color: $pink;
         &:before, &:after {
+            color: $pink;
+        }
+    }
+
+    .author-description {
+        strong {
             color: $pink;
         }
     }

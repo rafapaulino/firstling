@@ -184,6 +184,8 @@ pre {
     font-family: $fontDefault;
     font-size: 0.9em;
     background: #f8f8f8;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 pre code {
@@ -192,6 +194,8 @@ pre code {
     line-height: 1em;
     letter-spacing: normal;
     word-break: break-all;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 code {
@@ -202,6 +206,19 @@ code {
     padding: 0.2em;
     letter-spacing: -0.05em;
     word-break: normal;
+}
+
+/* contact form 7 */
+.wpcf7-form {
+    label {
+        display: block;
+        clear: both;
+
+    }
+    .form-group {
+        display: block;
+        clear: both;
+    }
 }
 
 @import 'header.scss';

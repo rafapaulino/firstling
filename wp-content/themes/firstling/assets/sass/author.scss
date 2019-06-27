@@ -25,6 +25,14 @@
         display: block;
         /* width: 55%; */
         width: 100%;
+        
+        strong {
+            display: block;
+            width: 100%;
+            margin-bottom: 4px;
+            text-transform: capitalize;
+            color: $primary;
+        }
 
         @media (min-width: 400px) {
             width: 70%;

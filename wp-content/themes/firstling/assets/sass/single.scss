@@ -34,6 +34,7 @@
             font-weight: normal;
             font-size: 14px;
             font-family: $fontSecound;
+            padding-bottom: 10px;
 
             h1, h2, h3, h4, h5, h6 {
                 font-family: $fontDefault;
@@ -57,15 +58,30 @@
             h6 {
                 font-size: 15px; 
             }
+            /* shortcodes */
+            h1.su-post-title, 
+            h2.su-post-title, 
+            h3.su-post-title,
+            h4.su-post-title, 
+            h5.su-post-title, 
+            h6.su-post-title {
+                font-family: $fontDefault;
+                color: $primary; 
+                font-weight: normal;
+
+                a {
+                    color: $primary; 
+                    text-decoration: none;
+                    font-family: $fontDefault;
+                    font-weight: normal;
+                }
+            }
 
             img {
                 max-width: 100%;
+                height: auto;
             }
-
-            .wp-block-embed-instagram {
-                margin-bottom: 2em;
-            }
-
+           
             .wp-block-embed__wrapper,
             .wp-block-preformatted {
                 position: relative;
@@ -81,6 +97,35 @@
                     height: 100% !important;
                 }
             }
+
+            .instagram-media {
+                margin:15px auto !important;
+            }
+            .wp-block-embed-instagram {
+                margin: 0;
+                max-width: 100%;
+                width: 100%;
+                position: relative;
+
+                .wp-block-embed__wrapper {
+                    max-width: 100%;
+                    height: auto;
+                    padding-bottom: 20px;
+                    position: initial;
+
+                    iframe {
+                        max-width: 100%;
+                    }
+                }
+            }
+            .wp-block-embed-instagram::after {
+                content: "";
+                display: table;
+                table-layout: fixed;
+            }
+
+
+
             .wp-block-video {
                 overflow: hidden;
                 width: 100%;

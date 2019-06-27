@@ -28,6 +28,18 @@ body.purple {
         h1, h2, h3, h4, h5, h6 {
             color: $purple !important;
         }
+
+        h1.su-post-title, 
+        h2.su-post-title, 
+        h3.su-post-title,
+        h4.su-post-title, 
+        h5.su-post-title, 
+        h6.su-post-title {
+            color: $purple;
+            a {
+                color: $purple;
+            }
+        }
     }
 
     /* volume do player de áudio */
@@ -77,6 +89,12 @@ body.purple {
     blockquote {
         border-color: $purple;
         &:before, &:after {
+            color: $purple;
+        }
+    }
+
+    .author-description {
+        strong {
             color: $purple;
         }
     }

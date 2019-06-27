@@ -23,7 +23,7 @@ get_header(); ?>
 		<div class="col-12 col-md-8 wrap">
 			<main class="content-home">
 				<header class="page-header">
-					<?php printf( __( 'Search Results for: %s', 'odin' ), get_search_query() ); ?>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'odin' ), get_search_query() ); ?></h1>
 				</header><!-- .page-header -->
 				<?php 
 					if ( have_posts() ) : 
