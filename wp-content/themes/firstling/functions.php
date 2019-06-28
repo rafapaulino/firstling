@@ -45,6 +45,7 @@ require_once THEME_PATH . '/custom/helpers.php';
 require_once THEME_PATH . '/widgets/sidebar.php';
 require_once THEME_PATH . '/custom/navwalker.php';
 require_once THEME_PATH . '/custom/theme-custom-options-kirki.php';
+require_once THEME_PATH . '/custom/comments-loop.php';
 
 if ( ! function_exists( 'odin_setup_features' ) ) {
 

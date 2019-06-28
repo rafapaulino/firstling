@@ -17,7 +17,7 @@ get_header(); ?>
 <div class="container">
 	<?php 
 		$latest_posts = get_posts(array(
-			'numberposts' => 5,
+			'numberposts' => firstling_carrossel_total(),
 			'orderby'    => 'date',
 			'sort_order' => 'desc'
 		));

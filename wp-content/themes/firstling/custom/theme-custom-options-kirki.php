@@ -95,6 +95,16 @@ function firstling_kirki_fields( $fields ) {
 		'section'     => 'firstling_configuracoes_principais',
 	);
 
+	$fields[] = array(
+		'type'        => 'number',
+		'setting'     => 'carrossel',
+		'label'       => __( 'Itens no carrossel', 'kirki' ),
+		'description' => __( 'Escolha a quantidade de itens que aparece no carrosel da home.', 'kirki' ),
+		'help'        => __( 'Escolha a quantidade de itens que aparece no carrosel da home.', 'kirki' ),
+		'section'     => 'firstling_configuracoes_principais',
+		'default'     => '5',
+		'priority'    => 10,
+	);
 
     return $fields;
 
@@ -134,3 +144,10 @@ blockquote:after,blockquote:before{color:<?php esc_attr_e($cor_de_fundo); ?>;}
 	endif;
 }
 add_action('wp_head', 'firstling_hook_css');
+
+
+function firstling_carrossel_total()
+{
+	$total = Kirki::get_option( 'carrossel' );
+	return intval($total);
+}

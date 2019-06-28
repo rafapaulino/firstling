@@ -184,84 +184,11 @@
 
         }
 
-        .comment-notes {
-            font-size: 12px;
-        }
-        .comment-form-cookies-consent {
-            label {
-                font-size: 12px;
-                margin-left: 5px;
-            }
-        }
-        .comments-link {
-            a {
-                color: $primary;
-            }
-        }
-
-        #comments-title {
-            font-size: 1rem;
-        }
         .media-heading {
             a {
                 color: $primary; 
             }
         }
 
-        #comments {
-
-            .btn-comment {
-                background: $primary;
-                color: #fff;
-                outline: none;
-                border: 0;
-                border-radius: 0;
-                font-size: .8rem;
-            }
-
-            .media-list {
-                margin: 0;
-                padding: 0;
-
-                .comment-body {
-                    width: 100%;
-                    box-sizing: border-box;
-        
-                    .media-left {
-                        display: inline-block;
-                        margin: 0;
-                        float: left;
-                    }
-                    .media-body {
-                        float: right;
-                        margin: 0;
-                        width: 85%;
-
-                        .comment-meta {
-                            margin: 0 0 10px 0;
-                            font-size: 1rem;
-
-                            h5 {
-                                font-size: 1rem;
-                            }
-
-                            .comment-awaiting-moderation {
-                                font-size: 0.8rem;
-                            }
-                        }
-
-                        .comment-content {
-                            font-size: 0.9rem;
-                        }
-                        .comment-metadata {
-                            font-size: 0.9rem;
-                            a {
-                                color: $primary;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }

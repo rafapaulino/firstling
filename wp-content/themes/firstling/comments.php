@@ -32,7 +32,7 @@
 			</nav>
 		<?php endif; ?>
 		<ul class="media-list">
-			<?php wp_list_comments( array( 'callback' => 'odin_comments_loop' ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'firstling_comments_loop' ) ); ?>
 		</ul>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above">
