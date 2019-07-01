@@ -221,6 +221,11 @@ code {
     }
 }
 
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
 @import 'header.scss';
 @import 'footer.scss';
 @import 'sidebar.scss';
@@ -232,6 +237,12 @@ code {
 @import 'wordpress.scss';
 @import 'comments.scss';
 
+.topBottom-leftRightCorner .ui-border-element::before,
+.topBottom-leftRightCorner .ui-border-element::after,
+.topBottom-leftRightCorner::before,
+.topBottom-leftRightCorner::after {
+    border-width: 3px;
+}
 
 /* CORES DO TEMA */
 /* cores das bordas */

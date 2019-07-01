@@ -82,7 +82,7 @@
                 height: auto;
             }
            
-            .wp-block-embed__wrapper,
+            .wp-block-embed__wrapper:not(.wp-block-embed-instagram),
             .wp-block-preformatted {
                 position: relative;
                 padding-bottom: 56.25%; /* 16:9 */
@@ -98,33 +98,11 @@
                 }
             }
 
-            .instagram-media {
-                margin:15px auto !important;
-            }
             .wp-block-embed-instagram {
-                margin: 0;
-                max-width: 100%;
-                width: 100%;
-                position: relative;
-
-                .wp-block-embed__wrapper {
-                    max-width: 100%;
-                    height: auto;
-                    padding-bottom: 20px;
-                    position: initial;
-
-                    iframe {
-                        max-width: 100%;
-                    }
+                iframe {
+                    min-width: auto !important;
                 }
             }
-            .wp-block-embed-instagram::after {
-                content: "";
-                display: table;
-                table-layout: fixed;
-            }
-
-
 
             .wp-block-video {
                 overflow: hidden;
