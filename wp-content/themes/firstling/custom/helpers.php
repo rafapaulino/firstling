@@ -10,7 +10,8 @@ function getImageSRC($id, $size = 'thumbnail')
     if ( $image_attributes ) :
         return esc_attr($image_attributes[0]);
     else :
-        return esc_url('http://placehold.it/1140x426');
+        $img = get_template_directory_uri() . '/assets/image/locomotive-60539_1920.jpg';
+        return esc_url($img);
     endif;
 }
 
