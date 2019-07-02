@@ -10,7 +10,7 @@ function getImageSRC($id, $size = 'thumbnail')
     if ( $image_attributes ) :
         return esc_attr($image_attributes[0]);
     else :
-        $img = get_template_directory_uri() . '/assets/image/locomotive-60539_1920.jpg';
+        $img = get_template_directory_uri() . '/assets/images/locomotive-60539_1920.jpg';
         return esc_url($img);
     endif;
 }
