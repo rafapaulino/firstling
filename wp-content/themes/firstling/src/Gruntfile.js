@@ -53,8 +53,9 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/rafa-carrossel/js/carrossel.min.js',
 					   '<%= config.bower_components %>/noticias-relacionadas/js/noticias-relacionadas.min.js',
 					   '<%= config.bower_components %>/plyr/dist/plyr.min.js',
-					   '<%= config.bower_components %>/smartmenus/dist/jquery.smartmenus.min.js',
-					   '<%= config.bower_components %>/smartmenus/dist/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.min.js'
+					   '<%= config.bower_components %>/smartmenus/src/jquery.smartmenus.js',
+					   '<%= config.bower_components %>/smartmenus/dist/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.min.js',
+					   '<%= config.bower_components %>/venobox/venobox/venobox.min.js',
 				   ],
 				   '<%= config.js %>/app.min.js': [
 					   '<%= config.devjs %>/app.js',
@@ -93,6 +94,7 @@ module.exports = function(grunt) {
 					   '<%= config.bower_components %>/noticias-relacionadas/css/noticias-relacionadas.css',
 					   '<%= config.bower_components %>/plyr/dist/plyr.css',
 					   '<%= config.bower_components %>/smartmenus/src/addons/bootstrap-4/jquery.smartmenus.bootstrap-4.css',
+					   '<%= config.bower_components %>/venobox/venobox/venobox.css',
 				   ],
 				   '<%= config.css %>/app.min.css': [
 					   '<%= config.css %>/app.css'

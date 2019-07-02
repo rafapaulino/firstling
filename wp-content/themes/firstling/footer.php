@@ -38,8 +38,6 @@
 		<div class="fas fa-arrow-up" aria-hidden="true" title="Voltar ao Topo"></div>
 	</div>
 </footer><!--/ footer -->
-
-
 <?php wp_footer(); ?>
 </body>
 </html>

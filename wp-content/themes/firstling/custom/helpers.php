@@ -35,3 +35,8 @@ function wpSubstr($string, $limit = 150)
     return esc_attr($new_string);
 }
 
+function firstling_remove_type_attr($tag, $handle) {
+    return preg_replace( "/type=['\"]text\/(javascript|css)['\"]/", '', $tag );
+}
+add_filter('style_loader_tag', 'firstling_remove_type_attr', 10, 2);
+add_filter('script_loader_tag', 'firstling_remove_type_attr', 10, 2);

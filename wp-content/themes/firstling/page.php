@@ -14,7 +14,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-12 wrap">
-			<main class="content-single">
+			<div class="content-single">
 				<?php 
 					if ( have_posts() ) : 
 						while ( have_posts() ) : the_post(); 
@@ -51,7 +51,7 @@ get_header(); ?>
 					endif; 
 				?>
 				</article>
-			</main>
+			</div>
 		</div>
 	</div>
 </div>

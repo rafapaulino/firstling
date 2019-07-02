@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-8 wrap">
-			<main class="content-home">
+			<div class="content-home">
 				<?php 
 					if ( have_posts() ) : 
 						while ( have_posts() ) : the_post(); 
@@ -48,7 +48,7 @@ get_header(); ?>
 						get_template_part( 'content-none' );
 					endif; 
 				?>
-			</main>
+			</div>
 		</div>
 		<?php get_sidebar(); ?>
 	</div>

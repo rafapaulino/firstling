@@ -34,17 +34,6 @@ body {
     position: relative; 
 }
 
-main {
-    transform: translateX(0);
-    transition: all .25s linear;
-    width: 100%;
-    min-height: 100%;
-}
-
-main.open {
-    transform: translateX(280px);
-}
-
 /* bordas e plano de fundo das caixa */
 .box-default {
     border: 1px solid #DADADA;

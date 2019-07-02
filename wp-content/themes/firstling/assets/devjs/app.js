@@ -100,7 +100,29 @@
 
         $public.initMenu = function () {
             $( window ).on( "load", function() {
-               $('#navbarNavDropdown').smartmenus();;
+               $('#navbarNavDropdown').smartmenus();
+            });
+        };
+
+        $public.imageGallery = function () {
+            jQuery(document).ready(function() {
+                if (jQuery('.wp-block-gallery').length > 0) {
+                    jQuery('li.blocks-gallery-item figure img').each(function(){
+                        var $this = $(this);
+                        var $parent = $this.parent();
+    
+                        if ( $parent.is( "a" ) ) {
+                            $parent.addClass('venobox').attr('data-gall','myGallery');
+                        } else {
+                            var $src = $this.attr('src');
+                            var $html = '<a href="' + $src + '" data-gall="myGallery" target="_blank" class="venobox"></a>';
+                            $this.wrap($html);
+                        }
+                    });
+                    window.setTimeout(function(){
+                        jQuery('.venobox').venobox(); 
+                    }, 1000);
+                }
             });
         };
 
@@ -117,5 +139,6 @@
     app.customVideoPlayer();
     //app.customIframeMediaPlayer();
     app.initMenu();
+    app.imageGallery();
 
 })(window, document, jQuery);

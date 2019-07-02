@@ -21,7 +21,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-8 wrap">
-			<main class="content-home">
+			<div class="content-home">
 				<header class="page-header">
 					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'odin' ), get_search_query() ); ?></h1>
 				</header><!-- .page-header -->
@@ -35,7 +35,7 @@ get_header(); ?>
 						get_template_part( 'content-none' );
 					endif; 
 				?>
-			</main>
+			</div>
 		</div>
 		<?php get_sidebar(); ?>
 	</div>

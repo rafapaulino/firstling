@@ -21,7 +21,7 @@ get_header(); ?>
 <div class="container">
 	<div class="row">
 		<div class="col-12 col-md-8 wrap">
-			<main class="content-home">
+			<div class="content-home">
 				<header class="page-header">
 					<?php
 						the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -38,7 +38,7 @@ get_header(); ?>
 						get_template_part( 'content-none' );
 					endif;
 				?>
-			</main>
+			</div>
 		</div>
 		<?php get_sidebar(); ?>
 	</div>
