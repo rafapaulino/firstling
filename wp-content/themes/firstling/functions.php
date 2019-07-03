@@ -47,6 +47,8 @@ require_once THEME_PATH . '/custom/navwalker.php';
 require_once THEME_PATH . '/custom/theme-custom-options-kirki.php';
 require_once THEME_PATH . '/custom/comments-loop.php';
 
+//add_filter( 'media_library_show_audio_playlist', '__return_false' );
+
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
 	/**
