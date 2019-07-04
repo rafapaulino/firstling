@@ -22,10 +22,10 @@ get_header(); ?>
 						<div class="image-description">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Image total size: %s pixels', 'odin' ), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'odin' ) ), $metadata['width'], $metadata['height'] ) );
+								printf( __( 'Image total size: %s pixels', 'firstling'), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'firstling') ), $metadata['width'], $metadata['height'] ) );
 								
 								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Image total size: %s pixels', 'odin' ), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'odin' ) ), $metadata['width'], $metadata['height'] ) );
+								printf( __( 'Image total size: %s pixels', 'firstling'), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'firstling') ), $metadata['width'], $metadata['height'] ) );
 							?>
 						</div>
 					</header><!-- .page-header -->

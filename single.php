@@ -34,9 +34,9 @@ get_header(); ?>
 
 					<div class="entry-content">
 						<?php
-							the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'odin' ) );
+							the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'firstling') );
 							wp_link_pages( array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'odin' ) . '</span>',
+								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'firstling') . '</span>',
 								'after'       => '</div>',
 								'link_before' => '<span>',
 								'link_after'  => '</span>',
@@ -46,7 +46,7 @@ get_header(); ?>
 
 					<footer class="entry-meta">
 						<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
-							<span class="cat-links"><?php echo __( 'Posted in:', 'odin' ) . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'odin' ) ); ?></span>
+							<span class="cat-links"><?php echo __( 'Posted in:', 'firstling') . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'firstling') ); ?></span>
 						<?php endif; ?>
 						
 						<?php if (has_tag()) : ?>
@@ -66,7 +66,7 @@ get_header(); ?>
 						<?php endif; ?>
 
 						<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'odin' ), __( '1 Comment', 'odin' ), __( '% Comments', 'odin' ) ); ?></span>
+							<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'firstling'), __( '1 Comment', 'firstling'), __( '% Comments', 'firstling') ); ?></span>
 						<?php endif; ?>
 
 						<div class="prev-next-content">

@@ -61,15 +61,15 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		/**
 		 * Add support for multiple languages.
 		 */
-		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'firstling', get_template_directory() . '/languages' );
 
 		/**
 		 * Register nav menus.
 		 */
 		register_nav_menus(
 			array(
-				'main-menu' => __( 'Main Menu', 'odin' ),
-				'footer-menu' => __( 'Footer Menu', 'odin' )
+				'main-menu' => __( 'Main Menu', 'firstling' ),
+				'footer-menu' => __( 'Footer Menu', 'firstling' )
 			)
 		);
 
@@ -154,9 +154,9 @@ add_action( 'after_setup_theme', 'odin_setup_features' );
 function odin_widgets_init() {
 	register_sidebar(
 		array(
-			'name' => __( 'Main Sidebar', 'odin' ),
+			'name' => __( 'Main Sidebar', 'firstling' ),
 			'id' => 'main-sidebar',
-			'description' => __( 'Site Main Sidebar', 'odin' ),
+			'description' => __( 'Site Main Sidebar', 'firstling' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widgettitle widget-title">',

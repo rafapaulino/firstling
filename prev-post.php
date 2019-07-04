@@ -22,7 +22,7 @@ if (!empty( $prev_post )):
         </span>
     </a>
     <a href="<?php echo $link; ?>" title="<?php echo $title; ?>" class="title">
-        <span><?php esc_attr_e('Prev','odin'); ?></span>
+        <span><?php esc_attr_e('Prev','firstling'); ?></span>
         <h3 itemprop="headline"><?php echo $title; ?></h3>
     </a>
 </div>

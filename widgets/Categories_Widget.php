@@ -12,9 +12,9 @@ class Categories_Widget extends WP_Widget
     {
         $widget_options = array( 
             'classname' => 'categories-box',
-            'description' => __('With this Widget you put the categories in the sidebar.'),
+            'description' => __('With this Widget you put the categories in the sidebar.','firstling'),
         );        
-        parent::__construct( 'categories-box', __('Categories'), $widget_options );
+        parent::__construct( 'categories-box', __('Categories', 'firstling'), $widget_options );
     }
 
     public function form( $instance ) 
@@ -22,7 +22,7 @@ class Categories_Widget extends WP_Widget
         $title = ! empty( $instance['categories_title'] ) ? $instance['categories_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'categories_title' ); ?>"><?php echo __('Title'); ?>:</label>
+            <label for="<?php echo $this->get_field_id( 'categories_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
             <input type="text" id="<?php echo $this->get_field_id( 'categories_title' ); ?>" name="<?php echo $this->get_field_name( 'categories_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p>
         <?php

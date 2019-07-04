@@ -25,9 +25,9 @@ class SocialSidebar_Widget extends WP_Widget
         
         $widget_options = array( 
             'classname' => 'social-sidebar-box',
-            'description' => __('With this Widget you put the social network icons in the sidebar.'),
+            'description' => __('With this Widget you put the social network icons in the sidebar.','firstling'),
         );        
-        parent::__construct( 'social-sidebar-box', __('Social Network'), $widget_options );
+        parent::__construct( 'social-sidebar-box', __('Social Network','firstling'), $widget_options );
     }
 
     public function form( $instance ) 
@@ -35,7 +35,7 @@ class SocialSidebar_Widget extends WP_Widget
         $title = ! empty( $instance['social_sidebar_title'] ) ? $instance['social_sidebar_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'social_sidebar_title' ); ?>"><?php echo __('Title'); ?>:</label>
+            <label for="<?php echo $this->get_field_id( 'social_sidebar_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
             <input type="text" id="<?php echo $this->get_field_id( 'social_sidebar_title' ); ?>" name="<?php echo $this->get_field_name( 'social_sidebar_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p><br><br>
         <?php
@@ -90,11 +90,11 @@ class SocialSidebar_Widget extends WP_Widget
             $link_instance = ! empty( $instance[$link] ) ? $instance[$link] : '';
             ?>
             <p>
-                <label for="<?php echo $this->get_field_id($link); ?>"><?php echo __('Link'); ?>:</label>
+                <label for="<?php echo $this->get_field_id($link); ?>"><?php echo __('Link','firstling'); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id($link); ?>" name="<?php echo $this->get_field_name($link); ?>" value="<?php echo esc_attr($link_instance); ?>" class="widefat title" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id($icon); ?>"><?php echo __('Icon'); ?>:</label>
+                <label for="<?php echo $this->get_field_id($icon); ?>"><?php echo __('Icon','firstling'); ?>:</label>
                 
                 <select name="<?php echo $this->get_field_name($icon); ?>" id="<?php echo $this->get_field_id($icon); ?>" class="widefat title">
                     <?php foreach($this->icons as $key => $value): ?>

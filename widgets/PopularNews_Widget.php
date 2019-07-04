@@ -12,9 +12,9 @@ class PopularNews_Widget extends WP_Widget
     {
         $widget_options = array( 
             'classname' => 'popular-news-box',
-            'description' => __('With this Widget you put the popular news in the sidebar.'),
+            'description' => __('With this Widget you put the popular news in the sidebar.','firstling'),
         );        
-        parent::__construct( 'popular-news-box', __('Popular News'), $widget_options );
+        parent::__construct( 'popular-news-box', __('Popular News','firstling'), $widget_options );
     }
 
     public function form( $instance ) 
@@ -23,11 +23,11 @@ class PopularNews_Widget extends WP_Widget
         $title = ! empty( $instance['popular_news_title'] ) ? $instance['popular_news_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'popular_news_title' ); ?>"><?php echo __('Title'); ?>:</label>
+            <label for="<?php echo $this->get_field_id( 'popular_news_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
             <input type="text" id="<?php echo $this->get_field_id( 'popular_news_title' ); ?>" name="<?php echo $this->get_field_name( 'popular_news_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'popular_news_total' ); ?>"><?php echo __('Total News'); ?>:</label>
+            <label for="<?php echo $this->get_field_id( 'popular_news_total' ); ?>"><?php echo __('Total News','firstling'); ?>:</label>
             <input type="text" id="<?php echo $this->get_field_id( 'popular_news_total' ); ?>" name="<?php echo $this->get_field_name( 'popular_news_total' ); ?>" value="<?php echo esc_attr( $total ); ?>" class="widefat title" />
         </p>
         <?php

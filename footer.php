@@ -30,12 +30,12 @@
 					);
 				?>
 			</nav>
-			<p class="col-md-6 col-sm-12">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Rafael Paulino</a> forces with <a href="%s" rel="nofollow" target="_blank">WordPress</a> and <a href="%s" rel="nofollow" target="_blank">Odin</a>.', 'odin' ), 'https://rafapaulino.com/', 'http://wordpress.org/','http://wpod.in/' ); ?></p>
+			<p class="col-md-6 col-sm-12">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'firstling'); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Rafael Paulino</a> forces with <a href="%s" rel="nofollow" target="_blank">WordPress</a> and <a href="%s" rel="nofollow" target="_blank">Odin</a>.', 'firstling'), 'https://rafapaulino.com/', 'http://wordpress.org/','http://wpod.in/' ); ?></p>
 		</div>
 	</div><!-- .container -->
 
 	<div id="stop" class="backToTop">
-		<div class="fas fa-arrow-up" aria-hidden="true" title="Voltar ao Topo"></div>
+		<div class="fas fa-arrow-up" aria-hidden="true" title="<?php esc_attr_e("Back to Top", "firstling"); ?>"></div>
 	</div>
 </footer><!--/ footer -->
 <?php wp_footer(); ?>

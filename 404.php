@@ -16,10 +16,10 @@ get_header();
 				
 				<div class="notfound">
 					<div class="notfound-404">
-						<h2>Página Não Encontrada</h2>
+						<h2><?php esc_attr_e("Page not found", "firstling"); ?></h2>
 						<h3><span>4</span><span>0</span><span>4</span></h3>
 					</div>
-					<h4>A página que você procura não foi encontrada, por favor utilize o formulário abaixo para fazer uma busca no site.</h4>
+					<h4><?php esc_attr_e("The page you are looking for was not found, please use the form below to perform a search on the site.", "firstling"); ?></h4>
 					<?php get_search_form(); ?>
 				</div>
 

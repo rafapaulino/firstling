@@ -25,9 +25,9 @@ class TopSocialSidebar_Widget extends WP_Widget
         
         $widget_options = array( 
             'classname' => 'top-social-box',
-            'description' => __('With this Widget you put the social network icons in the top.'),
+            'description' => __('With this Widget you put the social network icons in the top.','firstling'),
         );        
-        parent::__construct( 'top-social-box', __('Social Network and Links'), $widget_options );
+        parent::__construct( 'top-social-box', __('Social Network and Links','firstling'), $widget_options );
     }
 
     public function form( $instance ) 
@@ -91,11 +91,11 @@ class TopSocialSidebar_Widget extends WP_Widget
 
             ?>
             <p>
-                <label for="<?php echo $this->get_field_id($link_href); ?>"><?php echo __('Link'); ?>:</label>
+                <label for="<?php echo $this->get_field_id($link_href); ?>"><?php echo __('Link','firstling'); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id($link_href); ?>" name="<?php echo $this->get_field_name($link_href); ?>" value="<?php echo esc_attr( $link ); ?>" class="widefat title" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id($link_title); ?>"><?php echo __('Title'); ?>:</label>
+                <label for="<?php echo $this->get_field_id($link_title); ?>"><?php echo __('Title','firstling'); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id($link_title); ?>" name="<?php echo $this->get_field_name($link_title); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
             </p><hr>
             <?php
@@ -112,11 +112,11 @@ class TopSocialSidebar_Widget extends WP_Widget
             $link_instance = ! empty( $instance[$link] ) ? $instance[$link] : '';
             ?>
             <p>
-                <label for="<?php echo $this->get_field_id($link); ?>"><?php echo __('Link'); ?>:</label>
+                <label for="<?php echo $this->get_field_id($link); ?>"><?php echo __('Link','firstling'); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id($link); ?>" name="<?php echo $this->get_field_name($link); ?>" value="<?php echo esc_attr($link_instance); ?>" class="widefat title" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id($icon); ?>"><?php echo __('Icon'); ?>:</label>
+                <label for="<?php echo $this->get_field_id($icon); ?>"><?php echo __('Icon','firstling'); ?>:</label>
                 
                 <select name="<?php echo $this->get_field_name($icon); ?>" id="<?php echo $this->get_field_id($icon); ?>" class="widefat title">
                     <?php foreach($this->icons as $key => $value): ?>
@@ -161,9 +161,9 @@ class TopSocialSidebar_Widget extends WP_Widget
             if (trim($link_html) !== ""):
             ?>
                 <li class="social <?php echo $icon_html; ?> bgAnimated">
-                    <a href="<?php echo $link_html; ?>" accesskey="<?php echo intval($x); ?>" title="<?php esc_attr_e('Click here to access:'); ?> <?php echo $title; ?>">
+                    <a href="<?php echo $link_html; ?>" accesskey="<?php echo intval($x); ?>" title="<?php esc_attr_e('Click here to access:','firstling'); ?> <?php echo $title; ?>">
                         <i class="<?php echo $icon_class; ?>" aria-hidden="true">
-                            <span class="sr-only"><?php esc_attr_e('Click here to access:'); ?> <?php echo $title; ?></span>
+                            <span class="sr-only"><?php esc_attr_e('Click here to access:','firstling'); ?> <?php echo $title; ?></span>
                         </i>
                     </a>
                 </li>               

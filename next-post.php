@@ -22,7 +22,7 @@ if (!empty( $next_post )):
         </span>
     </a>
     <a href="<?php echo $link; ?>" title="<?php echo $title; ?>" class="title">
-        <span><?php esc_attr_e('Next','odin'); ?></span>
+        <span><?php esc_attr_e('Next','firstling'); ?></span>
         <h3 itemprop="headline"><?php echo $title; ?></h3>
     </a>
 </div>

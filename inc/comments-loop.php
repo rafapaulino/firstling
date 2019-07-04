@@ -18,7 +18,7 @@ if ( ! function_exists( 'odin_comment_loop' ) ) {
 			case 'trackback' :
 ?>
 				<li class="media post pingback">
-					<p><?php _e( 'Pingback:', 'odin' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'odin' ), '<span class="edit-link">', '</span>' ); ?></p>
+					<p><?php _e( 'Pingback:', 'firstling'); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'firstling'), '<span class="edit-link">', '</span>' ); ?></p>
 <?php
 			break;
 			default :
@@ -34,17 +34,17 @@ if ( ! function_exists( 'odin_comment_loop' ) ) {
 									<?php echo sprintf( '<strong><span class="fn">%1$s</span></strong>
 														 %2$s <a href="%3$s"><time datetime="%4$s">%5$s %6$s </time></a>
 														 <span class="says"> %7$s</span>',
-														 get_comment_author_link(), __( 'in', 'odin' ),
+														 get_comment_author_link(), __( 'in', 'firstling'),
 														 esc_url( get_comment_link( $comment->comment_ID ) ),
 														 get_comment_time( 'c' ),
-														 get_comment_date(), __( 'at', 'odin' ),
-														 get_comment_time(), __( 'said:', 'odin' ) ); ?>
+														 get_comment_date(), __( 'at', 'firstling'),
+														 get_comment_time(), __( 'said:', 'firstling') ); ?>
 								</h5>
 
-								<?php edit_comment_link( __( 'Edit', 'odin' ), '<span class="edit-link">', ' </span>' ); ?>
+								<?php edit_comment_link( __( 'Edit', 'firstling'), '<span class="edit-link">', ' </span>' ); ?>
 
 								<?php if ( $comment->comment_approved == '0' ) : ?>
-								<p class="comment-awaiting-moderation alert alert-info"><?php _e( 'Your comment is awaiting moderation.', 'odin' ); ?></p>
+								<p class="comment-awaiting-moderation alert alert-info"><?php _e( 'Your comment is awaiting moderation.', 'firstling'); ?></p>
 								<?php endif; ?>
 							</footer><!-- .comment-meta -->
 
@@ -53,7 +53,7 @@ if ( ! function_exists( 'odin_comment_loop' ) ) {
 							</div><!-- .comment-content -->
 
 							<div class="comment-metadata">
-								<span class="reply-link"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Respond', 'odin' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></span>
+								<span class="reply-link"><?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Respond', 'firstling'), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></span>
 							</div><!-- .comment-metadata -->
 						</div>
 					</article><!-- .comment-body -->

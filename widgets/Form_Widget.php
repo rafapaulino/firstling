@@ -12,9 +12,9 @@ class Form_Widget extends WP_Widget
     {
         $widget_options = array( 
             'classname' => 'search-box',
-            'description' => __('With this Widget you put the search form in the sidebar.'),
+            'description' => __('With this Widget you put the search form in the sidebar.','firstling'),
         );        
-        parent::__construct( 'search-box', __('Search Form'), $widget_options );
+        parent::__construct( 'search-box', __('Search Form','firstling'), $widget_options );
     }
 
     public function form( $instance ) 
@@ -22,7 +22,7 @@ class Form_Widget extends WP_Widget
         $title = ! empty( $instance['search_form_title'] ) ? $instance['search_form_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'search_form_title' ); ?>"><?php echo __('Title'); ?>:</label>
+            <label for="<?php echo $this->get_field_id( 'search_form_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
             <input type="text" id="<?php echo $this->get_field_id( 'search_form_title' ); ?>" name="<?php echo $this->get_field_name( 'search_form_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p>
         <?php

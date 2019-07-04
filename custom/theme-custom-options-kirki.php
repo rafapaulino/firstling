@@ -43,7 +43,7 @@ Kirki::add_config(
 function firstling_customize_register( $wp_customize ) 
 {    
     $wp_customize->add_section( 'firstling_configuracoes_principais', array(
-        'title'       => __( 'Configurações Principais do Tema', 'kirki' ),
+        'title'       => __( 'Main Theme Settings', 'firstling' ),
         'priority'    => 20,
     ) );
     
@@ -58,9 +58,9 @@ function firstling_kirki_fields( $fields ) {
     $fields[] = array(
 		'type'        => 'radio-image',
 		'setting'     => 'classe_tema',
-		'label'       => __( 'Esquema de Cores', 'kirki' ),
-		'description' => __( 'Escolha qual esquema de cores você deseja para o seu tema.', 'kirki' ),
-		'help'        => __( 'Escolha qual esquema de cores você deseja para o seu tema.', 'kirki' ),
+		'label'       => __( 'Color scheme', 'firstling' ),
+		'description' => __( 'Choose which color scheme you want for your theme.', 'firstling' ),
+		'help'        => __( 'Choose which color scheme you want for your theme.', 'firstling' ),
 		'section'     => 'firstling_configuracoes_principais',
 		'default'     => 'default',
 		'priority'    => 10,
@@ -77,9 +77,9 @@ function firstling_kirki_fields( $fields ) {
     $fields[] = array(
 		'type'        => 'switch',
 		'setting'     => 'sobrescrever_cores',
-		'label'       => __( 'Sobrescrever as cores acima', 'kirki' ),
-		'description' => __( 'Escolhendo essa opção você pode definir uma cor personalizada nos controles abaixo.', 'kirki' ),
-		'help'        => __( 'Escolhendo essa opção você pode definir uma cor personalizada nos controles abaixo.', 'kirki' ),
+		'label'       => __( 'Overwrite the above colors', 'firstling' ),
+		'description' => __( 'By choosing this option you can set a custom color in the controls below.', 'firstling' ),
+		'help'        => __( 'By choosing this option you can set a custom color in the controls below.', 'firstling' ),
 		'section'     => 'firstling_configuracoes_principais',
 		'default'     => 0,
 		'priority'    => 10,
@@ -89,18 +89,18 @@ function firstling_kirki_fields( $fields ) {
     $fields[] = array(
 		'type'        => 'color',
 		'setting'     => 'cor_de_fundo',
-		'label'       => __( 'Cor de fundo', 'kirki' ),
-		'description' => __( 'Escolha a cor de fundo personalizada para o seu tema.', 'kirki' ),
-		'help'        => __( 'A cor escolhida aqui será utilizada no tema.', 'kirki' ),
+		'label'       => __( 'Background color', 'firstling' ),
+		'description' => __( 'Choose the custom background color for your theme.', 'firstling' ),
+		'help'        => __( 'The color chosen here will be used in the theme.', 'firstling' ),
 		'section'     => 'firstling_configuracoes_principais',
 	);
 
 	$fields[] = array(
 		'type'        => 'number',
 		'setting'     => 'carrossel',
-		'label'       => __( 'Itens no carrossel', 'kirki' ),
-		'description' => __( 'Escolha a quantidade de itens que aparece no carrosel da home.', 'kirki' ),
-		'help'        => __( 'Escolha a quantidade de itens que aparece no carrosel da home.', 'kirki' ),
+		'label'       => __( 'Carousel Items', 'firstling' ),
+		'description' => __( 'Choose the amount of items that appear on the home carousel.', 'firstling' ),
+		'help'        => __( 'Choose the amount of items that appear on the home carousel.', 'firstling' ),
 		'section'     => 'firstling_configuracoes_principais',
 		'default'     => '5',
 		'priority'    => 10,

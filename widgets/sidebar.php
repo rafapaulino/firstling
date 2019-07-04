@@ -36,9 +36,9 @@ function firstling_load_widget()
     //entidades do topo
     register_sidebar(
         array(
-            'name' => __( 'Top', 'odin' ),
+            'name' => __( 'Top', 'firstling'),
             'id' => 'top-sidebar',
-            'description' => __( 'Sidebar with top items.', 'odin' ),
+            'description' => __( 'Sidebar with top items.', 'firstling'),
             'before_widget' => '',
             'after_widget' => '',
             'before_title' => '',
