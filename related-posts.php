@@ -26,7 +26,7 @@ $related = new WP_Query( $args );
 if ( $related->have_posts() ):
 ?>
 <div class="relatedPosts d-print-none">
-    <h3 class="titulosChamada"><?php esc_attr_e("Related Content", "odin"); ?></h3>
+    <h3 class="titulosChamada"><?php esc_attr_e("Related Content", "firstling"); ?></h3>
     <div class="jcarousel-wrapper" itemscope itemtype="http://schema.org/Article">
         <div class="jcarousel jcarousel-related-posts">
             <ul id="carrossel<?php echo intval($id); ?>">
@@ -60,8 +60,8 @@ if ( $related->have_posts() ):
             <?php endwhile; ?>          
             </ul>
         </div>
-        <a href="#" title="<?php esc_attr_e("Back", "odin"); ?>" class="jcarousel-control-prev jcarousel-related-posts-control-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-        <a href="#" title="<?php esc_attr_e("Go", "odin"); ?>" class="jcarousel-control-next jcarousel-related-posts-control-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="#" title="<?php esc_attr_e("Back", "firstling"); ?>" class="jcarousel-control-prev jcarousel-related-posts-control-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+        <a href="#" title="<?php esc_attr_e("Go", "firstling"); ?>" class="jcarousel-control-next jcarousel-related-posts-control-next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
     </div>
 </div>
 <?php endif; wp_reset_postdata(); ?>
