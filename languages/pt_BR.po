@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Odin v2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-10 07:21-0300\n"
-"PO-Revision-Date: 2019-07-05 16:16-0300\n"
+"PO-Revision-Date: 2019-07-05 16:44-0300\n"
 "Last-Translator: Rafael Funchal <rafaelfunchal@gmail.com>\n"
 "Language-Team: WordPress Brasil Group\n"
 "MIME-Version: 1.0\n"
@@ -12,8 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 2.2.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: .\n"
 "X-Textdomain-Support: yes\n"
 "Language: pt_BR\n"
@@ -27,8 +26,7 @@ msgstr "Nada Encontrado"
 # @ odin
 #: ../404.php:19
 msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr ""
-"Parece que nada foi encontrado neste local. Talvez tentar uma pesquisa?"
+msgstr "Parece que nada foi encontrado neste local. Talvez tentar uma pesquisa?"
 
 # @ odin
 #: ../archive.php:30
@@ -96,11 +94,8 @@ msgstr "Arquivo da Categoria: %s"
 
 # @ odin
 #: ../comments.php:13
-msgid ""
-"This post is password protected. Enter the password to view all comments."
-msgstr ""
-"Esse post é protegido por senha. Informe a senha para ver todos os "
-"comentários."
+msgid "This post is password protected. Enter the password to view all comments."
+msgstr "Esse post é protegido por senha. Informe a senha para ver todos os comentários."
 
 # @ odin
 #: ../comments.php:22
@@ -165,29 +160,18 @@ msgstr "Nada Encontrado"
 # @ odin
 #: ../content-none.php:17
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Pronto para publicar o seu primeiro post? <a href=\"%1$s\">Comece agora "
-"aqui</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Pronto para publicar o seu primeiro post? <a href=\"%1$s\">Comece agora aqui</a>."
 
 # @ odin
 #: ../content-none.php:21
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Desculpe, mas nada foi encontrado com os termos da sua pesquisa. Por favor, "
-"tente novamente com algumas palavras-chave diferentes."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Desculpe, mas nada foi encontrado com os termos da sua pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes."
 
 # @ odin
 #: ../content-none.php:26
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Parece que não conseguimos encontrar o que você está procurando. Talvez a "
-"pesquisa pode ajudar."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que não conseguimos encontrar o que você está procurando. Talvez a pesquisa pode ajudar."
 
 # @ odin
 #: ../content-page.php:17 ../content.php:38
@@ -228,12 +212,8 @@ msgstr "Todos os direitos reservados"
 # @ odin
 #: ../footer.php:17
 #, php-format
-msgid ""
-"Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Odin</a> "
-"forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
-msgstr ""
-"Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Odin</a> "
-"forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
+msgid "Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Odin</a> forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
+msgstr "Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Odin</a> forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
 
 # @ odin
 #: ../functions.php:64 ../functions.php:71
@@ -269,16 +249,6 @@ msgstr "Alternar navegação"
 #: ../header.php:83
 msgid "Search:"
 msgstr "Pesquisar:"
-
-# @ odin
-#: ../header.php:87 ../searchform.php:12 ../functions.php:173
-#, fuzzy
-msgid "Search"
-msgstr ""
-"#-#-#-#-#  catalog.po (Odin v2.2.0)  #-#-#-#-#\n"
-"Pesquisa\n"
-"#-#-#-#-#  catalog.po (Odin v2.2.0)  #-#-#-#-#\n"
-"Perquisar"
 
 # @ odin
 #: ../image.php:23
@@ -653,12 +623,8 @@ msgstr "Página não encontrada"
 
 # @ odin
 #: ../footer.php:70
-msgid ""
-"The page you are looking for was not found, please use the form below to "
-"perform a search on the site."
-msgstr ""
-"A página que você está procurando não foi encontrada, por favor use o "
-"formulário abaixo para realizar uma busca no site."
+msgid "The page you are looking for was not found, please use the form below to perform a search on the site."
+msgstr "A página que você está procurando não foi encontrada, por favor use o formulário abaixo para realizar uma busca no site."
 
 # @ odin
 #: ../footer.php:70
@@ -737,11 +703,8 @@ msgstr "Substituir as cores acima"
 
 # @ odin
 #: ../theme-custom-options-kirki.php:81
-msgid ""
-"By choosing this option you can set a custom color in the controls below."
-msgstr ""
-"Ao escolher esta opção, você pode definir uma cor personalizada nos "
-"controles abaixo."
+msgid "By choosing this option you can set a custom color in the controls below."
+msgstr "Ao escolher esta opção, você pode definir uma cor personalizada nos controles abaixo."
 
 # @ odin
 #: ../theme-custom-options-kirki.php:81
@@ -757,3 +720,105 @@ msgstr "Esquema de cores"
 #: ../theme-custom-options-kirki.php:81
 msgid "Main Theme Settings"
 msgstr "Configurações Padrão do Tema"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Search"
+msgstr "Pesquisar"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Categories"
+msgstr "Categorias"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the categories in the sidebar."
+msgstr "Com este widget você coloca as categorias na barra lateral."
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Popular News"
+msgstr "Notícias Populares"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the popular news in the sidebar."
+msgstr "Com este widget você coloca as notícias populares na barra lateral."
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Top"
+msgstr "Topo"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Sidebar with top items."
+msgstr "Barra lateral com os principais itens."
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Social Network"
+msgstr "Redes Sociais"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the social network icons in the sidebar."
+msgstr "Com este widget você coloca os ícones de redes sociais na barra lateral."
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Link"
+msgstr "Link"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Icon"
+msgstr "Ícone"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Title"
+msgstr "Título"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Tags"
+msgstr "Tags"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the tags in the sidebar."
+msgstr "Com este widget você coloca as tags na barra lateral."
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Social Network and Links"
+msgstr "Redes Sociais e Links"
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the social network icons in the top."
+msgstr "Com este widget você coloca os ícones de redes sociais no topo."
+
+# @ odin
+#: ../searchform.php:13
+#, php-format
+msgid "Click here to access:"
+msgstr "Clique aqui para acessar:"
