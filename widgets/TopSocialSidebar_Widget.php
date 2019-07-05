@@ -120,7 +120,7 @@ class TopSocialSidebar_Widget extends WP_Widget
                 
                 <select name="<?php echo $this->get_field_name($icon); ?>" id="<?php echo $this->get_field_id($icon); ?>" class="widefat title">
                     <?php foreach($this->icons as $key => $value): ?>
-                        <option value="<?php esc_attr_e($key); ?>" <?php echo (( $icon_instance == $key )?'selected="selected"':''); ?>><?php esc_attr_e($value['title']); ?></option>
+                        <option value="<?php echo esc_attr($key); ?>" <?php echo (( $icon_instance == $key )?'selected="selected"':''); ?>><?php echo esc_attr($value['title']); ?></option>
                     <?php endforeach; ?>
                 </select>
                 <hr><br>

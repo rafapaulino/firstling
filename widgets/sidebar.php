@@ -7,12 +7,12 @@
 if ( ! defined('ABSPATH')) exit('restricted access');
 
 
-include 'PopularNews_Widget.php';
-include 'Categories_Widget.php';
-include 'Form_Widget.php';
-include 'SocialSidebar_Widget.php';
-include 'TopSocialSidebar_Widget.php';
-include 'Tags_Widget.php';
+require_once('PopularNews_Widget.php');
+require_once('Categories_Widget.php');
+require_once('Form_Widget.php');
+require_once('SocialSidebar_Widget.php');
+require_once('TopSocialSidebar_Widget.php');
+require_once('Tags_Widget.php');
 
 function remove_widgets()
 {

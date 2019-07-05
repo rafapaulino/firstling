@@ -42,7 +42,7 @@ get_header(); ?>
 							$category = get_the_category(); 
 							$img = getImageSRC(get_the_ID(),'carrossel');
 						?>
-							<div class="carousel-item <?php esc_attr_e( ($x == 0) ? 'active':''); ?>">
+							<div class="carousel-item <?php echo strip_tags( ($x == 0) ? 'active':''); ?>">
 								<a href="<?php the_permalink(); ?>" itemprop="url">
 									<img class="d-block w-100" src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
 								</a>

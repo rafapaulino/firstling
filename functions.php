@@ -97,12 +97,12 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		/**
 		 * Add support for Post Formats.
 		 */
-		add_theme_support( 'post-formats', array(
+		/*add_theme_support( 'post-formats', array(
 			'gallery',
 			'image',
 			'video',
 			'audio',
-		) );
+		) );*/
 
 		/**
 		 * Support The Excerpt on pages.

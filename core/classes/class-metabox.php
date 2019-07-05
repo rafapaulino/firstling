@@ -95,11 +95,11 @@ class Odin_Metabox {
 				'odin-admin',
 				'odinAdminParams',
 				array(
-					'galleryTitle'  => __( 'Add images in gallery', 'odin' ),
-					'galleryButton' => __( 'Add in gallery', 'odin' ),
-					'galleryRemove' => __( 'Remove image', 'odin' ),
-					'uploadTitle'   => __( 'Choose a file', 'odin' ),
-					'uploadButton'  => __( 'Add file', 'odin' ),
+					'galleryTitle'  => __( 'Add images in gallery', 'firstling' ),
+					'galleryButton' => __( 'Add in gallery', 'firstling' ),
+					'galleryRemove' => __( 'Remove image', 'firstling' ),
+					'uploadTitle'   => __( 'Choose a file', 'firstling' ),
+					'uploadButton'  => __( 'Add file', 'firstling' ),
 				)
 			);
 		}

@@ -15,7 +15,7 @@
 * Include Kirki as a library for this theme 
 */
 if ( ! class_exists( 'Kirki' ) ) {
-    include_once( dirname( __FILE__ ) . '/kirki/kirki.php' );
+    require_once( dirname( __FILE__ ) . '/kirki/kirki.php' );
 }
 
 use Kirki\Core\Helper;
