@@ -27,7 +27,7 @@ if ( ! isset( $content_width ) ) {
  * Odin Classes.
  */
 require_once THEME_PATH . '/core/classes/class-bootstrap-nav.php';
-require_once THEME_PATH . '/core/classes/class-shortcodes.php';
+//require_once THEME_PATH . '/core/classes/class-shortcodes.php';
 //require_once THEME_PATH . '/core/classes/class-shortcodes-menu.php';
 require_once THEME_PATH . '/core/classes/class-thumbnail-resizer.php';
 // require_once THEME_PATH . '/core/classes/class-theme-options.php';

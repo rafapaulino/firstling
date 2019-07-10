@@ -50,13 +50,13 @@ class Categories_Widget extends WP_Widget
     ?>
 	<!-- categories -->
 	<aside id="categories-sidebar" class="widget">
-		<h3 class="widget-title"><?php esc_attr_e($title); ?></h3>
+		<h3 class="widget-title"><?php echo esc_attr($title); ?></h3>
 		<ul class="categories-list">
             <?php 
                 foreach($categories as $cat): 
                     $link = esc_url(get_category_link( $cat->term_id )); 
             ?>
-			    <li><a href="<?php echo $link; ?>" title="<?php esc_attr_e($cat->name); ?>"><?php esc_attr_e($cat->name); ?> <span>(<?php esc_attr_e($cat->count); ?>)</span></a></li>
+			    <li><a href="<?php echo $link; ?>" title="<?php echo esc_attr($cat->name); ?>"><?php echo esc_attr($cat->name); ?> <span>(<?php echo esc_attr($cat->count); ?>)</span></a></li>
             <?php endforeach; ?>
 		</ul>
 	</aside>

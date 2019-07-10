@@ -68,7 +68,7 @@ class SocialSidebar_Widget extends WP_Widget
     <!-- social network -->
     <aside id="redes-sociais-sidebar" class="widget">
         <?php if (trim($title) !== "") : ?>
-            <h3 class="widget-title"><?php esc_attr_e($title); ?></h3>
+            <h3 class="widget-title"><?php echo esc_attr($title); ?></h3>
         <?php endif; ?>
 
 		<ul class="redes-sociais-mini">
@@ -122,7 +122,7 @@ class SocialSidebar_Widget extends WP_Widget
 
             if (trim($link_html) !== ""):
             ?>
-                <li><a class="<?php echo $icon_html; ?>" href="<?php echo $link_html; ?>" target="_blank" title="<?php esc_attr_e('Click here to access:'); ?> <?php echo $title; ?>"><i class="<?php echo $icon_class; ?>"></i></a></li>
+                <li><a class="<?php echo $icon_html; ?>" href="<?php echo $link_html; ?>" target="_blank" title="<?php esc_attr_e('Click here to access:', 'firstling'); ?> <?php echo $title; ?>"><i class="<?php echo $icon_class; ?>"></i></a></li>
             <?php 
             endif;
             $x++;

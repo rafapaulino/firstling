@@ -31,13 +31,13 @@ if ( _.isObject( data.value ) && ! _.isUndefined( data.value.url ) ) {
 
 data.choices.labels = _.isObject( data.choices.labels ) ? data.choices.labels : {};
 data.choices.labels = _.defaults( data.choices.labels, {
-	select: '<?php esc_html_e( 'Select image', 'kirki' ); ?>',
-	change: '<?php esc_html_e( 'Change image', 'kirki' ); ?>',
-	'default': '<?php esc_html_e( 'Default', 'kirki' ); ?>',
-	remove: '<?php esc_html_e( 'Remove', 'kirki' ); ?>',
-	placeholder: '<?php esc_html_e( 'No image selected', 'kirki' ); ?>',
-	frame_title: '<?php esc_html_e( 'Select image', 'kirki' ); ?>',
-	frame_button: '<?php esc_html_e( 'Choose image', 'kirki' ); ?>',
+	select: '<?php esc_html_e( 'Select image', 'firstling' ); ?>',
+	change: '<?php esc_html_e( 'Change image', 'firstling' ); ?>',
+	'default': '<?php esc_html_e( 'Default', 'firstling' ); ?>',
+	remove: '<?php esc_html_e( 'Remove', 'firstling' ); ?>',
+	placeholder: '<?php esc_html_e( 'No image selected', 'firstling' ); ?>',
+	frame_title: '<?php esc_html_e( 'Select image', 'firstling' ); ?>',
+	frame_button: '<?php esc_html_e( 'Choose image', 'firstling' ); ?>',
 } );
 #>
 

@@ -46,7 +46,7 @@ class Tags_Widget extends WP_Widget
 	<!-- tags -->
 	<aside id="tags-sidebar" class="widget">
         <?php if (trim($title) !== "") : ?>
-            <h3 class="widget-title"><?php esc_attr_e($title); ?></h3>
+            <h3 class="widget-title"><?php echo esc_attr($title); ?></h3>
         <?php endif; ?>
 		<div class="tagcloud tagcloud-label">
 			<ul>
@@ -54,7 +54,7 @@ class Tags_Widget extends WP_Widget
                     foreach($tags as $tag): 
                         $link = get_tag_link($tag->term_id);
                 ?>
-                    <li><a href="<?php echo esc_url($link); ?>"><span><?php esc_attr_e($tag->name); ?></span></a></li>
+                    <li><a href="<?php echo esc_url($link); ?>"><span><?php echo esc_attr($tag->name); ?></span></a></li>
                 <?php endforeach; ?>
 			</ul>
 		</div>

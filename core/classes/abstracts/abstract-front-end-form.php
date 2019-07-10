@@ -290,7 +290,7 @@ abstract class Odin_Front_End_Form {
 				);
 			}
 		} else {
-			$html .= '<button type="submit" class="btn btn-primary">' . __( 'Submit', 'odin' ) . '</button>';
+			$html .= '<button type="submit" class="btn btn-primary">' . __( 'Submit', 'firstling'  ) . '</button>';
 		}
 
 		$html .= '</div>';
@@ -333,7 +333,7 @@ abstract class Odin_Front_End_Form {
 			if ( ! empty( $this->success ) ) {
 				$html .= '<p>' . $this->success . '</p>';
 			} else {
-				$html .= '<p>' . __( 'Form submitted successfully!', 'odin' ) . '</p>';
+				$html .= '<p>' . __( 'Form submitted successfully!', 'firstling'  ) . '</p>';
 			}
 			$html .= '</div>';
 		}
@@ -606,19 +606,19 @@ abstract class Odin_Front_End_Form {
 					$required = isset( $field['required'] ) && $field['required'] ? true : false;
 
 					if ( $type != 'file' && $required && empty( $data[ $id ] ) ) {
-						$this->set_errors( sprintf( __( '%s is required.', 'odin' ), '<strong>' . $label . '</strong>' ) );
+						$this->set_errors( sprintf( __( '%s is required.', 'firstling'  ), '<strong>' . $label . '</strong>' ) );
 					}
 
 					switch ( $type ) {
 						case 'email':
 							if ( ! is_email( $value ) ) {
-								$this->set_errors( sprintf( __( '%s must be an email address valid.', 'odin' ), '<strong>' . $label . '</strong>' ) );
+								$this->set_errors( sprintf( __( '%s must be an email address valid.', 'firstling'  ), '<strong>' . $label . '</strong>' ) );
 							}
 							break;
 						case 'file':
 							if ( count($files) >= 1 ) {
 								if ( $required && empty( $files[ $id ]['name'] ) ) {
-									$this->set_errors( sprintf( __( '%s is required.', 'odin' ), '<strong>' . $label . '</strong>' ) );
+									$this->set_errors( sprintf( __( '%s is required.', 'firstling'  ), '<strong>' . $label . '</strong>' ) );
 								}
 							}
 							break;

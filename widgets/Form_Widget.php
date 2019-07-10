@@ -43,7 +43,7 @@ class Form_Widget extends WP_Widget
     <!-- form -->
     <aside id="form-sidebar" class="widget">
         <?php if (trim($title) !== "") : ?>
-            <h3 class="widget-title"><?php esc_attr_e($title); ?></h3>
+            <h3 class="widget-title"><?php echo esc_attr($title); ?></h3>
         <?php endif; ?>
 		<?php get_search_form(); ?>
 	</aside>

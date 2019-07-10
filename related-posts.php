@@ -50,8 +50,8 @@ if ( $related->have_posts() ):
                         $categories = get_the_category(); 
                         if ( ! empty( $categories ) ):
                     ?>
-                        <a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ); ?>" class="category" title="<?php esc_attr_e( $categories[0]->name ); ?>" itemprop="about">
-                            <?php esc_attr_e( $categories[0]->name ); ?>
+                        <a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ); ?>" class="category" title="<?php echo esc_attr( $categories[0]->name ); ?>" itemprop="about">
+                            <?php echo esc_attr( $categories[0]->name ); ?>
                         </a>
                     <?php endif; ?>
 

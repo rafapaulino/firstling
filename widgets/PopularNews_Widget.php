@@ -58,7 +58,7 @@ class PopularNews_Widget extends WP_Widget
     ?>
 	<!-- posts recentes -->
 	<aside id="posts-sidebar" class="widget">
-		<h3 class="widget-title"><?php esc_attr_e($title); ?></h3>
+		<h3 class="widget-title"><?php echo esc_attr($title); ?></h3>
         <!-- ultimas noticias -->
 		<div class="ultimasNoticias">
 			<!-- noticias -->

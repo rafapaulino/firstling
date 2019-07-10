@@ -32,7 +32,7 @@ get_header(); ?>
 				<div id="carouselHome" class="carousel slide carouselSwipe" data-interval="8000" data-ride="carousel" itemscope itemtype="http://schema.org/ItemList">
 					<ol class="carousel-indicators">
 						<?php for($a = 0; $a < $total; $a++) { ?>
-							<li data-target="#carouselHome" data-slide-to="0" class="<?php esc_attr_e( ($a == 0) ? 'active':''); ?>"></li>
+							<li data-target="#carouselHome" data-slide-to="0" class="<?php echo esc_attr( ($a == 0) ? 'active':''); ?>"></li>
 						<?php } ?>
 					</ol>
 					<div class="carousel-inner">
@@ -42,14 +42,14 @@ get_header(); ?>
 							$category = get_the_category(); 
 							$img = getImageSRC(get_the_ID(),'carrossel');
 						?>
-							<div class="carousel-item <?php echo strip_tags( ($x == 0) ? 'active':''); ?>">
+							<div class="carousel-item <?php echo esc_attr( ($x == 0) ? 'active':''); ?>">
 								<a href="<?php the_permalink(); ?>" itemprop="url">
 									<img class="d-block w-100" src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
 								</a>
 								
 								<div class="carousel-caption d-md-block">
 									<?php if (count($category) > 0): ?>
-										<h5 itemprop="name"><a href="<?php the_permalink(); ?>" itemprop="url" data-animation="animated fadeInLeft"><?php esc_attr_e($category[0]->cat_name); ?></a></h5>
+										<h5 itemprop="name"><a href="<?php the_permalink(); ?>" itemprop="url" data-animation="animated fadeInLeft"><?php echo esc_attr($category[0]->cat_name); ?></a></h5>
 									<?php endif; ?>
 									<p itemprop="itemListElement"><a href="<?php the_permalink(); ?>" itemprop="url" data-animation="animated bounceInLeft"><?php the_title(); ?></a></p>
 								</div>
