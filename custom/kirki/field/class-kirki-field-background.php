@@ -41,7 +41,7 @@ class Kirki_Field_Background extends Kirki_Field {
 	/**
 	 * Sanitizes typography controls
 	 *
-	 * @since 2.2.0
+	 * @since 1.0.2
 	 * @param array $value The value.
 	 * @return array
 	 */

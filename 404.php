@@ -2,8 +2,8 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 
 get_header(); 

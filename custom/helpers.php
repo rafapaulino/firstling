@@ -17,7 +17,7 @@ function getImageSRC($id, $size = 'thumbnail')
 
 function getExcerpt($limit = 150, $type = 'excerpt')
 {
-    $excerpt = odin_excerpt($type, $limit);
+    $excerpt = firstling_excerpt($type, $limit);
 
     if (strlen($excerpt) > $limit) {
 		$excerpt = substr(trim($excerpt),0,$limit);

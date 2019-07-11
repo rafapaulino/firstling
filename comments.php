@@ -4,7 +4,7 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package Odin
+ * @package Firstling
  * @since 1.9.0
  */
 ?>

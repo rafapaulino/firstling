@@ -4,8 +4,8 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 if ( ! defined('ABSPATH')) exit('restricted access');
 

@@ -257,7 +257,7 @@ abstract class Odin_Front_End_Form {
 							break;
 
 						default:
-							$html .= do_action( 'odin_front_end_form_field_' . $this->id, $id, $label, $default, $description, $attributes, $options );
+							$html .= do_action( 'firstling_front_end_form_field_' . $this->id, $id, $label, $default, $description, $attributes, $options );
 							break;
 					}
 				}
@@ -624,7 +624,7 @@ abstract class Odin_Front_End_Form {
 							break;
 
 						default:
-							$custom_message = apply_filters( 'odin_front_end_form_valid_' . $this->id . '_' . $id, '', $label, $value );
+							$custom_message = apply_filters( 'firstling_front_end_form_valid_' . $this->id . '_' . $id, '', $label, $value );
 							if ( $custom_message ) {
 								$this->set_errors( $custom_message );
 							}
@@ -651,7 +651,7 @@ abstract class Odin_Front_End_Form {
 		@ob_clean();
 
 		$url = $this->get_current_page();
-		$url = apply_filters( 'odin_front_end_form_redirect_' . $this->id, add_query_arg( 'success', '1', $url ) );
+		$url = apply_filters( 'firstling_front_end_form_redirect_' . $this->id, add_query_arg( 'success', '1', $url ) );
 
 		wp_redirect( $url, 303 );
 
@@ -677,7 +677,7 @@ abstract class Odin_Front_End_Form {
 					$attachment_id = media_handle_upload( $id, 0 );
 
 					if ( is_wp_error( $attachment_id ) ) {
-						$error = apply_filters( 'odin_front_end_form_upload_error_' . $this->id, sprintf( '%s %s.', '<strong>' . $this->get_field_label( $id ) . '</strong>', $attachment_id->get_error_message() ) );
+						$error = apply_filters( 'firstling_front_end_form_upload_error_' . $this->id, sprintf( '%s %s.', '<strong>' . $this->get_field_label( $id ) . '</strong>', $attachment_id->get_error_message() ) );
 						$this->set_errors( $error );
 					} else {
 						$attachments[ $id ] = array(
@@ -700,18 +700,18 @@ abstract class Odin_Front_End_Form {
 		$submitted_data = $this->submitted_form_data();
 		$uploaded_files = $this->get_attachments();
 
-		if ( ! empty( $submitted_data ) && isset( $submitted_data['odin_form_action'] ) && $this->id == $submitted_data['odin_form_action'] ) {
+		if ( ! empty( $submitted_data ) && isset( $submitted_data['firstling_form_action'] ) && $this->id == $submitted_data['firstling_form_action'] ) {
 			// Validates the form data.
 			$this->validate_form_data();
 
 			if ( $this->is_valid() ) {
 				// Hook to process submitted form data.
-				do_action( 'odin_front_end_form_submitted_data_' . $this->id, $submitted_data, $uploaded_files );
+				do_action( 'firstling_front_end_form_submitted_data_' . $this->id, $submitted_data, $uploaded_files );
 
 				// Redirect after submit.
 				$this->redirect();
 			} else {
-				add_filter( 'odin_front_end_form_messages_' . $this->id, array( $this, 'display_error_messages' ) );
+				add_filter( 'firstling_front_end_form_messages_' . $this->id, array( $this, 'display_error_messages' ) );
 			}
 		}
 	}
@@ -726,7 +726,7 @@ abstract class Odin_Front_End_Form {
 		$html = '';
 
 		// Display error messages.
-		$html .= apply_filters( 'odin_front_end_form_messages_' . $this->id, $html );
+		$html .= apply_filters( 'firstling_front_end_form_messages_' . $this->id, $html );
 
 		// Display success message.
 		$html .= $this->display_success_message();
@@ -743,11 +743,11 @@ abstract class Odin_Front_End_Form {
 			$this->process_attributes( array_merge( array( 'class' => 'form' ), $this->attributes ) )
 		);
 
-			$html .= do_action( 'odin_front_end_form_before_fields_' . $this->id );
+			$html .= do_action( 'firstling_front_end_form_before_fields_' . $this->id );
 			$html .= $fields;
-			$html .= do_action( 'odin_front_end_form_after_fields_' . $this->id );
+			$html .= do_action( 'firstling_front_end_form_after_fields_' . $this->id );
 			$html .= $this->process_buttons();
-			$html .= sprintf( '<input type="hidden" name="odin_form_action" value="%s" />', $this->id );
+			$html .= sprintf( '<input type="hidden" name="firstling_form_action" value="%s" />', $this->id );
 		$html .= '</form>';
 
 		return $html;

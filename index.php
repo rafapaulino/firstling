@@ -9,8 +9,8 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 
 get_header(); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
 						while ( have_posts() ) : the_post(); 
 							get_template_part( 'content-loop' );
 						endwhile; 
-						odin_paging_nav(); 
+						firstling_paging_nav(); 
 					else:
 						get_template_part( 'content-none' );
 					endif; 

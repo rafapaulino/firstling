@@ -4,9 +4,9 @@
 	/**
 	 * Add the shortcodes downdown.
 	 */
-	tinymce.PluginManager.add( 'odin_shortcodes', function( editor ) {
+	tinymce.PluginManager.add( 'firstling_shortcodes', function( editor ) {
 		var ed      = tinymce.activeEditor;
-		var odin_ui = new Odin_Shortcode_UI( editor, ed );
+		var firstling_ui = new Odin_Shortcode_UI( editor, ed );
 
 		editor.addButton(
 			'odin', {
@@ -15,87 +15,87 @@
 				menu: [ {
 					text   : ed.getLang( 'odin.button' ),
 					onclick: function() {
-						odin_ui.button();
+						firstling_ui.button();
 					}
 				}, {
 					text   : ed.getLang( 'odin.group_button' ),
 					onclick: function() {
-						odin_ui.group_button();
+						firstling_ui.group_button();
 					}
 				}, {
 					text   : ed.getLang( 'odin.alert' ),
 					onclick: function() {
-						odin_ui.alert();
+						firstling_ui.alert();
 					}
 				}, {
 					text   : ed.getLang( 'odin.label' ),
 					onclick: function() {
-						odin_ui.label();
+						firstling_ui.label();
 					}
 				}, {
 					text   : ed.getLang( 'odin.badge' ),
 					onclick: function() {
-						odin_ui.badge();
+						firstling_ui.badge();
 					}
 				}, {
 					text   : ed.getLang( 'odin.icon' ),
 					onclick: function() {
-						odin_ui.icon();
+						firstling_ui.icon();
 					}
 				}, {
 					text   : ed.getLang( 'odin.well' ),
 					onclick: function() {
-						odin_ui.well();
+						firstling_ui.well();
 					}
 				}, {
 					text   : ed.getLang( 'odin.table' ),
 					onclick: function() {
-						odin_ui.table();
+						firstling_ui.table();
 					}
 				}, {
 					text   : ed.getLang( 'odin.grid' ),
 					onclick: function() {
-						odin_ui.grids();
+						firstling_ui.grids();
 					}
 				}, {
 					text   : ed.getLang( 'odin.progress_bar' ),
 					onclick: function() {
-						odin_ui.progress();
+						firstling_ui.progress();
 					}
 				}, {
 					text   : ed.getLang( 'odin.panel' ),
 					onclick: function() {
-						odin_ui.panel();
+						firstling_ui.panel();
 					}
 				}, {
 					text   : ed.getLang( 'odin.tabs' ),
 					onclick: function() {
-						odin_ui.tabs();
+						firstling_ui.tabs();
 					}
 				}, {
 					text   : ed.getLang( 'odin.accordion' ),
 					onclick: function() {
-						odin_ui.accordion();
+						firstling_ui.accordion();
 					}
 				}, {
 					text   : ed.getLang( 'odin.tooltip' ),
 					onclick: function() {
-						odin_ui.tooltip();
+						firstling_ui.tooltip();
 					}
 				}, {
 					text   : ed.getLang( 'odin.map' ),
 					onclick: function() {
-						odin_ui.map();
+						firstling_ui.map();
 					}
 				}, {
 					text   : ed.getLang( 'odin.clear' ),
 					onclick: function() {
-						odin_ui.clear();
+						firstling_ui.clear();
 					}
 				}, {
 					text   : ed.getLang( 'odin.qrcode' ),
 					onclick: function() {
-						odin_ui.qrcode();
+						firstling_ui.qrcode();
 					}
 				} ]
 			} );
@@ -729,7 +729,7 @@ function Odin_Shortcode_UI( _editor, _ed ) {
 
 				type : 'textbox',
 				name : 'id',
-				value: 'odin_gmap',
+				value: 'firstling_gmap',
 				label: ed.getLang( 'odin.id' )
 			}, {
 				type : 'textbox',

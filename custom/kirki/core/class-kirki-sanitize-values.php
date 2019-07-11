@@ -83,7 +83,7 @@ class Kirki_Sanitize_Values {
 	 *
 	 * @static
 	 * @access public
-	 * @since 2.2.0
+	 * @since 1.0.2
 	 * @param string $value The value to be sanitized.
 	 * @return string
 	 */

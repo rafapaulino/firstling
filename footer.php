@@ -5,8 +5,8 @@
  * Contains footer content and the closing of the
  * #main div element.
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 ?>
 </main>

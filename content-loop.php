@@ -2,8 +2,8 @@
 /**
  * The template used for displaying page content.
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 ?>
 

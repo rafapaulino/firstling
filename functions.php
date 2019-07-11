@@ -1,6 +1,6 @@
 <?php
 /**
- * Odin functions and definitions.
+ * Firstling functions and definitions.
  *
  * Sets up the theme and provides some helper functions, which are used in the
  * theme as custom template tags. Others are attached to action and filter
@@ -9,12 +9,12 @@
  * For more information on hooks, actions, and filters,
  * see http://codex.wordpress.org/Plugin_API
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 
 define('THEME_ASSETS', esc_attr(get_template_directory_uri() . '/assets/') );
-define('THEME_PATH', get_template_directory() );
+define('FIRSTLING_THEME_PATH', get_template_directory() );
 
 /**
  * Sets content width.
@@ -23,40 +23,25 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 600;
 }
 
-/**
- * Odin Classes.
- */
-require_once THEME_PATH . '/core/classes/class-bootstrap-nav.php';
-//require_once THEME_PATH . '/core/classes/class-shortcodes.php';
-//require_once THEME_PATH . '/core/classes/class-shortcodes-menu.php';
-require_once THEME_PATH . '/core/classes/class-thumbnail-resizer.php';
-// require_once THEME_PATH . '/core/classes/class-theme-options.php';
-// require_once THEME_PATH . '/core/classes/class-options-helper.php';
-// require_once THEME_PATH . '/core/classes/class-post-type.php';
-// require_once THEME_PATH . '/core/classes/class-taxonomy.php';
-// require_once THEME_PATH . '/core/classes/class-metabox.php';
+require_once FIRSTLING_THEME_PATH . '/core/classes/class-bootstrap-nav.php';
+require_once FIRSTLING_THEME_PATH . '/core/classes/class-thumbnail-resizer.php';
 // require_once THEME_PATH . '/core/classes/abstracts/abstract-front-end-form.php';
-// require_once THEME_PATH . '/core/classes/class-contact-form.php';
-// require_once THEME_PATH . '/core/classes/class-post-form.php';
-// require_once THEME_PATH . '/core/classes/class-user-meta.php';
-// require_once THEME_PATH . '/core/classes/class-post-status.php';
-//require_once THEME_PATH . '/core/classes/class-term-meta.php';
-require_once THEME_PATH . '/custom/helpers.php';
-require_once THEME_PATH . '/widgets/sidebar.php';
-require_once THEME_PATH . '/custom/navwalker.php';
-require_once THEME_PATH . '/custom/theme-custom-options-kirki.php';
-require_once THEME_PATH . '/custom/comments-loop.php';
+require_once FIRSTLING_THEME_PATH . '/custom/helpers.php';
+require_once FIRSTLING_THEME_PATH . '/widgets/sidebar.php';
+require_once FIRSTLING_THEME_PATH . '/custom/navwalker.php';
+require_once FIRSTLING_THEME_PATH . '/custom/theme-custom-options-kirki.php';
+require_once FIRSTLING_THEME_PATH . '/custom/comments-loop.php';
 
 //add_filter( 'media_library_show_audio_playlist', '__return_false' );
 
-if ( ! function_exists( 'odin_setup_features' ) ) {
+if ( ! function_exists( 'firstling_setup_features' ) ) {
 
 	/**
 	 * Setup theme features.
 	 *
-	 * @since 2.2.0
+	 * @since 1.0.2
 	 */
-	function odin_setup_features() {
+	function firstling_setup_features() {
 
 		/**
 		 * Add support for multiple languages.
@@ -94,15 +79,6 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		add_editor_style( 'assets/css/editor-style.css' );
 
-		/**
-		 * Add support for Post Formats.
-		 */
-		/*add_theme_support( 'post-formats', array(
-			'gallery',
-			'image',
-			'video',
-			'audio',
-		) );*/
 
 		/**
 		 * Support The Excerpt on pages.
@@ -144,14 +120,14 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 	}
 }
 
-add_action( 'after_setup_theme', 'odin_setup_features' );
+add_action( 'after_setup_theme', 'firstling_setup_features' );
 
 /**
  * Register widget areas.
  *
- * @since 2.2.0
+ * @since 1.0.2
  */
-function odin_widgets_init() {
+function firstling_widgets_init() {
 	register_sidebar(
 		array(
 			'name' => __( 'Main Sidebar', 'firstling' ),
@@ -165,40 +141,34 @@ function odin_widgets_init() {
 	);
 }
 
-add_action( 'widgets_init', 'odin_widgets_init' );
+add_action( 'widgets_init', 'firstling_widgets_init' );
 
 /**
  * Flush Rewrite Rules for new CPTs and Taxonomies.
  *
- * @since 2.2.0
+ * @since 1.0.2
  */
-function odin_flush_rewrite() {
+function firstling_flush_rewrite() {
 	flush_rewrite_rules();
 }
 
-add_action( 'after_switch_theme', 'odin_flush_rewrite' );
+add_action( 'after_switch_theme', 'firstling_flush_rewrite' );
 
 /**
  * Load site scripts.
  *
- * @since 2.2.0
+ * @since 1.0.2
  */
-function odin_enqueue_scripts() {
+function firstling_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'library', $template_url . '/assets/css/library.min.css' , array(), null, 'all' );
 	wp_enqueue_style( 'app', $template_url . '/assets/css/app.min.css' , array(), null, 'all' );
 
-	// jQuery.
-	//wp_enqueue_script( 'jquery' );
-
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	wp_enqueue_script( 'library', $template_url . '/assets/js/library.min.js', array(), null, true );
 	wp_enqueue_script( 'app', $template_url . '/assets/js/app.min.js', array(), null, true );
-
-	// Grunt watch livereload in the browser.
-	// wp_enqueue_script( 'odin-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
@@ -206,7 +176,7 @@ function odin_enqueue_scripts() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'odin_enqueue_scripts', 1 );
+add_action( 'wp_enqueue_scripts', 'firstling_enqueue_scripts', 1 );
 
 
 /**

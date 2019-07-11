@@ -1,16 +1,16 @@
 <?php
-if ( ! function_exists( 'odin_comment_loop' ) ) {
+if ( ! function_exists( 'firstling_comment_loop' ) ) {
 
 	/**
 	 * Custom comments loop.
 	 *
-	 * @since 2.2.0
+	 * @since 1.0.2
 	 *
 	 * @param  object $comment Comment object.
 	 * @param  array  $args    Comment arguments.
 	 * @param  int    $depth   Comment depth.
 	 */
-	function odin_comments_loop( $comment, $args, $depth ) {
+	function firstling_comments_loop( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 
 		switch ( $comment->comment_type ) {

@@ -4,8 +4,8 @@
  *
  * Displays all of the <head> section and everything up till #main div
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 ?><!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -32,7 +32,7 @@
             <h1>
                 <?php 
                     if (has_custom_logo()): 
-                        odin_the_custom_logo();
+                        firstling_the_custom_logo();
                     else: 
                 ?>
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

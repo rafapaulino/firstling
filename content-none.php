@@ -2,8 +2,8 @@
 /**
  * The template for displaying a "No posts found" message.
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 ?>
 <div>

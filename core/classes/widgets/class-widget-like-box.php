@@ -16,7 +16,7 @@ class Odin_Widget_Like_Box extends WP_Widget {
 	 */
 	public function __construct() {
 		parent::__construct(
-			'odin_facebook_like_box',
+			'firstling_facebook_like_box',
 			__( 'Facebook Like Box', 'firstling'  ),
 			array( 'description' => __( 'This widget includes a facebook like box on your blog', 'firstling'  ), )
 		);
@@ -159,8 +159,8 @@ class Odin_Widget_Like_Box extends WP_Widget {
 /**
  * Register the Like Box Widget.
  */
-function odin_like_box_widget() {
+function firstling_like_box_widget() {
 	register_widget( 'Odin_Widget_Like_Box' );
 }
 
-add_action( 'widgets_init', 'odin_like_box_widget' );
+add_action( 'widgets_init', 'firstling_like_box_widget' );

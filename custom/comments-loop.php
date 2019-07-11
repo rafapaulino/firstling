@@ -4,7 +4,7 @@ if ( ! function_exists( 'firstling_comments_loop' ) ) {
 	/**
 	 * Custom comments loop.
 	 *
-	 * @since 2.2.0
+	 * @since 1.0.2
 	 *
 	 * @param  object $comment Comment object.
 	 * @param  array  $args    Comment arguments.

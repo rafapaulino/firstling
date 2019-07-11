@@ -23,7 +23,7 @@
  *
  * @return string       Return the pagination.
  */
-function odin_pagination( $mid = 2, $end = 1, $show = false, $query = null ) {
+function firstling_pagination( $mid = 2, $end = 1, $show = false, $query = null ) {
 
 	// Prevent show pagination number if Infinite Scroll of JetPack is active.
 	if ( ! isset( $_GET[ 'infinity' ] ) ) {
@@ -41,7 +41,7 @@ function odin_pagination( $mid = 2, $end = 1, $show = false, $query = null ) {
 			$big = 999999999;
 
 			// Sets the paginate_links arguments.
-			$arguments = apply_filters( 'odin_pagination_args', array(
+			$arguments = apply_filters( 'firstling_pagination_args', array(
 					'base'      => esc_url_raw( str_replace( $big, '%#%', get_pagenum_link( $big, false ) ) ),
 					'format'    => '',
 					'current'   => max( 1, get_query_var( 'paged' ) ),
@@ -72,9 +72,9 @@ function odin_pagination( $mid = 2, $end = 1, $show = false, $query = null ) {
  *
  * Usage:
  * To show related by categories:
- * Add in single.php <?php odin_related_posts(); ?>
+ * Add in single.php <?php firstling_related_posts(); ?>
  * To show related by tags:
- * Add in single.php <?php odin_related_posts( 'tag' ); ?>
+ * Add in single.php <?php firstling_related_posts( 'tag' ); ?>
  *
  * @since  2.2.0
  *
@@ -88,7 +88,7 @@ function odin_pagination( $mid = 2, $end = 1, $show = false, $query = null ) {
  *
  * @return string              Related Posts.
  */
-function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thumb = true, $post_type = 'post' ) {
+function firstling_related_posts( $display = 'category', $qty = 4, $title = '', $thumb = true, $post_type = 'post' ) {
 	global $post;
 
 	$show = false;
@@ -164,7 +164,7 @@ function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thum
 						$img = '<img src="' . get_template_directory_uri() . '/core/assets/images/odin-thumb-placeholder.jpg" alt="' . get_the_title() . '">';
 					}
 					// Filter to replace the image.
-					$image = apply_filters( 'odin_related_posts_thumbnail', $img );
+					$image = apply_filters( 'firstling_related_posts_thumbnail', $img );
 
 					$layout .= '<span class="thumb">';
 					$layout .= sprintf( '<a href="%s" title="%s" class="thumbnail">%s</a>', esc_url( get_permalink() ), get_the_title(), $image );
@@ -191,7 +191,7 @@ function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thum
  * Custom excerpt for content or title.
  *
  * Usage:
- * Place: <?php echo odin_excerpt( 'excerpt', value ); ?>
+ * Place: <?php echo firstling_excerpt( 'excerpt', value ); ?>
  *
  * @since  2.2.0
  *
@@ -200,7 +200,7 @@ function odin_related_posts( $display = 'category', $qty = 4, $title = '', $thum
  *
  * @return string       Return the excerpt.
  */
-function odin_excerpt( $type = 'excerpt', $limit = 40 ) {
+function firstling_excerpt( $type = 'excerpt', $limit = 40 ) {
 	$limit = (int) $limit;
 
 	// Set excerpt type.
@@ -226,7 +226,7 @@ function odin_excerpt( $type = 'excerpt', $limit = 40 ) {
  *
  * @return string            HTML of breadcrumbs.
  */
-function odin_breadcrumbs( $homepage = '' ) {
+function firstling_breadcrumbs( $homepage = '' ) {
 	global $wp_query, $post, $author;
 
 	! empty( $homepage ) || $homepage = __( 'Home', 'firstling' );
@@ -454,7 +454,7 @@ function odin_breadcrumbs( $homepage = '' ) {
  *
  * @return string
  */
-function odin_get_image_url( $id, $width, $height, $crop = true, $upscale = false ) {
+function firstling_get_image_url( $id, $width, $height, $crop = true, $upscale = false ) {
 	$resizer    = Odin_Thumbnail_Resizer::get_instance();
 	$origin_url = wp_get_attachment_url( $id );
 	$url        = $resizer->process( $origin_url, $width, $height, $crop, $upscale );
@@ -481,7 +481,7 @@ function odin_get_image_url( $id, $width, $height, $crop = true, $upscale = fals
  *
  * @return string         Return the post thumbnail.
  */
-function odin_thumbnail( $width, $height, $alt, $crop = true, $class = '', $upscale = false ) {
+function firstling_thumbnail( $width, $height, $alt, $crop = true, $class = '', $upscale = false ) {
 	if ( ! class_exists( 'Odin_Thumbnail_Resizer' ) ) {
 		return;
 	}
@@ -489,10 +489,10 @@ function odin_thumbnail( $width, $height, $alt, $crop = true, $class = '', $upsc
 	$thumb = get_post_thumbnail_id();
 
 	if ( $thumb ) {
-		$image = odin_get_image_url( $thumb, $width, $height, $crop, $upscale );
+		$image = firstling_get_image_url( $thumb, $width, $height, $crop, $upscale );
 		$html  = '<img class="wp-image-thumb img-responsive ' . esc_attr( $class ) . '" src="' . esc_url( $image ) . '" width="' . esc_attr( $width ) . '" height="' . esc_attr( $height ) . '" alt="' . esc_attr( $alt ) . '" />';
 
-		return apply_filters( 'odin_thumbnail_html', $html );
+		return apply_filters( 'firstling_thumbnail_html', $html );
 	}
 }
 
@@ -500,18 +500,18 @@ function odin_thumbnail( $width, $height, $alt, $crop = true, $class = '', $upsc
  * Automatically sets the post thumbnail.
  *
  * Use:
- * add_action( 'the_post', 'odin_autoset_featured' );
- * add_action( 'save_post', 'odin_autoset_featured' );
- * add_action( 'draft_to_publish', 'odin_autoset_featured' );
- * add_action( 'new_to_publish', 'odin_autoset_featured' );
- * add_action( 'pending_to_publish', 'odin_autoset_featured' );
- * add_action( 'future_to_publish', 'odin_autoset_featured' );
+ * add_action( 'the_post', 'firstling_autoset_featured' );
+ * add_action( 'save_post', 'firstling_autoset_featured' );
+ * add_action( 'draft_to_publish', 'firstling_autoset_featured' );
+ * add_action( 'new_to_publish', 'firstling_autoset_featured' );
+ * add_action( 'pending_to_publish', 'firstling_autoset_featured' );
+ * add_action( 'future_to_publish', 'firstling_autoset_featured' );
  *
  * @since  2.2.0
  *
  * @global array $post WP post object.
  */
-function odin_autoset_featured() {
+function firstling_autoset_featured() {
 	global $post;
 
 	if ( isset( $post->ID ) ) {
@@ -538,7 +538,7 @@ function odin_autoset_featured() {
  *
  * @return string          Human-readable information.
  */
-function odin_debug( $variable ) {
+function firstling_debug( $variable ) {
 	echo '<pre>' . print_r( $variable, true ) . '</pre>';
 	exit;
 }
@@ -546,7 +546,7 @@ function odin_debug( $variable ) {
  * Get term meta fields
  *
  * Usage:
- * <?php echo odin_get_term_meta( $term_id, $field );?>
+ * <?php echo firstling_get_term_meta( $term_id, $field );?>
  *
  * @since  2.2.7
  *
@@ -555,14 +555,14 @@ function odin_debug( $variable ) {
  *
  * @return string               Field value
  */
-function odin_get_term_meta( $term_id, $field ) {
+function firstling_get_term_meta( $term_id, $field ) {
 	// First try to get value in the new Term Meta WP API.
 	if ( $value = get_term_meta( $term_id, $field, true ) ) {
 		return $value;
 	}
 
 	// After, try to get in the old way (option API).
-	$option_name = sprintf( 'odin_term_meta_%s_%s', $term_id, $field );
+	$option_name = sprintf( 'firstling_term_meta_%s_%s', $term_id, $field );
 	$value       = get_option( $option_name );
 
 	// Upgrade to new update_term_meta().

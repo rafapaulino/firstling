@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 
 get_header(); ?>
@@ -27,7 +27,7 @@ get_header(); ?>
 						
 						<?php if ( 'post' == get_post_type() ) : ?>
 							<div class="entry-meta">
-								<?php odin_posted_on(); ?>
+								<?php firstling_posted_on(); ?>
 							</div><!-- .entry-meta -->
 						<?php endif; ?>
 					</header>

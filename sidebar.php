@@ -4,8 +4,8 @@
  *
  * If no active widgets in this sidebar, it will shows Recent Posts, Archives and Tag Cloud widgets.
  *
- * @package Odin
- * @since 2.2.0
+ * @package Firstling
+ * @since 1.0.2
  */
 ?>
 <div class="wrap-sidebar col-12 col-md-4">
