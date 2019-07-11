@@ -13,7 +13,7 @@
  * @since 1.0.2
  */
 
-define('THEME_ASSETS', esc_attr(get_template_directory_uri() . '/assets/') );
+define('FIRSTLING_THEME_ASSETS', esc_attr(get_template_directory_uri() . '/assets/') );
 define('FIRSTLING_THEME_PATH', get_template_directory() );
 
 /**
