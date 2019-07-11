@@ -203,11 +203,6 @@ require_once get_template_directory() . '/core/helpers.php';
 require_once get_template_directory() . '/inc/admin.php';
 
 /**
- * Comments loop.
- */
-require_once get_template_directory() . '/inc/comments-loop.php';
-
-/**
  * WP optimize functions.
  */
 require_once get_template_directory() . '/inc/optimize.php';

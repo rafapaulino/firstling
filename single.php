@@ -16,7 +16,7 @@ get_header(); ?>
 						while ( have_posts() ) : the_post(); 
 
 						if ( has_post_thumbnail() ):
-							$img = getImageSRC(get_the_ID(),'single');
+							$img = firstling_getImageSRC(get_the_ID(),'single');
 				?>
 						<img src="<?php echo $img; ?>" class="img-fluid" alt="<?php the_title(); ?>">
 						<?php endif; ?>

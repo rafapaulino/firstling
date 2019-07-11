@@ -32,7 +32,7 @@ get_header(); ?>
 					<p class="attachment">
 						<a href="<?php echo wp_get_attachment_url( $post->ID, 'full' ); ?>" title="<?php the_title_attribute(); ?>">
 							<?php 
-								$img = getImageSRC($post->ID,'carrossel');
+								$img = firstling_getImageSRC($post->ID,'carrossel');
 							?>
 							<img src="<?php echo $img; ?>" class="img-fluid" alt="<?php the_title(); ?>">
 						</a>

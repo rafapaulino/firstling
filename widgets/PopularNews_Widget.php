@@ -69,7 +69,7 @@ class PopularNews_Widget extends WP_Widget
                         $url = esc_url(get_permalink());
                         $id = get_the_ID();
                         $date = esc_html( get_the_date() );
-                        $img = getImageSRC($id,'news-sidebar');
+                        $img = firstling_getImageSRC($id,'news-sidebar');
                 ?>
 				<li>
 					<a href="<?php echo $url; ?>" title="<?php echo $title; ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">

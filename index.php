@@ -40,7 +40,7 @@ get_header(); ?>
 							$x = 0;
 							foreach ($latest_posts as $post): setup_postdata( $post );
 							$category = get_the_category(); 
-							$img = getImageSRC(get_the_ID(),'carrossel');
+							$img = firstling_getImageSRC(get_the_ID(),'carrossel');
 						?>
 							<div class="carousel-item <?php echo esc_attr( ($x == 0) ? 'active':''); ?>">
 								<a href="<?php the_permalink(); ?>" itemprop="url">

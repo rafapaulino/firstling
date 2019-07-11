@@ -37,7 +37,7 @@ if ( $related->have_posts() ):
                 $link = esc_url( get_permalink() );
                 $title =  esc_attr( get_the_title() );
                 $id = get_the_ID();
-                $img = getImageSRC($id, 'news-sidebar');
+                $img = firstling_getImageSRC($id, 'news-sidebar');
             ?>
                 <li>
                     <a href="<?php echo $link; ?>" title="<?php echo $title; ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">

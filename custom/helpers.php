@@ -3,7 +3,7 @@
 if ( ! defined('ABSPATH')) exit('restricted access');
 
 //pega o valor src da imagem 
-function getImageSRC($id, $size = 'thumbnail')
+function firstling_getImageSRC($id, $size = 'thumbnail')
 {
     $post_thumbnail_id = get_post_thumbnail_id( intval($id) );
     $image_attributes = wp_get_attachment_image_src( intval($post_thumbnail_id), $size );
@@ -15,7 +15,7 @@ function getImageSRC($id, $size = 'thumbnail')
     endif;
 }
 
-function getExcerpt($limit = 150, $type = 'excerpt')
+function firstling_getExcerpt($limit = 150, $type = 'excerpt')
 {
     $excerpt = firstling_excerpt($type, $limit);
 
@@ -26,7 +26,7 @@ function getExcerpt($limit = 150, $type = 'excerpt')
     return $excerpt;
 }
 
-function wpSubstr($string, $limit = 150)
+function firstling_wpSubstr($string, $limit = 150)
 {
     $new_string = substr(trim($string), 0, $limit);
     
