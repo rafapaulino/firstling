@@ -309,6 +309,13 @@ table.wp-block-table.is-style-stripes td {
 	/*display: none !important;*/
 }
 
-.commentlist .bypostauthor,.bypostauthor {}
-.commentlist li ul.children li.bypostauthor {}
+.commentlist .bypostauthor,.bypostauthor {
+	font-weight: normal;
+}
+.commentlist li ul.children li.bypostauthor {
+	font-weight: normal;
+}
  
+.bypostauthor {
+	font-weight: normal;
+}
