@@ -10,27 +10,34 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'firstling' ) ); ?>">
+</main>
+<!--/ main -->
+<!-- footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<nav class="col-md-6 col-sm-12">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'firstling' ), 'WordPress' );
+					wp_nav_menu(
+						array(
+							'theme_location' => 'footer-menu',
+							'depth'          => 2,
+							'container'      => false,
+							'menu_class'     => 'nav footer-nav clearfix',
+							'fallback_cb'     => false,
+							'items_wrap'     => '<ul id="menu-footer" class="%2$s">%3$s</ul>',
+						)
+					);
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'firstling' ), 'firstling', '<a href="https://rafapaulino.com">Rafael Paulino</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+			</nav>
+			<p class="col-md-6 col-sm-12">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'firstling'); ?></p>
+		</div>
+	</div><!-- .container -->
 
+	<div id="stop" class="backToTop">
+		<div class="fas fa-arrow-up" aria-hidden="true" title="<?php esc_attr_e("Back to Top", "firstling"); ?>"></div>
+	</div>
+</footer><!--/ footer -->
 <?php wp_footer(); ?>
-
 </body>
 </html>

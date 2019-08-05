@@ -14,46 +14,81 @@
 
 get_header();
 ?>
+<div class="container">
+	<?php 
+		$latest_posts = get_posts(array(
+			'numberposts' => firstling_carrossel_total(),
+			'orderby'    => 'date',
+			'sort_order' => 'desc'
+		));
+		$total = count($latest_posts);
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		if ($total > 0):
+	?>
+	<div class="row">
+		<div class="col-md-12 no-padding">
+			<div class="wrapCarousel no-padding d-print-none">
+				<!-- carrossel -->
+				<div id="carouselHome" class="carousel slide carouselSwipe" data-interval="8000" data-ride="carousel" itemscope itemtype="http://schema.org/ItemList">
+					<ol class="carousel-indicators">
+						<?php for($a = 0; $a < $total; $a++) { ?>
+							<li data-target="#carouselHome" data-slide-to="0" class="<?php echo esc_attr( ($a == 0) ? 'active':''); ?>"></li>
+						<?php } ?>
+					</ol>
+					<div class="carousel-inner">
+						<?php 
+							$x = 0;
+							foreach ($latest_posts as $post): setup_postdata( $post );
+							$category = get_the_category(); 
+							$img = firstling_image_src(get_the_ID(),'carrossel');
+						?>
+							<div class="carousel-item <?php echo esc_attr( ($x == 0) ? 'active':''); ?>">
+								<a href="<?php the_permalink(); ?>" itemprop="url">
+									<img class="d-block w-100" src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
+								</a>
+								
+								<div class="carousel-caption d-md-block">
+									<?php if (count($category) > 0): ?>
+										<h5 itemprop="name"><a href="<?php the_permalink(); ?>" itemprop="url" data-animation="animated fadeInLeft"><?php echo esc_attr($category[0]->cat_name); ?></a></h5>
+									<?php endif; ?>
+									<p itemprop="itemListElement"><a href="<?php the_permalink(); ?>" itemprop="url" data-animation="animated bounceInLeft"><?php the_title(); ?></a></p>
+								</div>
+							</div>
+						<?php $x++; endforeach; ?>
+					</div>
+					<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<!--/ carrossel -->
+			</div>
+		</div>
+	</div>
+	<?php wp_reset_postdata(); ?>
+	<?php endif; ?>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
+	<div class="row">
+		<div class="col-12 col-md-8 wrap">
+			<div class="content-home">
+				<?php 
+					if ( have_posts() ) : 
+						while ( have_posts() ) : the_post(); 
+							get_template_part( 'template-parts/content' );
+						endwhile; 
+						firstling_paging_nav(); 
+					else:
+						get_template_part( 'template-parts/content-none' );
+					endif; 
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+			</div>
+		</div>
+		<?php get_sidebar(); ?>
+	</div>
+</div>
 <?php
-get_sidebar();
 get_footer();
