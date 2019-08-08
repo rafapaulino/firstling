@@ -9,67 +9,66 @@
  *
  * @package firstling
  */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
-}
 ?>
+<section id="comments" class="content-wrap" itemscope itemtype="http://schema.org/Comment">
+	<?php if ( post_password_required() ) : ?>
+		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view all comments.', 'firstling'); ?></p>
+</section><!-- #comments -->
+		<?php
+		return;
+	endif;
 
-<div id="comments" class="comments-area">
+	if ( have_comments() ) : ?>
+		<h2 id="comments-title" class="page-header">
+			<?php
+			comments_number( __( '0 Comments', 'firstling'), __( '1 Comment', 'firstling'), __( '% Comments', 'firstling') );
+			echo ' ' . __( 'to', 'firstling') . ' <span>&quot;' . get_the_title() . '&quot;</span>';
+			?>
+		</h2>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+			<nav id="comment-nav-above">
+				<ul class="pager">
+					<li class="previous"><?php previous_comments_link( __( '&larr; Old Comments', 'firstling') ); ?></li>
+					<li class="next"><?php next_comments_link( __( 'New Comments &rarr;', 'firstling') ); ?></li>
+				</ul>
+			</nav>
+		<?php endif; ?>
+		<ul class="media-list">
+			<?php wp_list_comments( array( 'callback' => 'firstling_comments_loop' ) ); ?>
+		</ul>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+			<nav id="comment-nav-above">
+				<ul class="pager">
+					<li class="previous"><?php previous_comments_link( __( '&larr; Old Comments', 'firstling') ); ?></li>
+					<li class="next"><?php next_comments_link( __( 'New Comments &rarr;', 'firstling') ); ?></li>
+				</ul>
+			</nav>
+		<?php endif; ?>
+	<?php endif; ?>
+	<?php if ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+		<p class="nocomments"><?php _e( 'Comments closed.', 'firstling'); ?></p>
+	<?php endif; ?>
 
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-			$firstling_comment_count = get_comments_number();
-			if ( '1' === $firstling_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'firstling' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $firstling_comment_count, 'comments title', 'firstling' ) ),
-					number_format_i18n( $firstling_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
-
-		<?php the_comments_navigation(); ?>
-
-		<ol class="comment-list">
-			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php
-		the_comments_navigation();
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'firstling' ); ?></p>
-			<?php
-		endif;
-
-	endif; // Check for have_comments().
-
-	comment_form();
+		$commenter 		= wp_get_current_commenter();
+		$req 			= get_option( 'require_name_email' );
+		$html_req 		= ( $req ? " required='required'" : '' );
+		$html5 			= current_theme_supports( 'html5', 'comment-form' ) ? 'html5' : null;
+		$comment_field 	= '<div class="comment-form-comment form-group"><label class="control-label" for="comment">' . __( 'Comment', 'firstling') . ' <span class="required text-danger">*</span></label> ' .
+						 '<textarea id="comment" name="comment" class="form-control" cols="45" rows="8" required="required"></textarea></div>';
+		$fields 		=  array(
+			'author' => '<div class="comment-form-author form-group">' . '<label for="author">' . __( 'Name', 'firstling') . ( $req ? ' <span class="required text-danger">*</span>' : '' ) . '</label> ' .
+			            '<input id="author" name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $html_req . ' /></div>',
+			'email'  => '<div class="comment-form-email form-group"><label for="email">' . __( 'E-mail', 'firstling') . ( $req ? ' <span class="required text-danger">*</span>' : '' ) . '</label> ' .
+			            '<input id="email" name="email" class="form-control" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div>',
+			'url'    => '<div class="comment-form-url form-group"><label for="url">' . __( 'Website', 'firstling') . '</label> ' .
+			            '<input id="url" name="url" class="form-control" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'
+		);
+		comment_form( array(
+			'comment_notes_after' 	=> '',
+			'comment_field' 		=> $comment_field,
+			'fields' 				=> apply_filters( 'comment_form_default_fields', $fields ),
+			'class_submit' 			=> 'submit btn btn-default btn-comment'
+		));
 	?>
-
-</div><!-- #comments -->
+</section><!-- #comments -->
