@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/* SINGLE */
+.content-single {
+    @extend .box-default;
+    padding: 0 0 30px 0;
+    width: 100%;
+    margin-bottom: 30px;
+
+    img.img-fluid {
+        width: 100%;
+    }
+
+    article {
+        padding: 30px 30px 0 30px;
+        min-height: 300px;
+
+        header {
+            margin-bottom: 30px;
+
+            .entry-meta {
+                font-family: $fontSecound;
+                font-size: 12px;
+                color: #9e9e9e;
+                margin: 30px 0 0 0;
+            }
+        }
+
+        h1 {
+            font-size: 25px;
+            font-family: $fontDefault;
+        }
+
+        .entry-content {
+            font-weight: normal;
+            font-size: 14px;
+            font-family: $fontSecound;
+            padding-bottom: 10px;
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: $fontDefault;
+                color: $primary; 
+            }
+            h1 {
+                font-size: 25px;  
+            }
+            h2 {
+                font-size: 23px;  
+            }
+            h3 {
+                font-size: 21px;   
+            }
+            h4 {
+                font-size: 19px; 
+            }
+            h5 {
+                font-size: 17px; 
+            }
+            h6 {
+                font-size: 15px; 
+            }
+            /* shortcodes */
+            h1.su-post-title, 
+            h2.su-post-title, 
+            h3.su-post-title,
+            h4.su-post-title, 
+            h5.su-post-title, 
+            h6.su-post-title {
+                font-family: $fontDefault;
+                color: $primary; 
+                font-weight: normal;
+
+                a {
+                    color: $primary; 
+                    text-decoration: none;
+                    font-family: $fontDefault;
+                    font-weight: normal;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+           
+            .wp-block-embed__wrapper:not(.wp-block-embed-instagram),
+            .wp-block-preformatted {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                padding-top: 25px;
+                height: 0;
+
+                iframe, object, embed {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+
+            .wp-block-embed-instagram {
+                iframe {
+                    min-width: auto !important;
+                }
+            }
+
+            .wp-block-video {
+                overflow: hidden;
+                width: 100%;
+
+                .plyr {
+                    width: inherit;
+                    .plyr__controls {
+                        width: inherit;
+                    }
+                    .plyr__video-wrapper {
+                        width: inherit;
+
+                        video {
+                            width: inherit;
+                        }
+                    }
+                }
+            }
+            .wp-block-audio {
+                overflow: hidden;
+                width: 100%;
+            }
+        }
+
+        footer {
+            margin: 30px 0;
+
+            .cat-links {
+                font-size: 13px;
+                
+                a {
+                    color: #747373;
+                }
+                a:hover {
+                    color: #000;
+                }
+            }
+
+            .author-biography {
+                padding-top: 10px;
+                border-top: 1px solid #dedede;
+            }
+
+            .prev-next-content {
+                margin: 15px 0;
+                width: 100%;
+                display: inline-block;
+                clear: both;
+            }
+
+            .relatedPosts .jcarousel-wrapper ul li h2,
+            .relatedPosts .jcarousel-wrapper ul li h2 a {
+                font-family: $fontDefault !important; 
+                color: #000;           
+            }
+
+        }
+
+        .media-heading {
+            a {
+                color: $primary; 
+            }
+        }
+
+    }
+}

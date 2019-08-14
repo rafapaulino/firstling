@@ -1,0 +1,101 @@
+/* cor verde */
+body.green {
+    .navContainer {
+        background-color: $green;
+    }
+    #footer {
+        border-bottom-color: $green;   
+    }
+
+    /* cores das bordas */
+    .topBottom-leftRightCorner .ui-border-element::before,
+    .topBottom-leftRightCorner .ui-border-element::after,
+    .topBottom-leftRightCorner::before,
+    .topBottom-leftRightCorner::after {
+        border-color: $green;
+    }
+
+    .categories-list li a:hover {
+        color: $green !important;
+    }
+
+    h2, h3, h4, h5, h6 {
+        a:hover {
+            color: $green !important;
+        }
+    }
+    .entry-content {
+        h1, h2, h3, h4, h5, h6 {
+            color: $green !important;
+        }
+
+        h1.su-post-title, 
+        h2.su-post-title, 
+        h3.su-post-title,
+        h4.su-post-title, 
+        h5.su-post-title, 
+        h6.su-post-title {
+            color: $green;
+            a {
+                color: $green;
+            }
+        }
+    }
+
+    /* volume do player de áudio */
+    .plyr--full-ui input[type="range"] {
+        color: $green;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $green;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $green;
+    }
+
+    .author.vcard {
+        a {
+            color: $green;
+        }
+    }
+
+    .comments-link {
+        a {
+            color: $green;
+        }
+    }
+    .media-heading {
+        a {
+            color: $green; 
+        }
+    }
+    .comment-metadata {
+        a {
+            color: $green;
+        }
+    }
+    
+    #comments {
+        .btn-comment {
+            background: $green;
+        }
+    }
+
+    .pagination-wrap .page-numbers li span {
+        background: $green;      
+        border: 1px solid $green;
+    }
+
+    blockquote {
+        border-color: $green;
+        &:before, &:after {
+            color: $green;
+        }
+    }
+
+    .author-description {
+        strong {
+            color: $green;
+        }
+    }
+}

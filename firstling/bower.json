@@ -1,0 +1,25 @@
+{
+  "name": "firstling",
+  "homepage": "https://github.com/rafapaulino/firstling",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.3.1",
+    "jquery-validation": "^1.19.0",
+    "font-awesome": "^5.7.2",
+    "jquery-scroll-top": "jquery-back-to-top#^1.0.7",
+    "barra-topo": "^1.0.8",
+    "categories": "^1.0.1",
+    "redes-sociais-mini": "^1.0.0",
+    "tagcloud": "^1.0.0",
+    "noticias-relacionadas": "^1.0.0",
+    "ultimas-noticias": "^1.0.0",
+    "rafa-carrossel": "^1.0.0",
+    "prev-next": "^1.0.0",
+    "plyr": "^3.5.4",
+    "smartmenus": "^1.1.0",
+    "venobox": "^1.8.6"
+  }
+}

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+.page-404 {
+    @extend .box-default;
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 20px;
+    
+    @media (min-width: 330px) {
+        min-height: 80vh;
+        padding: 40% 20px;
+    }
+
+    @media (min-width: 800px) {
+        height: auto;
+        min-height: auto;
+        padding: 30% 20px;
+    }
+}
+
+.page-404 .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.page-404 .notfound form .search-alt {
+    width: 100%;
+}
+  
+.notfound {
+    max-width: 520px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+
+    form {
+
+        .input-group {
+            width: 100%;
+
+            .btn-default {
+                background: $dark;
+                border: 1px solid $dark;
+                color: #fff;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+}
+
+.notfound .notfound-404 {
+    position: relative;
+    height: 240px;
+    display: none;
+
+    @media (min-width: 330px) {
+        display: block;
+    }
+}
+  
+.notfound .notfound-404 h3 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 252px;
+    font-weight: 900;
+    margin: 0px;
+    color: #262626;
+    text-transform: uppercase;
+    letter-spacing: -40px;
+    margin-left: -20px;
+}
+  
+.notfound .notfound-404 h3 > span {
+    text-shadow: -8px 0px 0px #fff;
+}
+  
+.notfound .notfound-404 h2 {
+    font-family: 'Cabin', sans-serif;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #262626;
+    margin: 0px;
+    letter-spacing: 3px;
+    padding-left: 6px;
+}
+  
+.notfound h4 {
+    font-family: 'Cabin', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+  
+@media only screen and (max-width: 767px) {
+    .notfound .notfound-404 {
+        height: 200px;
+    }
+    .notfound .notfound-404 h3 {
+        font-size: 200px;
+    }
+}
+  
+@media only screen and (max-width: 480px) {
+    .notfound .notfound-404 {
+        height: 162px;
+    }
+    .notfound .notfound-404 h3 {
+        font-size: 162px;
+        height: 150px;
+        line-height: 162px;
+    }
+    .notfound h4 {
+        font-size: 16px;
+    }
+}

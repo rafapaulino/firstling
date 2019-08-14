@@ -1,0 +1,101 @@
+/* cor verde */
+body.warning {
+    .navContainer {
+        background-color: $warning;
+    }
+    #footer {
+        border-bottom-color: $warning;   
+    }
+
+    /* cores das bordas */
+    .topBottom-leftRightCorner .ui-border-element::before,
+    .topBottom-leftRightCorner .ui-border-element::after,
+    .topBottom-leftRightCorner::before,
+    .topBottom-leftRightCorner::after {
+        border-color: $warning;
+    }
+
+    .categories-list li a:hover {
+        color: $warning !important;
+    }
+
+    h2, h3, h4, h5, h6 {
+        a:hover {
+            color: $warning !important;
+        }
+    }
+    .entry-content {
+        h1, h2, h3, h4, h5, h6 {
+            color: $warning !important;
+        }
+
+        h1.su-post-title, 
+        h2.su-post-title, 
+        h3.su-post-title,
+        h4.su-post-title, 
+        h5.su-post-title, 
+        h6.su-post-title {
+            color: $warning;
+            a {
+                color: $warning;
+            }
+        }
+    }
+
+    /* volume do player de áudio */
+    .plyr--full-ui input[type="range"] {
+        color: $warning;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $warning;
+    }
+    .plyr--audio .plyr__control.plyr__tab-focus, .plyr--audio .plyr__control:hover, .plyr--audio .plyr__control[aria-expanded="true"] {
+        background: $warning;
+    }
+
+    .author.vcard {
+        a {
+            color: $warning;
+        }
+    }
+
+    .comments-link {
+        a {
+            color: $warning;
+        }
+    }
+    .media-heading {
+        a {
+            color: $warning; 
+        }
+    }
+    .comment-metadata {
+        a {
+            color: $warning;
+        }
+    }
+
+    #comments {
+        .btn-comment {
+            background: $warning;
+        }
+    }
+
+    .pagination-wrap .page-numbers li span {
+        background: $warning;      
+        border: 1px solid $warning;
+    }
+
+    blockquote {
+        border-color: $warning;
+        &:before, &:after {
+            color: $warning;
+        }
+    }
+
+    .author-description {
+        strong {
+            color: $warning;
+        }
+    }
+}

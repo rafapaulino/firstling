@@ -1,0 +1,155 @@
+
+#comments-title {
+    font-size: 0.9rem !important;
+    font-family: $fontDefault;
+}
+
+.comment-notes {
+    font-size: 12px;
+}
+.comment-form-cookies-consent {
+    label {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}
+.comments-link {
+    a {
+        color: $primary;
+    }
+}
+
+#comments {
+
+    .btn-comment {
+        background: $primary;
+        color: #fff;
+        outline: none;
+        border: 0;
+        border-radius: 0;
+        font-size: .8rem;
+    }
+
+    .media-list {
+        margin: 10px 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+
+        li.comment {
+            display: inline-block !important;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 15px 0;
+            padding: 0;
+            
+            @media (min-width: 568px) {
+                padding-top: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+
+            .children { 
+                @media (max-width: 568px) {
+                    padding: 0;
+                }
+            }
+
+            .comment-body {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+
+                .media-left {
+                    display: block;
+                    float: none; 
+                    margin: 0 auto; 
+                    padding-bottom: 15px;
+                    width: 64px;
+                    height: 64px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    border-radius: 50%;
+
+                    @media (min-width: 568px) {
+                        float: left; 
+                        margin-right: 20px; 
+                        padding-bottom: 25px;
+                        border-radius: 0;
+                    }
+                }
+
+                .media-body {
+                    float: none;
+                    margin: 0 auto;
+                    width: 100%;
+                    padding-bottom: 10px;
+                    box-sizing: border-box;
+                    
+
+                    @media (min-width: 568px) {
+                        float: right;
+                        margin: 0;
+                        width: calc(100% - 84px);
+                    }
+
+                    .comment-meta { 
+                        margin: 0;
+                        padding: 0;
+
+                        h5 {
+                            font-size: 1rem;
+                            font-family: $fontDefault;
+
+                            a {
+                                text-decoration: none;
+                                color: $primary;
+                            }
+
+                            .comment-time {
+                                font-size: 0.9rem;
+                                font-family: $fontDefault;
+                                color: #a09f9f !important;
+                            }
+                        }
+                    }
+                    .comment-content {
+                        font-size: 0.9rem;
+                        font-family: $fontSecound;
+
+                        a {
+                            text-decoration: none;
+                            color: $primary;
+                        }
+                    }
+                    .comment-metadata {
+                        font-size: 0.7rem;
+                        padding: 0;
+                        margin: 0;
+
+                        a {
+                            font-family: $fontSecound;
+                            color: #a09f9f !important;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @media (min-width: 568px) {
+            .depth-1 {padding-left: 0;}
+            .depth-2 {padding-left: 15px;}
+            .depth-3 {padding-left: 30px;}
+            .depth-4 {padding-left: 45px;}
+            .depth-5 {padding-left: 60px;}
+            .depth-6 {padding-left: 75px;}
+            .depth-7 {padding-left: 90px;}
+            .depth-8 {padding-left: 105px;}
+            .depth-9 {padding-left: 120px;}
+            .depth-10 {padding-left: 135px;}
+        }
+    }
+}

@@ -1,0 +1,220 @@
+
+@charset "UTF-8";
+/* barra no topo */
+.navContainer {
+    position: relative;
+    background-color: $primary;
+}
+/* plano de fundo do logo */
+#header {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #313233;
+    display: inline-block;
+    clear: both;
+
+    nav.bg-dark {
+        background-color: #313233 !important;
+        padding: .8rem 1rem;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: 0;
+
+            a {
+                span {
+                    text-transform: uppercase;
+                    font-family: $fontDefault;
+                    font-weight: bold;
+                    margin: 0;
+                }
+
+                .navbar-text {
+                    font-size: 0.6em;
+                    color: rgba(255,255,255,.8);
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    padding: 0;
+                    margin-left: 10px;
+                }
+
+                .custom-logo {
+                    max-height: 55px;
+                    width: auto !important;
+
+                    /*@media (min-width: 412px) {
+                        max-height: 55px;
+                    }*/
+                }
+            }
+        }
+
+        ul.navbar-nav {
+            font-size: 0.9rem;
+
+            .dropdown-menu {
+                border-radius: 0;
+
+                a.dropdown-item {
+                    font-size: 0.9rem;
+                }
+                .dropdown-header {
+                    font-size: .850rem !important;
+                }
+            }
+        }
+    }
+}
+
+.headerContainer {
+    width: 100%;
+    padding: 0; 
+    box-sizing: border-box;
+    clear: both;
+    overflow: hidden;
+    position: relative;
+
+    .container {
+
+        .row {
+            position: relative;
+            overflow: hidden;
+
+            #search-content.open {
+                background: #525354;
+                left: 0;
+
+                form {
+                    display: block;
+                }
+            }
+            
+            #search-content {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                background: transparent;
+                padding: 17px; 
+                box-sizing: border-box;
+                min-height: 40px;
+                transition: all ease .3s;
+                left: 78%;
+
+                @media (min-width: 320px) {
+                    left: 83%;
+                }
+                @media (min-width: 360px) {
+                    left: 85%;
+                }
+                @media (min-width: 384px) {
+                    left: 86%;
+                }
+                @media (min-width: 412px) {
+                    left: 87%;
+                }
+                @media (min-width: 568px) {
+                    left: 91%;
+                }
+                @media (min-width: 800px) {
+                    left: 93%;
+                }
+                @media (min-width: 1024px) {
+                    left: 96%;
+                }
+
+                /* botão que mostra o formulário de busca */
+                i.fa-search {
+                    font-size: 22px;
+                    line-height: 40px;
+                    color: #fff;
+                    cursor: pointer;
+                    float: left; 
+                    margin-right: 16px;
+                    
+                    @media (min-width: 1024px) {
+                        margin-right: 8px;
+                    }
+                }
+
+                form {
+                    width: 65%;
+                    height: inherit;
+                    min-height: 40px;
+                    padding: 0;
+                    margin: 0;
+                    float: left;
+                    display: none;
+
+                    @media (min-width: 1024px) {
+                        width: 90%;
+                    }
+
+                    input {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        padding: 0;
+                        margin: 0;
+                        height: 40px;
+                        width: 100%;
+                        color: #fff;
+                        font-size: 13px;
+                    }
+                    input::placeholder {
+                        color: #fdfdfd;
+                    }
+                }
+
+                /* botão que fecha o formulário de busca */
+                i.fa-times {
+                    font-size: 22px;
+                    line-height: 40px;
+                    color: #fff;
+                    cursor: pointer;
+                    float: right; 
+                }
+            }
+        }
+    }
+}
+
+#branding {
+    padding: 17px 0; 
+    box-sizing: border-box;
+
+    /* logo */
+    h1 {
+        text-transform: uppercase;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 800px) {
+            font-size: 17px;
+        }
+        @media (min-width: 1024px) {
+            font-size: 20px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    strong {
+        font-size: 9px;
+        margin: 0;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #dadada;
+
+        @media (min-width: 800px) {
+            font-size: 11px;
+        }
+    }
+}
+

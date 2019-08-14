@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* CARROSSEL */
+.wrapCarousel {
+    max-width: inherit;
+    margin-bottom: 25px;
+}
+
+.carousel-item .carousel-caption h5,
+.carousel-item .carousel-caption p {
+    font-family: $fontSecound;
+}
+
+/* HOME */
+.content-home {
+    @extend .box-default;
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+
+    article {
+        padding-bottom: 40px;
+        width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+
+        .thumb {
+            display: inline-block;
+            width: 98%;
+            margin: 0 1%;
+
+            @media (min-width: 1280px) {
+                float: left;
+                margin: 0 0 10px 0;
+                width: 240px;
+            }
+
+            a {
+                display: block;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+
+                span.ui-border-element {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .details {
+            width: 98%;
+            margin: 1%;
+
+            @media (min-width: 1280px) {
+                float: right;
+                margin: 0 0 10px 0;
+                width: 62%;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-family: $fontDefault;
+                margin: 10px 0 0 0;
+
+                @media (min-width: 1280px) {
+                    margin: 0;
+                }
+                
+                a {
+                    color: #000;
+                    text-decoration: none;
+                }
+            }
+            a.time {
+                font-size: 11px;
+                font-family: $fontSecound;
+                color: #000;
+                text-decoration: none;
+                margin-top: 5px;
+            }
+            p {
+                font-size: 13px;
+                font-family: $fontSecound; 
+                margin-top: 5px;
+
+                a {
+                    color: #777;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
