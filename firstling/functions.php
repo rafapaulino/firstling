@@ -160,3 +160,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require get_template_directory() . '/inc/custom-functions.php';
+require get_template_directory() . '/inc/widgets/sidebar.php';
