@@ -1,0 +1,819 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Firstling v2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-10 07:21-0300\n"
+"PO-Revision-Date: 2019-08-16 11:04-0300\n"
+"Last-Translator: Rafael Funchal <rafaelfunchal@gmail.com>\n"
+"Language-Team: WordPress Brasil Group\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ firstling
+#: ../404.php:15
+msgid "Not Found"
+msgstr "Nada Encontrado"
+
+# @ firstling
+#: ../404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Parece que nada foi encontrado neste local. Talvez tentar uma pesquisa?"
+
+# @ firstling
+#: ../archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Arquivos Diários: %s"
+
+# @ firstling
+#: ../archive.php:33
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Arquivos Mensais: %s"
+
+# @ firstling
+#: ../archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+# @ firstling
+#: ../archive.php:36
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Arquivos Anuais: %s"
+
+# @ firstling
+#: ../archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+# @ firstling
+#: ../archive.php:39
+msgid "Archives"
+msgstr "Arquivos"
+
+# @ firstling
+#: ../audio.php:24 ../video.php:24
+msgid "URL:"
+msgstr "URL:"
+
+# @ firstling
+#: ../audio.php:30 ../image.php:40 ../video.php:30
+#, php-format
+msgid "Back to %s"
+msgstr "Voltar para %s"
+
+# @ firstling
+#: ../audio.php:30 ../image.php:40 ../video.php:30
+#, php-format
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr "<span class=\"meta-nav\">&larr;</span> %s"
+
+# @ firstling
+#: ../author.php:30
+#, php-format
+msgid "All posts by %s"
+msgstr "Todas as publicações por %s"
+
+# @ firstling
+#: ../category.php:19
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Arquivo da Categoria: %s"
+
+# @ firstling
+#: ../comments.php:13
+msgid "This post is password protected. Enter the password to view all comments."
+msgstr "Esse post é protegido por senha. Informe a senha para ver todos os comentários."
+
+# @ firstling
+#: ../comments.php:22
+msgid "0 Comments"
+msgstr "0 Comentários"
+
+# @ firstling
+#: ../comments.php:22 ../content.php:53
+msgid "1 Comment"
+msgstr "1 Comentário"
+
+# @ firstling
+#: ../comments.php:22 ../content.php:53
+msgid "% Comments"
+msgstr "% Comentários"
+
+# @ firstling
+#: ../comments.php:23
+msgid "to"
+msgstr "para"
+
+# @ firstling
+#: ../comments.php:28 ../comments.php:37
+msgid "&larr; Old Comments"
+msgstr "&larr; Comentários Antigos"
+
+# @ firstling
+#: ../comments.php:29 ../comments.php:38
+msgid "New Comments &rarr;"
+msgstr "Novos Comentários &rarr;"
+
+# @ firstling
+#: ../comments.php:43
+msgid "Comments closed."
+msgstr "Comentários não são permitidos."
+
+# @ firstling
+#: ../comments.php:54
+msgid "Comment"
+msgstr "Comentário"
+
+# @ firstling
+#: ../comments.php:56
+msgid "Name"
+msgstr "Nome"
+
+# @ firstling
+#: ../comments.php:57
+msgid "E-mail"
+msgstr "E-mail"
+
+# @ firstling
+#: ../comments.php:58
+msgid "Website"
+msgstr "Website"
+
+# @ firstling
+#: ../content-none.php:11
+msgid "Nothing Found"
+msgstr "Nada Encontrado"
+
+# @ firstling
+#: ../content-none.php:17
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Pronto para publicar o seu primeiro post? <a href=\"%1$s\">Comece agora aqui</a>."
+
+# @ firstling
+#: ../content-none.php:21
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Desculpe, mas nada foi encontrado com os termos da sua pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes."
+
+# @ firstling
+#: ../content-none.php:26
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que não conseguimos encontrar o que você está procurando. Talvez a pesquisa pode ajudar."
+
+# @ firstling
+#: ../content-page.php:17 ../content.php:38
+msgid "Pages:"
+msgstr "Páginas:"
+
+# @ firstling
+#: ../content.php:36
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continue lendo <span class=\"meta-nav\">&rarr;</span>"
+
+# @ firstling
+#: ../content.php:49
+msgid "Posted in:"
+msgstr "Publicado em:"
+
+# @ firstling
+#: ../content.php:49
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+# @ firstling
+#: ../content.php:51
+msgid "Tagged as:"
+msgstr "Marcado como:"
+
+# @ firstling
+#: ../content.php:53
+msgid "Leave a comment"
+msgstr "Deixe um comentário"
+
+# @ firstling
+#: ../footer.php:17 ../footer.php:70
+msgid "All rights reserved"
+msgstr "Todos os direitos reservados"
+
+# @ firstling
+#: ../footer.php:17
+#, php-format
+msgid "Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Rafael Paulino</a> forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
+msgstr "Desenvolvido por <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Rafael Paulino</a> e <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
+
+# @ firstling
+#: ../functions.php:64 ../functions.php:71
+msgid "Main Menu"
+msgstr "Menu Principal"
+
+# @ firstling
+#: ../functions.php:157 ../footer.php:157
+msgid "Main Sidebar"
+msgstr "Sidebar Principal"
+
+# @ firstling
+#: ../functions.php:159
+msgid "Site Main Sidebar"
+msgstr "Sidebar Principal"
+
+# @ firstling
+#: ../header.php:53
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+# @ firstling
+#: ../header.php:56
+msgid "Toggle navigation"
+msgstr "Alternar navegação"
+
+# @ firstling
+#: ../header.php:83
+msgid "Search:"
+msgstr "Pesquisar:"
+
+# @ firstling
+#: ../image.php:23
+#, php-format
+msgid "Image total size: %s pixels"
+msgstr "Tamanho total da imagem: %s pixels"
+
+# @ firstling
+#: ../image.php:23
+msgid "Full image link"
+msgstr "Link da imagem completa"
+
+# @ firstling
+#: ../image.php:34
+msgid "&larr; Previous image"
+msgstr "&larr; Imagem anterior"
+
+# @ firstling
+#: ../image.php:35
+msgid "Next image &rarr;"
+msgstr "Próxima imagem &rarr;"
+
+# @ firstling
+#: ../search.php:17
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultado de Busca por: %s"
+
+# @ firstling
+#: ../tag.php:21
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Arquivo da Tag: %s"
+
+# @ firstling
+#: ../core/helpers.php:56
+msgid "&laquo; Previous"
+msgstr "&laquo; Anterior"
+
+# @ firstling
+#: ../core/helpers.php:57
+msgid "Next &raquo;"
+msgstr "Próximo &raquo;"
+
+# @ firstling
+#: ../core/helpers.php:99
+msgid "Related Posts"
+msgstr "Artigos Relacionados"
+
+# @ firstling
+#: ../core/helpers.php:228
+msgid "Home"
+msgstr "Início"
+
+# @ firstling
+#: ../core/helpers.php:320
+#, php-format
+msgid "%sCategory: %s%s"
+msgstr "%sCategoria: %s%s"
+
+# @ firstling
+#: ../core/helpers.php:324
+#, php-format
+msgid "%sTag: %s%s"
+msgstr "%sTag: %s%s"
+
+# @ firstling
+#: ../core/helpers.php:332
+#, php-format
+msgid "%sSearch result for: &quot;%s&quot;%s"
+msgstr "%sResultado da busca para: &quot;%s&quot;%s"
+
+# @ firstling
+#: ../core/helpers.php:339
+msgid "Posted by"
+msgstr "Publicado por"
+
+# @ firstling
+#: ../core/helpers.php:378
+msgid "404 Error"
+msgstr "Erro 404"
+
+# @ firstling
+#: ../core/helpers.php:385 ../core/helpers.php:387 ../inc/optimize.php:27
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+# @ firstling
+#: ../core/classes/class-bootstrap-nav.php:203
+msgid "Add a menu"
+msgstr "Adicionar um menu"
+
+# @ firstling
+#: ../core/classes/class-contact-form.php:170
+#, php-format
+msgid "Message sent by the form %s in %s at %s"
+msgstr "Mensagem enviada pelo formulário %s em %s às %s"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:78 ../core/classes/class-metabox.php:424
+#: ../core/classes/class-theme-options.php:89
+#: ../core/classes/class-theme-options.php:616
+msgid "Add images in gallery"
+msgstr "Adicionar imagens na galeria"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:79
+#: ../core/classes/class-theme-options.php:90
+msgid "Add in gallery"
+msgstr "Adicionar na galeria"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:80 ../core/classes/class-metabox.php:388
+#: ../core/classes/class-metabox.php:413
+#: ../core/classes/class-theme-options.php:91
+#: ../core/classes/class-theme-options.php:570
+#: ../core/classes/class-theme-options.php:605
+msgid "Remove image"
+msgstr "Remover imagem"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:81
+#: ../core/classes/class-theme-options.php:92
+msgid "Choose a file"
+msgstr "Selecione um arquivo"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:82
+#: ../core/classes/class-theme-options.php:93
+msgid "Add file"
+msgstr "Adicionar arquivo"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:366
+#: ../core/classes/class-theme-options.php:537
+msgid "Select file"
+msgstr "Selecionar arquivo"
+
+# @ firstling
+#: ../core/classes/class-metabox.php:388
+#: ../core/classes/class-theme-options.php:570
+msgid "Select image"
+msgstr "Selecionar imagem"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:73
+#: ../core/classes/class-post-type.php:80 ../core/classes/class-taxonomy.php:75
+#: ../core/classes/class-taxonomy.php:84
+#, php-format
+msgid "%ss"
+msgstr "%ss"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:74 ../core/classes/class-taxonomy.php:76
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:75 ../core/classes/class-taxonomy.php:78
+#, php-format
+msgid "View %s"
+msgstr "Ver %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:76 ../core/classes/class-taxonomy.php:79
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:77 ../core/classes/class-taxonomy.php:80
+#, php-format
+msgid "Search %s"
+msgstr "Pesquisar %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:78 ../core/classes/class-taxonomy.php:81
+#, php-format
+msgid "Update %s"
+msgstr "Atualizar  %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:79 ../core/classes/class-taxonomy.php:82
+#: ../core/classes/class-taxonomy.php:83
+#, php-format
+msgid "Parent %s:"
+msgstr "Parente %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:81
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:82 ../core/classes/class-taxonomy.php:85
+#, php-format
+msgid "Add New %s"
+msgstr "Adicionar Novo %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:83 ../core/classes/class-taxonomy.php:86
+#, php-format
+msgid "New %s"
+msgstr "Novo %s"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:84 ../core/classes/class-taxonomy.php:87
+#, php-format
+msgid "All %ss"
+msgstr "Todos os %ss"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:85
+#, php-format
+msgid "No %s found"
+msgstr "Nenhum %s encontrado"
+
+# @ firstling
+#: ../core/classes/class-post-type.php:86
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Nenhum %s encontrado na Lixeira"
+
+# @ firstling
+#: ../core/classes/class-taxonomy.php:77
+#, php-format
+msgid "Add or Remove %ss"
+msgstr "Adicionar ou Remover %ss"
+
+# @ firstling
+#: ../core/classes/class-taxonomy.php:88
+#, php-format
+msgid "Separate %ss with comma"
+msgstr "Separe %ss com vírgula"
+
+# @ firstling
+#: ../core/classes/class-taxonomy.php:89
+#, php-format
+msgid "Choose from %ss most used"
+msgstr "Escolher entre os %ss mais usados"
+
+# @ firstling
+#: ../core/classes/abstracts/abstract-front-end-form.php:234
+msgid "Submit"
+msgstr "Enviar"
+
+# @ firstling
+#: ../core/classes/abstracts/abstract-front-end-form.php:276
+msgid "Form submitted successfully!"
+msgstr "Formulário enviado com sucesso!"
+
+# @ firstling
+#: ../core/classes/abstracts/abstract-front-end-form.php:514
+#, php-format
+msgid "%s is required."
+msgstr "%s é um campo obrigatório."
+
+# @ firstling
+#: ../core/classes/abstracts/abstract-front-end-form.php:520
+#, php-format
+msgid "%s must be an email address valid."
+msgstr "%s precisa ser um endereço de email válido"
+
+#: ../core/classes/widgets/class-widget-like-box.php:20
+msgid "Facebook Like Box"
+msgstr "Caixa de Curtir do Facebook"
+
+#: ../core/classes/widgets/class-widget-like-box.php:21
+msgid "This widget includes a facebook like box on your blog"
+msgstr "Esse widget inclui a caixa de curtir do Facebook em seu site"
+
+#: ../core/classes/widgets/class-widget-like-box.php:48
+msgid "Title:"
+msgstr "Título:"
+
+#: ../core/classes/widgets/class-widget-like-box.php:54
+msgid "Facebook Page URL:"
+msgstr "URL da página do Facebook:"
+
+#: ../core/classes/widgets/class-widget-like-box.php:60
+msgid "Width:"
+msgstr "Largura:"
+
+#: ../core/classes/widgets/class-widget-like-box.php:66
+msgid "Height:"
+msgstr "Altura:"
+
+#: ../core/classes/widgets/class-widget-like-box.php:72
+msgid "Color Scheme:"
+msgstr "Esquema de cores:"
+
+#: ../core/classes/widgets/class-widget-like-box.php:74
+msgid "Dark"
+msgstr "Escuro"
+
+#: ../core/classes/widgets/class-widget-like-box.php:75
+msgid "Light"
+msgstr "Claro"
+
+#: ../core/classes/widgets/class-widget-like-box.php:81
+msgid "Show Friends Faces"
+msgstr "Exibir rostos dos amigos"
+
+#: ../core/classes/widgets/class-widget-like-box.php:86
+msgid "Show Posts"
+msgstr "Exibir atualizações"
+
+#: ../core/classes/widgets/class-widget-like-box.php:91
+msgid "Show Header"
+msgstr "Exibir cabeçalho"
+
+#: ../core/classes/widgets/class-widget-like-box.php:96
+msgid "Show Border"
+msgstr "Exibir borda"
+
+# @ firstling
+#: ../inc/comments-loop.php:23
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# @ firstling
+#: ../inc/comments-loop.php:23 ../inc/comments-loop.php:33
+msgid "Edit"
+msgstr "Editar"
+
+# @ firstling
+#: ../inc/comments-loop.php:32
+msgid "in"
+msgstr "em"
+
+# @ firstling
+#: ../inc/comments-loop.php:32
+msgid "at"
+msgstr "as"
+
+# @ firstling
+#: ../inc/comments-loop.php:32
+msgid "said:"
+msgstr "disse:"
+
+# @ firstling
+#: ../inc/comments-loop.php:36
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguardando moderação."
+
+# @ firstling
+#: ../inc/comments-loop.php:41
+msgid "Respond"
+msgstr "Responder"
+
+# @ firstling
+#: ../inc/template-tags.php:62
+msgid "Sticky"
+msgstr "Destacado"
+
+# @ firstling
+#: ../inc/template-tags.php:67
+msgid "Posted in"
+msgstr "Publicado em"
+
+# @ firstling
+#: ../inc/template-tags.php:70
+msgid "by"
+msgstr "por"
+
+# @ firstling
+#: ../inc/template-tags.php:70
+msgid "Page not found"
+msgstr "Página não encontrada"
+
+# @ firstling
+#: ../footer.php:70
+msgid "The page you are looking for was not found, please use the form below to perform a search on the site."
+msgstr "A página que você está procurando não foi encontrada, por favor use o formulário abaixo para realizar uma busca no site."
+
+# @ firstling
+#: ../footer.php:70
+msgid "forces with"
+msgstr "usando"
+
+# @ firstling
+#: ../footer.php:70
+msgid "and"
+msgstr "e"
+
+# @ firstling
+#: ../footer.php:70
+msgid "Back to Top"
+msgstr "Voltar ao Topo"
+
+# @ firstling
+#: ../functions.php:72
+msgid "Footer Menu"
+msgstr "Menu do Rodapé"
+
+# @ firstling
+#: ../next-post.php:25
+msgid "Next"
+msgstr "Próximo"
+
+# @ firstling
+#: ../prev-post.php:25
+msgid "Prev"
+msgstr "Anterior"
+
+# @ firstling
+#: ../related-posts.php:72
+msgid "Related Content"
+msgstr "Conteúdo Relacionado"
+
+# @ firstling
+#: ../functions.php:63 ../functions.php:172
+msgid "Back"
+msgstr "Voltar"
+
+# @ firstling
+#: ../functions.php:64
+msgid "Go"
+msgstr "Ir"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:101
+msgid "Carousel Items"
+msgstr "Itens do Carrossel"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:72
+msgid "Choose the amount of items that appear on the home carousel."
+msgstr "Escolha a quantidade de itens que aparecem no carrossel da home."
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:91
+msgid "Background color"
+msgstr "Cor de fundo"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:93
+msgid "Choose the custom background color for your theme."
+msgstr "Escolha a cor de fundo personalizada para o seu tema."
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:94
+msgid "The color chosen here will be used in the theme."
+msgstr "A cor escolhida aqui será usada no tema."
+
+# @ firstling
+#: ../theme-custom-options-kirki.php.php:80
+msgid "Overwrite the above colors"
+msgstr "Substituir as cores acima"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:81
+msgid "By choosing this option you can set a custom color in the controls below."
+msgstr "Ao escolher esta opção, você pode definir uma cor personalizada nos controles abaixo."
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:81
+msgid "Choose which color scheme you want for your theme."
+msgstr "Escolha qual esquema de cores você deseja para o seu tema."
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:81
+msgid "Color scheme"
+msgstr "Esquema de cores"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:81
+msgid "Main Theme Settings"
+msgstr "Configurações Padrão do Tema"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Search"
+msgstr "Pesquisar"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Categories"
+msgstr "Categorias"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the categories in the sidebar."
+msgstr "Com este widget você coloca as categorias na barra lateral."
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Popular News"
+msgstr "Notícias Populares"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the popular news in the sidebar."
+msgstr "Com este widget você coloca as notícias populares na barra lateral."
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Top"
+msgstr "Topo"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Sidebar with top items."
+msgstr "Barra lateral com os principais itens."
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Social Network"
+msgstr "Redes Sociais"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the social network icons in the sidebar."
+msgstr "Com este widget você coloca os ícones de redes sociais na barra lateral."
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Link"
+msgstr "Link"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Icon"
+msgstr "Ícone"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Title"
+msgstr "Título"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Tags"
+msgstr "Tags"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the tags in the sidebar."
+msgstr "Com este widget você coloca as tags na barra lateral."
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Social Network and Links"
+msgstr "Redes Sociais e Links"
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "With this Widget you put the social network icons in the top."
+msgstr "Com este widget você coloca os ícones de redes sociais no topo."
+
+# @ firstling
+#: ../searchform.php:13
+#, php-format
+msgid "Click here to access:"
+msgstr "Clique aqui para acessar:"
