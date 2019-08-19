@@ -10,7 +10,7 @@
 ?>
 <?php 
 	$id = intval(get_the_ID());
-	$img = firstling_get_image_src($id,'news-sidebar');
+	$img = firstling_image_src($id,'news-sidebar');
 ?>
 <article id="post-<?php echo $id; ?>" <?php post_class(); ?> itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 	<div class="thumb">

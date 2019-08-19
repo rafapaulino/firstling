@@ -13,7 +13,7 @@ $next_post = get_next_post();
 if (!empty( $next_post )):
     $link = esc_url( get_permalink( $next_post->ID ) );
     $title = firstling_wpSubstr($next_post->post_title, 50);
-    $img = firstling_getImageSRC( $next_post->ID, 'next-prev');
+    $img = firstling_image_src( $next_post->ID, 'next-prev');
 ?>
 <div class="postNavigation nextPost d-print-none" itemscope itemtype="http://schema.org/Article">
     <a href="<?php echo $link; ?>" class="img ui-box topBottom-leftRightCorner" title="<?php echo $title; ?>" itemprop="url">

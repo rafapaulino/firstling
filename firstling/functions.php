@@ -120,11 +120,22 @@ add_action( 'widgets_init', 'firstling_widgets_init' );
  * Enqueue scripts and styles.
  */
 function firstling_scripts() {
-	wp_enqueue_style( 'firstling-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'firstling-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	$template_url = get_template_directory_uri();
 
-	wp_enqueue_script( 'firstling-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	// Loads Odin main stylesheet.
+	wp_enqueue_style( 'library', $template_url . '/assets/css/library.min.css' , array(), null, 'all' );
+	wp_enqueue_style( 'app', $template_url . '/assets/css/app.min.css' , array(), null, 'all' );
+
+	// Grunt main file with Bootstrap, FitVids and others libs.
+	wp_enqueue_script( 'library', $template_url . '/assets/js/library.min.js', array(), null, true );
+	wp_enqueue_script( 'app', $template_url . '/assets/js/app.min.js', array(), null, true );
+
+	// Load Thread comments WordPress script.
+	if ( is_singular() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -540,7 +540,7 @@ function firstling_excerpt( $type = 'excerpt', $limit = 40 ) {
 }
 
 //pega o valor src da imagem 
-function firstling_get_image_src($id, $size = 'thumbnail')
+function firstling_image_src($id, $size = 'thumbnail')
 {
     $post_thumbnail_id = get_post_thumbnail_id( intval($id) );
     $image_attributes = wp_get_attachment_image_src( intval($post_thumbnail_id), $size );
@@ -579,3 +579,20 @@ function firstling_remove_type_attr($tag, $handle) {
 add_filter('style_loader_tag', 'firstling_remove_type_attr', 10, 2);
 add_filter('script_loader_tag', 'firstling_remove_type_attr', 10, 2);
 
+function firstling_carrossel_total()
+{
+	//$total = Kirki::get_option( 'carrossel' );
+	//return intval($total);
+	return 5;
+}
+
+function firstling_paging_nav()
+{
+	$mid = 2;
+	// Total of items that will show along with the current page.
+	$end = 1;
+	// Total of items displayed for the last few pages.
+	$show = false;
+	// Show all items.
+	echo firstling_pagination($mid, $end, false);
+}
