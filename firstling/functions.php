@@ -44,7 +44,8 @@ if ( ! function_exists( 'firstling_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'firstling' ),
+			'main-menu' => __( 'Main Menu', 'firstling' ),
+			'footer-menu' => __( 'Footer Menu', 'firstling' )
 		) );
 
 		/*
@@ -105,13 +106,13 @@ add_action( 'after_setup_theme', 'firstling_content_width', 0 );
  */
 function firstling_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'firstling' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'firstling' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'name' => __( 'Main Sidebar', 'firstling' ),
+		'id' => 'main-sidebar',
+		'description' => __( 'Site Main Sidebar', 'firstling' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widgettitle widget-title">',
+		'after_title' => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'firstling_widgets_init' );
@@ -172,3 +173,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 require get_template_directory() . '/inc/custom-functions.php';
 require get_template_directory() . '/inc/widgets/sidebar.php';
+require get_template_directory() . '/inc/class-bootstrap-nav.php';

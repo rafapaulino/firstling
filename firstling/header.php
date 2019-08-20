@@ -54,8 +54,8 @@
                             'container'      => false,
                             'menu_class'     => 'nav navbar-nav ml-auto',
                             'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
-                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                            //'walker'          => new WP_Bootstrap_Navwalker(),
+                            'fallback_cb'     => 'Firstling_Bootstrap_Nav_Walker::fallback',
+                            'walker'          => new Firstling_Bootstrap_Nav_Walker(),
                         )
                     );
                 ?>
