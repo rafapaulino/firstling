@@ -30,7 +30,14 @@
 					);
 				?>
 			</nav>
-			<p class="col-md-6 col-sm-12 text-right">&copy; <?php echo esc_attr(date( 'Y' )); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php esc_attr_e('All rights reserved', 'firstling'); ?></p>
+			<p class="col-md-6 col-sm-12 text-right">
+				&copy; <?php echo esc_attr(date( 'Y' )); ?> 
+				<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> 
+				- 
+				<?php esc_attr_e('All rights reserved', 'firstling'); ?>
+
+				| <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Rafael Paulino</a> forces with <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'firstling'), 'https://rafapaulino.com/', 'http://wordpress.org/'); ?>			
+			</p>
 		</div>
 	</div><!-- .container -->
 
