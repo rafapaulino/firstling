@@ -352,7 +352,7 @@ if ( ! class_exists( 'Firstling_Bootstrap_Nav_Walker' ) ) {
 
 				// if $args has 'echo' key and it's true echo, otherwise return.
 				if ( array_key_exists( 'echo', $args ) && $args['echo'] ) {
-					echo $fallback_output; // WPCS: XSS OK.
+					echo apply_filters('the_content', $fallback_output);
 				} else {
 					return $fallback_output;
 				}

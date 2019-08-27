@@ -30,7 +30,7 @@
 					);
 				?>
 			</nav>
-			<p class="col-md-6 col-sm-12">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'firstling'); ?></p>
+			<p class="col-md-6 col-sm-12 text-right">&copy; <?php echo esc_attr(date( 'Y' )); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php esc_attr_e('All rights reserved', 'firstling'); ?></p>
 		</div>
 	</div><!-- .container -->
 

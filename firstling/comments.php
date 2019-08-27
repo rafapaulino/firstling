@@ -12,7 +12,7 @@
 ?>
 <section id="comments" class="content-wrap" itemscope itemtype="http://schema.org/Comment">
 	<?php if ( post_password_required() ) : ?>
-		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view all comments.', 'firstling'); ?></p>
+		<p class="nopassword"><?php esc_attr_e( 'This post is password protected. Enter the password to view all comments.', 'firstling'); ?></p>
 </section><!-- #comments -->
 		<?php
 		return;
@@ -21,15 +21,15 @@
 	if ( have_comments() ) : ?>
 		<h2 id="comments-title" class="page-header">
 			<?php
-			comments_number( __( '0 Comments', 'firstling'), __( '1 Comment', 'firstling'), __( '% Comments', 'firstling') );
-			echo ' ' . __( 'to', 'firstling') . ' <span>&quot;' . get_the_title() . '&quot;</span>';
+			comments_number( __('0 Comments', 'firstling'), __('1 Comment', 'firstling'), __('% Comments', 'firstling') );
+			echo esc_attr(' ' . esc_attr('to', 'firstling') . ' <span>&quot;' . get_the_title() . '&quot;</span>');
 			?>
 		</h2>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above">
 				<ul class="pager">
-					<li class="previous"><?php previous_comments_link( __( '&larr; Old Comments', 'firstling') ); ?></li>
-					<li class="next"><?php next_comments_link( __( 'New Comments &rarr;', 'firstling') ); ?></li>
+					<li class="previous"><?php previous_comments_link( __('&larr; Old Comments', 'firstling') ); ?></li>
+					<li class="next"><?php next_comments_link( __('New Comments &rarr;', 'firstling') ); ?></li>
 				</ul>
 			</nav>
 		<?php endif; ?>
@@ -39,14 +39,14 @@
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above">
 				<ul class="pager">
-					<li class="previous"><?php previous_comments_link( __( '&larr; Old Comments', 'firstling') ); ?></li>
-					<li class="next"><?php next_comments_link( __( 'New Comments &rarr;', 'firstling') ); ?></li>
+					<li class="previous"><?php previous_comments_link( __('&larr; Old Comments', 'firstling') ); ?></li>
+					<li class="next"><?php next_comments_link( __('New Comments &rarr;', 'firstling') ); ?></li>
 				</ul>
 			</nav>
 		<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( ! comments_open() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="nocomments"><?php _e( 'Comments closed.', 'firstling'); ?></p>
+		<p class="nocomments"><?php esc_attr_e('Comments closed.', 'firstling'); ?></p>
 	<?php endif; ?>
 
 	<?php
