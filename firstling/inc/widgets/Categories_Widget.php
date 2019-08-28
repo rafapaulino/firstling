@@ -22,8 +22,8 @@ class Categories_Widget extends WP_Widget
         $title = ! empty( $instance['categories_title'] ) ? $instance['categories_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'categories_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
-            <input type="text" id="<?php echo $this->get_field_id( 'categories_title' ); ?>" name="<?php echo $this->get_field_name( 'categories_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
+            <label for="<?php echo esc_attr($this->get_field_id( 'categories_title' )); ?>"><?php esc_attr_e('Title','firstling'); ?>:</label>
+            <input type="text" id="<?php echo esc_attr($this->get_field_id( 'categories_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'categories_title' )); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p>
         <?php
     }
@@ -54,9 +54,9 @@ class Categories_Widget extends WP_Widget
 		<ul class="categories-list">
             <?php 
                 foreach($categories as $cat): 
-                    $link = esc_url(get_category_link( $cat->term_id )); 
+                    $link = get_category_link( $cat->term_id ); 
             ?>
-			    <li><a href="<?php echo $link; ?>" title="<?php echo esc_attr($cat->name); ?>"><?php echo esc_attr($cat->name); ?> <span>(<?php echo esc_attr($cat->count); ?>)</span></a></li>
+			    <li><a href="<?php echo esc_url($link); ?>" title="<?php echo esc_attr($cat->name); ?>"><?php echo esc_attr($cat->name); ?> <span>(<?php echo esc_attr($cat->count); ?>)</span></a></li>
             <?php endforeach; ?>
 		</ul>
 	</aside>

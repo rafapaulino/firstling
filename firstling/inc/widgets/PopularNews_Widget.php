@@ -23,12 +23,12 @@ class PopularNews_Widget extends WP_Widget
         $title = ! empty( $instance['popular_news_title'] ) ? $instance['popular_news_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'popular_news_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
-            <input type="text" id="<?php echo $this->get_field_id( 'popular_news_title' ); ?>" name="<?php echo $this->get_field_name( 'popular_news_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
+            <label for="<?php echo esc_attr($this->get_field_id( 'popular_news_title' )); ?>"><?php esc_attr_e('Title','firstling'); ?>:</label>
+            <input type="text" id="<?php echo esc_attr($this->get_field_id( 'popular_news_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'popular_news_title' )); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'popular_news_total' ); ?>"><?php echo __('Total News','firstling'); ?>:</label>
-            <input type="text" id="<?php echo $this->get_field_id( 'popular_news_total' ); ?>" name="<?php echo $this->get_field_name( 'popular_news_total' ); ?>" value="<?php echo esc_attr( $total ); ?>" class="widefat title" />
+            <label for="<?php echo esc_attr($this->get_field_id( 'popular_news_total' )); ?>"><?php esc_attr_e('Total News','firstling'); ?>:</label>
+            <input type="text" id="<?php echo esc_attr($this->get_field_id( 'popular_news_total' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'popular_news_total' )); ?>" value="<?php echo esc_attr( $total ); ?>" class="widefat title" />
         </p>
         <?php
     }
@@ -65,21 +65,21 @@ class PopularNews_Widget extends WP_Widget
 			<ul itemscope itemtype="http://schema.org/Article">
                 <?php 
                     while ( $widget->have_posts() ) : $widget->the_post(); 
-                        $title = esc_attr(get_the_title());
-                        $url = esc_url(get_permalink());
+                        $title = get_the_title();
+                        $url = get_permalink();
                         $id = get_the_ID();
                         $date = esc_html( get_the_date() );
                         $img = firstling_image_src($id,'news-sidebar');
                 ?>
 				<li>
-					<a href="<?php echo $url; ?>" title="<?php echo $title; ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
+					<a href="<?php echo esc_url($url); ?>" title="<?php echo esc_attr($title); ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
 						<span class="ui-border-element">
-							<img src="<?php echo $img; ?>" alt="<?php echo $title; ?>" itemprop="image" class="img-fluid">
+							<img src="<?php echo esc_attr($img); ?>" alt="<?php echo esc_attr($title); ?>" itemprop="image" class="img-fluid">
 						</span>
 					</a>
 					<div class="titleDate">
-						<h3 itemprop="headline"><a href="<?php echo $url; ?>" title="<?php echo $title; ?>" itemprop="url"><?php echo $title; ?></a></h3>
-						<a class="time" href="<?php echo $url; ?>" title="<?php echo $title; ?>" itemprop="url"><?php echo $date; ?></a>
+						<h3 itemprop="headline"><a href="<?php echo esc_url($url); ?>" title="<?php echo esc_attr($title); ?>" itemprop="url"><?php echo esc_attr($title); ?></a></h3>
+						<a class="time" href="<?php echo esc_url($url); ?>" title="<?php echo esc_attr($title); ?>" itemprop="url"><?php echo esc_html($date); ?></a>
 					</div>
 				</li>
                 <?php endwhile; ?>

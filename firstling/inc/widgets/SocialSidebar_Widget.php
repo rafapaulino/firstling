@@ -35,8 +35,8 @@ class SocialSidebar_Widget extends WP_Widget
         $title = ! empty( $instance['social_sidebar_title'] ) ? $instance['social_sidebar_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'social_sidebar_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
-            <input type="text" id="<?php echo $this->get_field_id( 'social_sidebar_title' ); ?>" name="<?php echo $this->get_field_name( 'social_sidebar_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
+            <label for="<?php echo esc_attr($this->get_field_id( 'social_sidebar_title' )); ?>"><?php esc_attr_e('Title','firstling'); ?>:</label>
+            <input type="text" id="<?php echo esc_attr($this->get_field_id( 'social_sidebar_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'social_sidebar_title' )); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p><br><br>
         <?php
         $this->create_instance($instance);
@@ -90,13 +90,13 @@ class SocialSidebar_Widget extends WP_Widget
             $link_instance = ! empty( $instance[$link] ) ? $instance[$link] : '';
             ?>
             <p>
-                <label for="<?php echo $this->get_field_id($link); ?>"><?php echo __('Link','firstling'); ?>:</label>
-                <input type="text" id="<?php echo $this->get_field_id($link); ?>" name="<?php echo $this->get_field_name($link); ?>" value="<?php echo esc_attr($link_instance); ?>" class="widefat title" />
+                <label for="<?php echo esc_attr($this->get_field_id($link)); ?>"><?php esc_attr_e('Link','firstling'); ?>:</label>
+                <input type="text" id="<?php echo esc_attr($this->get_field_id($link)); ?>" name="<?php echo esc_url($this->get_field_name($link)); ?>" value="<?php echo esc_attr($link_instance); ?>" class="widefat title" />
             </p>
             <p>
-                <label for="<?php echo $this->get_field_id($icon); ?>"><?php echo __('Icon','firstling'); ?>:</label>
+                <label for="<?php echo esc_attr($this->get_field_id($icon)); ?>"><?php esc_attr_e('Icon','firstling'); ?>:</label>
                 
-                <select name="<?php echo $this->get_field_name($icon); ?>" id="<?php echo $this->get_field_id($icon); ?>" class="widefat title">
+                <select name="<?php echo esc_attr($this->get_field_name($icon)); ?>" id="<?php echo esc_attr($this->get_field_id($icon)); ?>" class="widefat title">
                     <?php foreach($this->icons as $key => $value): ?>
                         <option value="<?php echo esc_attr($key); ?>" <?php echo (( $icon_instance == $key )?'selected="selected"':''); ?>><?php echo esc_attr($value['title']); ?></option>
                     <?php endforeach; ?>
@@ -122,7 +122,7 @@ class SocialSidebar_Widget extends WP_Widget
 
             if (trim($link_html) !== ""):
             ?>
-                <li><a class="<?php echo $icon_html; ?>" href="<?php echo $link_html; ?>" target="_blank" title="<?php esc_attr_e('Click here to access:', 'firstling'); ?> <?php echo $title; ?>"><i class="<?php echo $icon_class; ?>"></i></a></li>
+                <li><a class="<?php echo esc_attr($icon_html); ?>" href="<?php echo esc_url($link_html); ?>" target="_blank" title="<?php esc_attr_e('Click here to access:', 'firstling'); ?> <?php echo esc_attr($title); ?>"><i class="<?php echo esc_attr($icon_class); ?>"></i></a></li>
             <?php 
             endif;
             $x++;
