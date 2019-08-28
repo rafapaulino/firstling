@@ -172,5 +172,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require get_template_directory() . '/inc/custom-functions.php';
+require get_template_directory() . '/inc/widgets/PopularNews_Widget.php';
+require get_template_directory() . '/inc/widgets/Categories_Widget.php';
+require get_template_directory() . '/inc/widgets/Form_Widget.php';
+require get_template_directory() . '/inc/widgets/SocialSidebar_Widget.php';
+require get_template_directory() . '/inc/widgets/TopSocialSidebar_Widget.php';
+require get_template_directory() . '/inc/widgets/Tags_Widget.php';
 require get_template_directory() . '/inc/widgets/sidebar.php';
 require get_template_directory() . '/inc/class-bootstrap-nav.php';

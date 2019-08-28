@@ -22,8 +22,8 @@ class Tags_Widget extends WP_Widget
         $title = ! empty( $instance['tags_title'] ) ? $instance['tags_title'] : '';
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'tags_title' ); ?>"><?php echo __('Title','firstling'); ?>:</label>
-            <input type="text" id="<?php echo $this->get_field_id( 'tags_title' ); ?>" name="<?php echo $this->get_field_name( 'tags_title' ); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
+            <label for="<?php echo esc_attr($this->get_field_id( 'tags_title' )); ?>"><?php esc_attr_e('Title','firstling'); ?>:</label>
+            <input type="text" id="<?php echo esc_attr($this->get_field_id( 'tags_title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'tags_title' )); ?>" value="<?php echo esc_attr( $title ); ?>" class="widefat title" />
         </p>
         <?php
     }

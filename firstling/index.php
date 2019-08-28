@@ -38,13 +38,13 @@ get_header();
 					<div class="carousel-inner">
 						<?php 
 							$x = 0;
-							foreach ($latest_posts as $post): setup_postdata( $post );
+							foreach ($latest_posts as $mypost): setup_postdata( $mypost );
 							$category = get_the_category(); 
 							$img = firstling_image_src(get_the_ID(),'carrossel');
 						?>
 							<div class="carousel-item <?php echo esc_attr( ($x == 0) ? 'active':''); ?>">
 								<a href="<?php the_permalink(); ?>" itemprop="url">
-									<img class="d-block w-100" src="<?php echo $img; ?>" alt="<?php the_title(); ?>">
+									<img class="d-block w-100" src="<?php echo esc_url($img); ?>" alt="<?php the_title(); ?>">
 								</a>
 								
 								<div class="carousel-caption d-md-block">

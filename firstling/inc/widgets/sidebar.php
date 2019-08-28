@@ -6,14 +6,6 @@
  */
 if ( ! defined('ABSPATH')) exit('restricted access');
 
-
-require_once('PopularNews_Widget.php');
-require_once('Categories_Widget.php');
-require_once('Form_Widget.php');
-require_once('SocialSidebar_Widget.php');
-require_once('TopSocialSidebar_Widget.php');
-require_once('Tags_Widget.php');
-
 function remove_widgets()
 {
     unregister_widget( 'WP_Widget_Archives' );
