@@ -10,13 +10,13 @@
 if ( ! defined('ABSPATH')) exit('restricted access');
 
 global $post;
-$id = $post->ID;
-$post_type = get_post_type( $id );
+$myId = $post->ID;
+$myPostType = get_post_type( $myId );
 
 $args = array(
-    'post__not_in' => array( $id ),
+    'post__not_in' => array( $myId ),
     'posts_per_page' => 5,
-    'post_type' => $post_type,
+    'post_type' => $myPostType,
     'ignore_sticky_posts' => 1,
     'orderby' => 'rand',
     'order'   => 'ASC'
@@ -29,20 +29,20 @@ if ( $related->have_posts() ):
     <h3 class="titulosChamada"><?php esc_attr_e("Related Content", "firstling"); ?></h3>
     <div class="jcarousel-wrapper" itemscope itemtype="http://schema.org/Article">
         <div class="jcarousel jcarousel-related-posts">
-            <ul id="carrossel<?php echo intval($id); ?>">
+            <ul id="carrossel<?php echo intval($myId); ?>">
             <?php 
                 while ( $related->have_posts() ):
                 $related->the_post();
                 
-                $link = esc_url( get_permalink() );
-                $title =  esc_attr( get_the_title() );
-                $id = get_the_ID();
-                $img = firstling_image_src($id, 'news-sidebar');
+                $myLink = esc_url( get_permalink() );
+                $myTitle =  esc_attr( get_the_title() );
+                $myId = get_the_ID();
+                $img = firstling_image_src($myId, 'news-sidebar');
             ?>
                 <li>
-                    <a href="<?php echo $link; ?>" title="<?php echo $title; ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
+                    <a href="<?php echo esc_url($myLink); ?>" title="<?php echo esc_attr($myTitle); ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
                         <span class="ui-border-element">
-                            <img src="<?php echo $img; ?>" alt="<?php echo $title; ?>" itemprop="image" class="img-fluid">
+                            <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($myTitle); ?>" itemprop="image" class="img-fluid">
                         </span>
                     </a>
 
@@ -55,7 +55,7 @@ if ( $related->have_posts() ):
                         </a>
                     <?php endif; ?>
 
-                    <h2 itemprop="headline"><a href="<?php echo $link; ?>" title="<?php echo $title; ?>" itemprop="url"><?php echo $title; ?></a></h2>
+                    <h2 itemprop="headline"><a href="<?php echo esc_url($myLink); ?>" title="<?php echo esc_attr($myTitle); ?>" itemprop="url"><?php echo esc_attr($myTitle); ?></a></h2>
                 </li>
             <?php endwhile; ?>          
             </ul>

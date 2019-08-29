@@ -24,7 +24,7 @@ get_header(); ?>
 						if ( has_post_thumbnail() ):
 							$img = firstling_getImageSRC(get_the_ID(),'single');
 				?>
-						<img src="<?php echo $img; ?>" class="img-fluid" alt="<?php the_title(); ?>">
+						<img src="<?php echo esc_url($img); ?>" class="img-fluid" alt="<?php the_title(); ?>">
 						<?php endif; ?>
 				
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

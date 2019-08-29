@@ -19,7 +19,7 @@ get_header(); ?>
 						if ( has_post_thumbnail() ):
 							$img = firstling_get_image_src(get_the_ID(),'single');
 				?>
-						<img src="<?php echo $img; ?>" class="img-fluid" alt="<?php the_title(); ?>">
+						<img src="<?php echo esc_url($img); ?>" class="img-fluid" alt="<?php the_title(); ?>">
 						<?php endif; ?>
 				
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -47,7 +47,7 @@ get_header(); ?>
 
 					<footer class="entry-meta">
 						<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) ) : ?>
-							<span class="cat-links"><?php echo __( 'Posted in:', 'firstling') . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'firstling') ); ?></span>
+							<span class="cat-links"><?php  esc_attr_e( 'Posted in:', 'firstling') . ' ' . get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'firstling') ); ?></span>
 						<?php endif; ?>
 						
 						<?php if (has_tag()) : ?>
