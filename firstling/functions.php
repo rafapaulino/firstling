@@ -141,9 +141,20 @@ function firstling_scripts() {
 	wp_enqueue_style( 'venobox', get_template_directory_uri() . '/assets/css/venobox.css', array('bootstrap'), null, 'all' );
 	wp_enqueue_style( 'app', get_template_directory_uri() . '/assets/css/app.css', array('bootstrap'), null, 'all' );
 
-	// Grunt main file with Bootstrap, FitVids and others libs.
-	wp_enqueue_script( 'library', get_template_directory_uri() . '/assets/js/library.min.js', array(), null, true );
-	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.min.js', array(), null, true );
+	
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.js', array('jquery'), null, true );
+	wp_enqueue_script( 'jquery.validate', get_template_directory_uri() . '/assets/js/jquery.validate.js', array('jquery'), null, true );
+	wp_enqueue_script( 'additional-methods', get_template_directory_uri() . '/assets/js/additional-methods.js', array('jquery.validate'), null, true );
+	wp_enqueue_script( 'jquery.jcarousel', get_template_directory_uri() . '/assets/js/jquery.jcarousel.js', array('jquery'), null, true );
+	wp_enqueue_script( 'jquery-scroll-top', get_template_directory_uri() . '/assets/js/jquery-scroll-top.js', array('jquery'), null, true );
+	wp_enqueue_script( 'jquery.touchSwipe', get_template_directory_uri() . '/assets/js/jquery.touchSwipe.js', array('jquery'), null, true );
+	wp_enqueue_script( 'carrossel', get_template_directory_uri() . '/assets/js/carrossel.js', array('jquery'), null, true );
+	wp_enqueue_script( 'noticias-relacionadas', get_template_directory_uri() . '/assets/js/noticias-relacionadas.js', array('jquery'), null, true );
+	wp_enqueue_script( 'plyr', get_template_directory_uri() . '/assets/js/plyr.js', array('jquery'), null, true );
+	wp_enqueue_script( 'jquery.smartmenus', get_template_directory_uri() . '/assets/js/jquery.smartmenus.js', array('jquery'), null, true );
+	wp_enqueue_script( 'jquery.smartmenus.bootstrap-4', get_template_directory_uri() . '/assets/js/jquery.smartmenus.bootstrap-4.js', array('jquery.smartmenus'), null, true );
+	wp_enqueue_script( 'venobox-js', get_template_directory_uri() . '/assets/js/venobox.js', array('jquery'), null, true );
+	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/js/app.js', array('bootstrap-js'), null, true );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
