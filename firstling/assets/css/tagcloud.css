@@ -1,0 +1,241 @@
+/* NUVEM DE TAGS */
+.tagcloud ul {
+	margin: 10px 0;
+	padding: 0;
+    list-style: none;
+    clear: both;
+}
+.tagcloud ul li a {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: #f4f4f4;
+    color: rgb(116, 115, 115);
+    padding: 0 10px;
+    text-decoration: none;
+    line-height: 23px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: .2s;
+}
+.tagcloud ul li a:hover {
+    background: #000;
+    color: #FFF;
+}
+
+
+
+/* NUVEM DE TAGS - DEFAULT */
+.tagcloud-default ul li {
+	display: inline-block;
+	margin: 0 .3em .3em 0;
+	padding: 0;
+}
+.tagcloud-default ul li a {
+	display: inline-block;
+	max-width: 100px;
+	overflow: hidden;
+}
+
+
+
+/* NUVEM DE TAGS - LARGE */
+.tagcloud-large ul li {
+	float: left;
+	width: 150px;
+	margin: 0 10px 10px 0;
+	padding: 0;
+}
+.tagcloud-large ul li a {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+
+/* NUVEM DE TAGS - ALERT */
+.tagcloud-alert ul li {
+	display: inline-block;
+	margin: 0 .3em .3em 0;
+    padding: 0;
+    text-align: left;
+}
+.tagcloud-alert ul li a {
+	position: relative;
+	display: inline-block;
+	max-width: 110px;
+    overflow: hidden;
+    text-align: left !important;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}
+.tagcloud-alert li span {  
+    line-height: 22px;
+    background-color: #000;
+    border-radius: 100%;
+    color: #FFF;
+    font-size: 9px;
+    text-align: center;
+    transition: .2s;
+    padding: 3px 5px;
+    margin-left: 5px;
+}
+.tagcloud-alert ul li a:hover span {
+	background-color: #FFF;
+	color: #000;
+}
+
+
+
+/* NUVEM DE TAGS - TOOLTIP */
+.tagcloud-tooltip ul li {
+	position: relative;
+	display: inline-block;
+	margin: 0 .75em .5em 0;
+	padding: 0;
+}
+.tagcloud-tooltip ul li a {
+	position: relative;
+	display: inline-block;
+	max-width: 100px;
+	padding: 0 1em;
+	word-wrap: normal;
+	overflow: hidden;
+}
+.tagcloud-tooltip ul li span {
+	position: absolute;
+	top: 0;
+	right: -10px;
+	z-index: 2;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	background-color: #3498db;
+	border-radius: 100%;
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+	opacity: 0;
+	-webkit-transition: .2s;
+	transition: .2s;
+	-webkit-transform: scale(.4);
+	transform: scale(.4);
+}
+.tagcloud-tooltip ul li span::after {
+	position: absolute;
+	top: 50%;
+	left: -8px;
+	content: '';
+	width: 0;
+	height: 0;
+	margin-top: -7px;
+	border-color: transparent #3498db transparent transparent;
+	border-style: solid;
+	border-width: 7px 14px 7px 0;
+}
+.tagcloud-tooltip ul li:hover span {
+	right: -26px;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+
+/* NUVEM DE TAGS - LABEL */
+.tagcloud-label ul li {
+	display: inline-block;
+	margin: 0 0 .3em 1em;
+	padding: 0;
+}
+.tagcloud-label ul li a {
+	position: relative;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 1em;
+	border-radius: 0 3px 3px 0;
+}
+.tagcloud-label ul li a::before {
+	position: absolute;
+	top: 0;
+	left: -15px;
+	content: '';
+	width: 0;
+	height: 0;
+	border-color: transparent #f4f4f4 transparent transparent;
+	border-style: solid;
+	border-width: 15px 15px 15px 0;
+	transition: .2s;
+}
+.tagcloud-label ul li a::after {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 6px;
+	height: 6px;
+	margin-top: -3px;
+	background-color: rgb(116, 115, 115);
+	border-radius: 100%;
+}
+.tagcloud-label ul li span {
+	display: block;
+	max-width: 100px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tagcloud-label ul li a:hover::before {
+	border-right-color: #000;
+}
+.tagcloud-label ul li a:hover::after {
+    background-color: #FFF;
+}
+
+
+
+/* NUVEM DE TAGS - CIRCLE */
+.tagcloud-circle ul li {
+	display: inline-block;
+	margin: 0 0 .3em 0;
+	padding: 0;
+}
+.tagcloud-circle ul li a {
+	position: relative;
+	display: inline-block;
+	padding: 5px 15px 5px 23px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.tagcloud-circle ul li span {
+	display: block;
+	max-width: 100px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.tagcloud-circle ul li a::after {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 6px;
+	height: 6px;
+	margin-top: -3px;
+	background-color: rgb(116, 115, 115);
+	border-radius: 100%;
+}
+.tagcloud-circle ul li a:hover::after {
+    background-color:#FFF;
+}
+.tagcloud-circle ul li a:hover::before {
+	background-color: #555;
+}

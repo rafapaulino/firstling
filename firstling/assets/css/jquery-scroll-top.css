@@ -1,0 +1,62 @@
+/* link with scroll top */
+.backToTop {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(67, 67, 67, 0.9);
+    padding: 12px 10px;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+    cursor: pointer;
+    text-align: center;
+    z-index: 300;
+}
+
+/* arrow with scroll top */
+.backToTop .fa {
+    color: #FFF;
+    font-size: 15px;
+    display: block;
+    margin: 0;
+}
+
+.backToTop.bg-red {
+    background: rgba(255, 0, 0, 0.9);
+}
+.backToTop.bg-orange {
+    background: rgba(255, 128, 0, 0.9);
+}
+.backToTop.bg-yellow {
+    background: rgba(255, 255, 0, 0.9);
+}
+.backToTop.bg-green {
+    background: rgba(0, 203, 0, 0.9);
+}
+.backToTop.bg-blue {
+    background: rgba(0, 0, 255, 0.9);
+}
+.backToTop.bg-purple {
+    background: rgba(128, 0, 255, 0.9);
+}
+.backToTop.bg-magenta {
+    background: rgba(191, 0, 255, 0.9);
+}
+.backToTop.bg-pink {
+    background: rgba(255, 0, 255, 0.9);
+}
+.backToTop.bg-black {
+    background: rgba(0, 0, 0, 0.9);
+}
+.backToTop.bg-darkgreen {
+    background: rgba(0, 100, 0, 0.9);
+}
+
+
+.backToTop.circle {
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    border-radius: 1000px;
+}

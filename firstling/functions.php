@@ -122,15 +122,28 @@ add_action( 'widgets_init', 'firstling_widgets_init' );
  */
 function firstling_scripts() {
 
-	$template_url = get_template_directory_uri();
-
-	// Loads Odin main stylesheet.
-	wp_enqueue_style( 'library', $template_url . '/assets/css/library.min.css' , array(), null, 'all' );
-	wp_enqueue_style( 'app', $template_url . '/assets/css/app.min.css' , array(), null, 'all' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.css', array(), null, 'all' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', array('font-awesome'), null, 'all' );
+	wp_enqueue_style( 'jcarousel', get_template_directory_uri() . '/assets/css/jcarousel.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'jquery-scroll-top', get_template_directory_uri() . '/assets/css/jquery-scroll-top.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'barra-topo', get_template_directory_uri() . '/assets/css/barra-topo.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'redes-sociais', get_template_directory_uri() . '/assets/css/redes-sociais.css' , array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'categories', get_template_directory_uri() . '/assets/css/categories.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'tagcloud', get_template_directory_uri() . '/assets/css/tagcloud.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'ultimas-noticias', get_template_directory_uri() . '/assets/css/ultimas-noticias.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'animated-border', get_template_directory_uri() . '/assets/css/animated-border.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'animate.css', get_template_directory_uri() . '/assets/css/animate.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'rafa-carrossel', get_template_directory_uri() . '/assets/css/rafa-carrossel.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'prev-next', get_template_directory_uri() . '/assets/css/prev-next.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'noticias-relacionadas', get_template_directory_uri() . '/assets/css/noticias-relacionadas.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'plyr', get_template_directory_uri() . '/assets/css/plyr.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'smartmenus', get_template_directory_uri() . '/assets/css/smartmenus.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'venobox', get_template_directory_uri() . '/assets/css/venobox.css', array('bootstrap'), null, 'all' );
+	wp_enqueue_style( 'app', get_template_directory_uri() . '/assets/css/app.css', array('bootstrap'), null, 'all' );
 
 	// Grunt main file with Bootstrap, FitVids and others libs.
-	wp_enqueue_script( 'library', $template_url . '/assets/js/library.min.js', array(), null, true );
-	wp_enqueue_script( 'app', $template_url . '/assets/js/app.min.js', array(), null, true );
+	wp_enqueue_script( 'library', get_template_directory_uri() . '/assets/js/library.min.js', array(), null, true );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.min.js', array(), null, true );
 
 	// Load Thread comments WordPress script.
 	if ( is_singular() && get_option( 'thread_comments' ) ) {

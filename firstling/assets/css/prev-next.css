@@ -1,0 +1,95 @@
+/* ANTERIOR E PRÓXIMO: ;
+// --------------------------------------------------
+*/
+
+/* post anterior/próximo */
+.postNavigation {
+    width: 50%;
+    text-align: left;
+    margin: 15px 0;
+    float: left;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+/* div que engloba o link com a imagem dentro */
+.postNavigation .img {
+    float: left;
+    width: 70px;
+    height: 70px;
+    display: block;
+    overflow: hidden;
+}
+/* configurando a posicao da imagem */
+.postNavigation .img img {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 70px;
+    height: 70px;
+    z-index: 0;
+}
+/* faz a borda aparecer por cima da imagem */
+.postNavigation .img:before,
+.postNavigation .img:after,
+.postNavigation .img .ui-border-element:before, 
+.postNavigation .img .ui-border-element:after {
+    z-index: 5;
+}
+
+/* parte que exibe o texto com o título e os itens anterior e próximo */
+.postNavigation .title {
+    text-decoration: none;
+    display: block;
+    clear: both;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    color: #000;
+    min-height: 70px;
+}
+@media (min-width: 1280px) { 
+    .postNavigation .title {
+        float: left;
+        width: 74%;
+        clear: none;
+        padding: 10px;
+    }
+}
+/* anterior e próximo */
+.postNavigation .title span {
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #888;
+    margin: 0 0 7px 0;
+    line-height: 13px;
+    display: block;
+}
+/* titulo do post */
+.postNavigation .title h3 {
+    font-size: 15px;
+    color: #000;
+}
+
+/* alinhamento do proximo */
+.postNavigation.nextPost {
+    text-align: right;
+    float: right;
+}
+.postNavigation.nextPost .img {
+    float: right;
+}
+.postNavigation.nextPost .title {
+    float: right;
+    padding: 10px 0 10px 10px;
+}
+
+@media (min-width: 1280px) { 
+    .postNavigation.nextPost .title {
+        padding: 10px;
+    }
+}

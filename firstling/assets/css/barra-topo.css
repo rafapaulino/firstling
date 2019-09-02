@@ -1,0 +1,164 @@
+body {
+    padding-top: 35px;
+}
+
+/* parte com a barra de acessibilidade */
+.acessibilidade ul {
+    list-style: none;
+    margin: 0;
+    width: auto;
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-size: 11px;
+    display: inline-block;
+}
+.acessibilidade ul:first-of-type {
+    float: left;
+}
+.acessibilidade ul:last-of-type {
+    float: right;
+}
+.acessibilidade ul:first-of-type li {
+    float: left;
+    margin: 0 12px 0 0;
+}
+.acessibilidade ul:last-of-type li {
+    float: left;
+    margin: 0 0 0 12px;
+}
+.acessibilidade ul li a {
+    color: #333;
+    text-decoration: none;
+}
+.acessibilidade ul li a span {
+    background: #CCC;
+    color: #333;
+    padding: 0 3px;
+}
+.acessibilidade ul:last-of-type li a {
+    border-bottom: 1px dotted #cccccc;
+}
+
+/* barra no topo com as redes sociais */
+/* barra de fundo */
+.navContainer {
+    width: 100%;
+    color: #FFF;
+    min-height: 35px;
+    max-height: 35px;
+    height: 35px;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    overflow: hidden;
+    clear: both;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+/* lista de itens */
+.navContainer .socialNav {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: inherit;
+    width: auto;
+}
+/* alinhamento dos elementos */
+.navContainer .socialNav li {
+    float: left;
+}
+/* cada link da barra */
+.navContainer .socialNav li a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 25px;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+}
+@media only screen and (min-width:768px) { 
+    /* cada link da barra */
+    .navContainer .socialNav li a {
+        padding: 5px 10px;
+    }
+}
+/* itens com os ícones das redes sociais no celular */
+.navContainer .socialNav li.social:nth-last-child(1),
+.navContainer .socialNav li.social:nth-last-child(2),
+.navContainer .socialNav li.social:nth-last-child(3),
+.navContainer .socialNav li.social:nth-last-child(4),
+.navContainer .socialNav li.social:nth-last-child(5) {
+    display: none;
+}
+
+@media only screen and (min-width:568px) { 
+    /* cada texto sem icone na barra */
+    .navContainer .socialNav li.social:nth-last-child(1),
+    .navContainer .socialNav li.social:nth-last-child(2),
+    .navContainer .socialNav li.social:nth-last-child(3),
+    .navContainer .socialNav li.social:nth-last-child(4),
+    .navContainer .socialNav li.social:nth-last-child(5) {
+        display: block;
+    }
+
+    .navContainer .socialNav {
+        margin: 0;
+        float: right;
+    }
+}
+/* tamanho da fonte e espaçamento dos icones */
+.navContainer .socialNav li a i {
+    font-size: 16px;
+    /* padding: 0 8px; */
+    padding: 0 4px;
+}
+/* animação no fundo de cada ícone */
+.navContainer .socialNav li.bgAnimated {
+    transition: background 250ms linear;
+}
+
+/* mudança de cor para cada rede social */
+.navContainer .socialNav li.social.facebook:hover { background-color: #3B5998; }
+.navContainer .socialNav li.social.twitter:hover { background-color: #5EA9DD; }
+.navContainer .socialNav li.social.youtube:hover { background-color: #D22827; }
+.navContainer .socialNav li.social.linkedin:hover { background-color: #0177B5; }
+.navContainer .socialNav li.social.instagram:hover { background-color: #5E4B45; }
+.navContainer .socialNav li.social.slideshare:hover { background-color: #00A7A9; }
+.navContainer .socialNav li.social.flickr:hover { background-color: #0062DD; }
+.navContainer .socialNav li.social.rss:hover { background-color: rgb(255, 102, 0); }
+
+
+/* cores diferentes para a barra */
+.navContainerRed {
+    background-color: #E30513;
+}
+.navContainerBlue {
+    background-color: #006699;
+}
+.navContainerGreen {
+    background-color: #008000;
+}
+.navContainerOrange {
+    background-color: #FF4500;
+}
+.navContainerMagenta {
+    background-color: #8B008B;
+}
+.navContainerYellow {
+    background-color: #FFFF00;
+    color: #000;
+}
+.navContainerYellow .socialNav li a {
+    color: #000;
+}
+.navContainerYellow .socialNav li.bgAnimated a:hover {
+    color: #FFF;
+}
