@@ -11,6 +11,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function firstling_customize_register( $wp_customize ) {
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -25,6 +26,91 @@ function firstling_customize_register( $wp_customize ) {
 			'render_callback' => 'firstling_customize_partial_blogdescription',
 		) );
 	}
+
+
+	$wp_customize->add_section( 'firstling_theme_settings', array(
+        'title'       => __( 'Main Theme Settings', 'firstling' ),
+        'priority'    => 20,
+    ) );
+
+	//cor padrão do tema
+	$wp_customize->add_setting("firstling_theme_color", array(
+		"default" => "default",
+		"transport" => "refresh",
+	));
+
+
+	$wp_customize->add_control( 'firstling_theme_color', array(
+		'type' => 'select',
+		'setting'     => 'firstling_theme_color',
+		'label'       => __( 'Color scheme', 'firstling' ),
+		'description' => __( 'Choose which color scheme you want for your theme.', 'firstling' ),
+		'help'        => __( 'Choose which color scheme you want for your theme.', 'firstling' ),
+		'choices' => array( // Optional.
+	         'default' => __( 'Default - Blue', 'firstling' ),
+	         'green' => __( 'Green', 'firstling' ),
+	         'pink' => __( 'Pink', 'firstling' ),
+	         'purple' => __( 'Purple', 'firstling' ),
+	         'red' => __( 'Red', 'firstling' ),
+	         'warning' => __( 'Yellow', 'firstling' ),
+      	),
+		'priority'    => 10,
+		'section'    => 'firstling_theme_settings',
+	) );
+
+
+	//sobrescrever as cores padrão do tema
+	$wp_customize->add_setting("firstling_overwrite_colors", array(
+		"default" => "no",
+		"transport" => "refresh",
+	));
+
+	$wp_customize->add_control( 'firstling_overwrite_colors', array(
+		'type' => 'select',
+		'setting'     => 'firstling_overwrite_colors',
+		'label'       => __( 'Overwrite the above colors', 'firstling' ),
+		'description' => __( 'By choosing this option you can set a custom color in the controls below.', 'firstling' ),
+		'help'        => __( 'By choosing this option you can set a custom color in the controls below.', 'firstling' ),
+		'choices' => array( // Optional.
+	         'no' => __( 'No', 'firstling' ),
+	         'yes' => __( 'Yes', 'firstling' )
+      	),
+		'priority'    => 10,
+		'section'    => 'firstling_theme_settings',
+	) );
+
+
+	//cor de fundo personalizada
+	$wp_customize->add_setting("firstling_custom_background", array(
+		"default" => "",
+		"transport" => "refresh",
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'firstling_custom_background', array(
+		'label'       => __( 'Background color', 'firstling' ),
+		'description' => __( 'Choose the custom background color for your theme.', 'firstling' ),
+		'help'        => __( 'The color chosen here will be used in the theme.', 'firstling' ),
+		'section'    => 'firstling_theme_settings',
+		'settings'   => 'firstling_custom_background',
+	) ) );
+
+	//quantidade de itens no carrossel da home
+	$wp_customize->add_setting("firstling_carrossel", array(
+		"default" => 5,
+		"transport" => "refresh",
+	));
+
+	$wp_customize->add_control( 'firstling_carrossel', array(
+		'type'        => 'number',
+		'setting'     => 'firstling_carrossel',
+		'label'       => __( 'Carousel Items', 'firstling' ),
+		'description' => __( 'Choose the amount of items that appear on the home carousel.', 'firstling' ),
+		'help'        => __( 'Choose the amount of items that appear on the home carousel.', 'firstling' ),
+		'section'    => 'firstling_theme_settings',
+		'default'     => '5',
+		'priority'    => 10
+	) );
+
 }
 add_action( 'customize_register', 'firstling_customize_register' );
 
@@ -50,6 +136,6 @@ function firstling_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function firstling_customize_preview_js() {
-	wp_enqueue_script( 'firstling-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'firstling-customizer', get_template_directory_uri() . '/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'firstling_customize_preview_js' );
