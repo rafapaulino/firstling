@@ -80,6 +80,8 @@ if ( ! function_exists( 'firstling_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		add_editor_style('assets/css/editor-style.css');
 	}
 endif;
 add_action( 'after_setup_theme', 'firstling_setup' );
