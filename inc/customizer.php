@@ -30,13 +30,15 @@ function firstling_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section( 'firstling_theme_settings', array(
         'title'       => __( 'Main Theme Settings', 'firstling' ),
-        'priority'    => 20,
+		'priority'    => 20,
+		'sanitize_callback'  => 'esc_attr',
     ) );
 
 	//cor padrão do tema
 	$wp_customize->add_setting("firstling_theme_color", array(
 		"default" => "default",
 		"transport" => "refresh",
+		'sanitize_callback'  => 'esc_attr',
 	));
 
 
@@ -56,6 +58,7 @@ function firstling_customize_register( $wp_customize ) {
       	),
 		'priority'    => 10,
 		'section'    => 'firstling_theme_settings',
+		'sanitize_callback'  => 'esc_attr',
 	) );
 
 
@@ -63,6 +66,7 @@ function firstling_customize_register( $wp_customize ) {
 	$wp_customize->add_setting("firstling_overwrite_colors", array(
 		"default" => "no",
 		"transport" => "refresh",
+		'sanitize_callback'  => 'esc_attr',
 	));
 
 	$wp_customize->add_control( 'firstling_overwrite_colors', array(
@@ -84,6 +88,7 @@ function firstling_customize_register( $wp_customize ) {
 	$wp_customize->add_setting("firstling_custom_background", array(
 		"default" => "",
 		"transport" => "refresh",
+		'sanitize_callback'  => 'esc_attr',
 	));
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'firstling_custom_background', array(
@@ -98,6 +103,7 @@ function firstling_customize_register( $wp_customize ) {
 	$wp_customize->add_setting("firstling_carrossel", array(
 		"default" => 5,
 		"transport" => "refresh",
+		'sanitize_callback'  => 'esc_attr',
 	));
 
 	$wp_customize->add_control( 'firstling_carrossel', array(
