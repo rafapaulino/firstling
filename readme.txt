@@ -30,20 +30,33 @@ firstling includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - Ago 01 2019 = 
 * Initial release
 
-== Credits ==
+= 1.0.5 - Ago 01 2019 =
+* Adjustments to follow WordPress standards
 
-* Di Restaurant Theme © 2018-2019 DiThemes, GPLv2 or later
+== Resources ==
+
+* Firstling Theme © 2019 Rafael Paulino, GPLv2 or later
 * bootstrap.css and bootstrap.js © 2011-2019 Twitter Inc, MIT
-* html5shiv.js © 2014 Alexander Farkas, MIT and GPL2
-* respond.js © 2012 Scott Jehl, MIT
 * Open Source Fonts © 2019 Google Fonts, MIT/GPL2
-* class-tgm-plugin-activation.php © 2011 Thomas Griffin, GPL-2.0+
-* font-awesome.css © 2018 davegandy, MIT
 * FontAwesome.otf, fontawesome-webfont.eot etc fonts © 2018 davegandy, SIL OFL 1.1
-* Kirki library © 2018 aristath, MIT
-* no-posts-found.png © stocksnap, https://stocksnap.io/photo/ULVISG5NY0, CC0
-* mainbg.jpg © stocksnap, https://stocksnap.io/photo/F7EPDH2L1A, CC0
-* Screenshot images : https://stocksnap.io/photo/B4SBE3CLS0
+* font-awesome.css © 2018 davegandy, MIT
+* animate.css © 2019, MIT
+* Animated Border © 2019 Rafael Paulino, GPLv2 or later
+* Categories © 2019 Rafael Paulino, GPLv2 or later
+* JQuery Scroll Top © 2019 Rafael Paulino, GPLv2 or later
+* Notícias Relacionadas © 2019 Rafael Paulino, GPLv2 or later
+* Rafa Carrossel © 2019 Rafael Paulino, GPLv2 or later
+* Redes Sociais © 2019 Rafael Paulino, GPLv2 or later
+* Tag Cloud © 2019 Rafael Paulino, GPLv2 or later
+* Barra Topo © 2019 Rafael Paulino, GPLv2 or later
+* Prev Next © 2019 Rafael Paulino, GPLv2 or later
+* Últimas Notícias © 2019 Rafael Paulino, GPLv2 or later
+* jCarousel © 2019 Sorgala, MIT
+* Venobox © 2019 Nicola Franchini, MIT
+* SmartMenus © 2019 vadikom, MIT
+* Plyr © 2019 sam_potts, MIT
+* jQuery Validation, MIT
+* jQuery Touch Swipe © 2019 mattbryson, MIT/GPL2
