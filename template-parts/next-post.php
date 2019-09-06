@@ -12,7 +12,7 @@ if ( ! defined('ABSPATH')) exit('restricted access');
 $next_post = get_next_post();
 if (!empty( $next_post )):
     $myLink = esc_url( get_permalink( $next_post->ID ) );
-    $myTitle = firstling_wpSubstr($next_post->post_title, 50);
+    $myTitle = firstling_wp_substr($next_post->post_title, 50);
     $img = firstling_image_src( $next_post->ID, 'next-prev');
 ?>
 <div class="postNavigation nextPost d-print-none" itemscope itemtype="http://schema.org/Article">

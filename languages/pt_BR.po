@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Firstling v2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-02-10 07:21-0300\n"
-"PO-Revision-Date: 2019-08-16 11:04-0300\n"
+"PO-Revision-Date: 2019-09-06 14:50-0300\n"
 "Last-Translator: Rafael Funchal <rafaelfunchal@gmail.com>\n"
 "Language-Team: WordPress Brasil Group\n"
 "MIME-Version: 1.0\n"
@@ -212,8 +212,26 @@ msgstr "Todos os direitos reservados"
 # @ firstling
 #: ../footer.php:17
 #, php-format
-msgid "Powered by the <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Rafael Paulino</a> forces and <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
-msgstr "Desenvolvido por <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Rafael Paulino</a> e <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">WordPress</a>."
+msgid "Powered by the"
+msgstr "Desenvolvido por"
+
+# @ firstling
+#: ../footer.php:18
+#, php-format
+msgid "Rafael Paulino"
+msgstr "Rafael Paulino"
+
+# @ firstling
+#: ../footer.php:18
+#, php-format
+msgid "forces with"
+msgstr "junto com"
+
+# @ firstling
+#: ../footer.php:18
+#, php-format
+msgid "WordPress"
+msgstr "WordPress"
 
 # @ firstling
 #: ../functions.php:64 ../functions.php:71
@@ -271,6 +289,18 @@ msgstr "Próxima imagem &rarr;"
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Resultado de Busca por: %s"
+
+# @ firstling
+#: ../search.php:17
+#, php-format
+msgid "Yes"
+msgstr "Sim"
+
+# @ firstling
+#: ../search.php:17
+#, php-format
+msgid "No"
+msgstr "Não"
 
 # @ firstling
 #: ../tag.php:21
@@ -521,6 +551,14 @@ msgstr "Esse widget inclui a caixa de curtir do Facebook em seu site"
 msgid "Title:"
 msgstr "Título:"
 
+#: ../core/classes/widgets/Form_Widget.php:15
+msgid "With this Widget you put the search form in the sidebar."
+msgstr "Com este widget, você coloca o formulário de pesquisa na barra lateral."
+
+#: ../core/classes/widgets/Form_Widget.php:16
+msgid "Search Form"
+msgstr "Formulário de Busca"
+
 #: ../core/classes/widgets/class-widget-like-box.php:54
 msgid "Facebook Page URL:"
 msgstr "URL da página do Facebook:"
@@ -623,11 +661,6 @@ msgstr "A página que você está procurando não foi encontrada, por favor use 
 
 # @ firstling
 #: ../footer.php:70
-msgid "forces with"
-msgstr "usando"
-
-# @ firstling
-#: ../footer.php:70
 msgid "and"
 msgstr "e"
 
@@ -712,7 +745,37 @@ msgid "Color scheme"
 msgstr "Esquema de cores"
 
 # @ firstling
-#: ../theme-custom-options-kirki.php:81
+#: ../theme-custom-options-kirki.php:52
+msgid "Default - Blue"
+msgstr "Padrão - Azul"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:53
+msgid "Green"
+msgstr "Verde"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:54
+msgid "Pink"
+msgstr "Rosa"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:55
+msgid "Purple"
+msgstr "Roxo"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:56
+msgid "Red"
+msgstr "Vermelho"
+
+# @ firstling
+#: ../theme-custom-options-kirki.php:57
+msgid "Yellow"
+msgstr "Amarelo"
+
+# @ firstling
+#: inc/customizer.php:81
 msgid "Main Theme Settings"
 msgstr "Configurações Padrão do Tema"
 
@@ -739,6 +802,12 @@ msgstr "Com este widget você coloca as categorias na barra lateral."
 #, php-format
 msgid "Popular News"
 msgstr "Notícias Populares"
+
+# @ firstling
+#: ../searchform.php:30
+#, php-format
+msgid "Total News"
+msgstr "Total de Notícias"
 
 # @ firstling
 #: ../searchform.php:13

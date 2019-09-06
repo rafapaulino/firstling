@@ -13,12 +13,12 @@ get_header(); ?>
 		<div class="col-12 col-md-8 wrap">
 			<div class="content-home">
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( esc_attr( 'Search Results for: %s', 'firstling'), get_search_query() ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'firstling'), get_search_query() ); ?></h1>
 				</header><!-- .page-header -->
 				<?php 
 					if ( have_posts() ) : 
 						while ( have_posts() ) : the_post(); 
-							get_template_part( 'template-parts/content-loop' );
+							get_template_part( 'template-parts/content' );
 						endwhile; 
 						firstling_paging_nav(); 
 					else:

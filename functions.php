@@ -198,6 +198,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require get_template_directory() . '/inc/custom-functions.php';
+require get_template_directory() . '/inc/comments-loop.php';
 require get_template_directory() . '/inc/widgets/PopularNews_Widget.php';
 require get_template_directory() . '/inc/widgets/Categories_Widget.php';
 require get_template_directory() . '/inc/widgets/Form_Widget.php';

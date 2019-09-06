@@ -22,7 +22,7 @@
 		<h2 id="comments-title" class="page-header">
 			<?php
 			comments_number( __('0 Comments', 'firstling'), __('1 Comment', 'firstling'), __('% Comments', 'firstling') );
-			echo esc_attr(' ' . esc_attr('to', 'firstling') . ' <span>&quot;' . get_the_title() . '&quot;</span>');
+			echo esc_attr(' ' . esc_attr('to', 'firstling') . ' &quot;' . get_the_title() . '&quot;');
 			?>
 		</h2>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -34,7 +34,7 @@
 			</nav>
 		<?php endif; ?>
 		<ul class="media-list">
-			<?php wp_list_comments( array( 'callback' => 'firstling_comments_loop' ) ); ?>
+<?php wp_list_comments( array( 'callback' => 'firstling_comments_loop' ) ); ?>
 		</ul>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 			<nav id="comment-nav-above">
@@ -60,7 +60,7 @@
 			'author' => '<div class="comment-form-author form-group">' . '<label for="author">' . __( 'Name', 'firstling') . ( $req ? ' <span class="required text-danger">*</span>' : '' ) . '</label> ' .
 			            '<input id="author" name="author" class="form-control" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $html_req . ' /></div>',
 			'email'  => '<div class="comment-form-email form-group"><label for="email">' . __( 'E-mail', 'firstling') . ( $req ? ' <span class="required text-danger">*</span>' : '' ) . '</label> ' .
-			            '<input id="email" name="email" class="form-control" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $aria_req . $html_req  . ' /></div>',
+			            '<input id="email" name="email" class="form-control" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" aria-describedby="email-notes"' . $html_req  . ' /></div>',
 			'url'    => '<div class="comment-form-url form-group"><label for="url">' . __( 'Website', 'firstling') . '</label> ' .
 			            '<input id="url" name="url" class="form-control" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'
 		);
