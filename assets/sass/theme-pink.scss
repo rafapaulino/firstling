@@ -98,4 +98,14 @@ body.pink {
             color: $pink;
         }
     }
+
+    .posted-on, .logged-in-as, .entry-content {
+        a {
+            color: $pink;
+        } 
+    }
+
+    .plyr__control--overlaid {
+        background: $pink;
+    }
 }

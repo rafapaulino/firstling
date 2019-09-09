@@ -266,6 +266,14 @@ h2, h3, h4, h5, h6 {
     outline: none;
 }
 
+.posted-on, .logged-in-as, .entry-content {
+    a {
+        color: $primary;
+    } 
+}
+.plyr__control--overlaid {
+	background: $primary;
+}
 
 @import 'theme-green.scss';
 @import 'theme-red.scss';

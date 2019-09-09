@@ -98,4 +98,14 @@ body.warning {
             color: $warning;
         }
     }
+
+    .posted-on, .logged-in-as, .entry-content {
+        a {
+            color: $warning;
+        } 
+    }
+
+    .plyr__control--overlaid {
+        background:  $warning;
+    }
 }

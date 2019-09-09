@@ -98,4 +98,15 @@ body.green {
             color: $green;
         }
     }
+
+    .posted-on, .logged-in-as, .entry-content {
+        a {
+            color: $green;
+        } 
+    }
+
+    .plyr__control--overlaid {
+        background: $green;
+    }
+    
 }

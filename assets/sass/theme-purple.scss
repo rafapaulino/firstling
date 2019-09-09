@@ -98,4 +98,14 @@ body.purple {
             color: $purple;
         }
     }
+
+    .posted-on, .logged-in-as, .entry-content {
+        a {
+            color: $purple;
+        } 
+    }
+
+    .plyr__control--overlaid {
+        background: $purple;
+    }
 }
