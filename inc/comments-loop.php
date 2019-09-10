@@ -30,18 +30,15 @@ if ( ! function_exists( 'firstling_comments_loop' ) ) {
 						<div class="media-body">
 							<div class="comment-meta">
 								<h5 class="media-heading">
-									<?php echo sprintf( '<strong>%1$s</strong>
-                                                         <a href="%2$s" class="comment-time">%3$s <time datetime="%4$s">%5$s %6$s </time> %7$s</a>',
-                                                         esc_attr(get_comment_author_link()),
-                                                         esc_url( get_comment_link( $comment->comment_ID ) ),
-                                                         esc_attr_e('in', 'firstling'),														 
-														 esc_attr(get_comment_time( 'c' )),
-														 esc_attr(get_comment_date()), esc_attr_e('at', 'firstling'),
-														 esc_attr(get_comment_time()), esc_attr_e( 'said:', 'firstling' ) ); ?>
+									<strong><span class="fn"><?php echo get_comment_author_link(); ?></span></strong>
+									<?php echo esc_attr_e( 'said:', 'firstling' ); ?>
+									
+									<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-time"><time datetime="<?php echo esc_attr(get_comment_time( 'c' )); ?>">
+										<?php echo esc_attr(get_comment_date()); ?> <?php echo esc_attr_e('at', 'firstling'); ?> <?php echo esc_attr(get_comment_time()); ?></time></a>
 								</h5>
 
-								<?php edit_comment_link( esc_attr_e( 'Edit', 'firstling' ), '<span class="edit-link">', ' </span>' ); ?>
-
+								<?php edit_comment_link( __( 'Edit', 'firstling' ), '<span class="edit-link">', ' </span>' ); ?>
+								
 								<?php if ( $comment->comment_approved == '0' ) : ?>
 								    <p class="comment-awaiting-moderation alert alert-info"><?php esc_attr_e( 'Your comment is awaiting moderation.', 'firstling' ); ?></p>
 								<?php endif; ?>
