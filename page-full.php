@@ -1,6 +1,11 @@
 <?php
 /**
- * Template Name: With Sidebar
+ * Template Name: Page Without Sidebar
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -10,14 +15,14 @@
 get_header(); ?>
 <div class="container">
 	<div class="row">
-		<div class="col-12 col-md-8 wrap">
+		<div class="col-12 wrap">
 			<div class="content-single">
 				<?php 
 					if ( have_posts() ) : 
 						while ( have_posts() ) : the_post(); 
 
 						if ( has_post_thumbnail() ):
-							$img = firstling_getImageSRC(get_the_ID(),'single');
+							$img = firstling_image_src(get_the_ID(),'single');
 				?>
 						<img src="<?php echo esc_url($img); ?>" class="img-fluid" alt="<?php the_title(); ?>">
 						<?php endif; ?>
@@ -49,7 +54,6 @@ get_header(); ?>
 				</article>
 			</div>
 		</div>
-        <?php get_sidebar(); ?>
 	</div>
 </div>
 <?php
