@@ -99,7 +99,7 @@ body.purple {
         }
     }
 
-    .posted-on, .logged-in-as, .entry-content {
+    .posted-on, .logged-in-as, .entry-content, .comment-content {
         a {
             color: $purple;
         } 
@@ -107,5 +107,9 @@ body.purple {
 
     .plyr__control--overlaid {
         background: $purple;
+    }
+
+    .comment-edit-link, .url {
+        color: $purple !important;
     }
 }

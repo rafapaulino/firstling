@@ -99,7 +99,7 @@ body.pink {
         }
     }
 
-    .posted-on, .logged-in-as, .entry-content {
+    .posted-on, .logged-in-as, .entry-content, .comment-content {
         a {
             color: $pink;
         } 
@@ -107,5 +107,9 @@ body.pink {
 
     .plyr__control--overlaid {
         background: $pink;
+    }
+
+    .comment-edit-link, .url {
+        color: $pink !important;
     }
 }

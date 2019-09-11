@@ -410,11 +410,14 @@ body.custom-color .pagination-wrap .page-numbers li span { background: <?php ech
 body.custom-color blockquote { border-color: <?php echo esc_attr($cor_de_fundo); ?>; }
 body.custom-color blockquote:before, body.custom-color blockquote:after { color: <?php echo esc_attr($cor_de_fundo); ?>; }
 body.custom-color .author-description strong { color: <?php echo esc_attr($cor_de_fundo); ?>; }
-body.custom-color .posted-on a, body.custom-color .logged-in-as a, body.custom-color .entry-content a {
-  color: <?php echo esc_attr($cor_de_fundo); ?>;
+body.custom-color .posted-on a, body.custom-color .logged-in-as a, body.custom-color .entry-content a, body.custom-color .comment-content a {
+  color: <?php echo esc_attr($cor_de_fundo); ?> !important;
 }
 body.custom-color .plyr__control--overlaid {
 	background: <?php echo esc_attr($cor_de_fundo); ?>;
+}
+.comment-edit-link, .url {
+  color: <?php echo esc_attr($cor_de_fundo); ?> !important;
 }
 </style><?php
 	endif;

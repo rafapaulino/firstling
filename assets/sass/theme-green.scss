@@ -99,7 +99,7 @@ body.green {
         }
     }
 
-    .posted-on, .logged-in-as, .entry-content {
+    .posted-on, .logged-in-as, .entry-content, .comment-content {
         a {
             color: $green;
         } 
@@ -107,6 +107,10 @@ body.green {
 
     .plyr__control--overlaid {
         background: $green;
+    }
+
+    .comment-edit-link, .url {
+        color: $green !important;
     }
     
 }

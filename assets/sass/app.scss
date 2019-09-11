@@ -266,13 +266,16 @@ h2, h3, h4, h5, h6 {
     outline: none;
 }
 
-.posted-on, .logged-in-as, .entry-content {
+.posted-on, .logged-in-as, .entry-content, .comment-content {
     a {
         color: $primary;
     } 
 }
 .plyr__control--overlaid {
 	background: $primary;
+}
+.comment-edit-link, .url {
+    color: $primary;
 }
 
 @import 'theme-green.scss';

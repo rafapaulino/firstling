@@ -99,13 +99,17 @@ body.warning {
         }
     }
 
-    .posted-on, .logged-in-as, .entry-content {
+    .posted-on, .logged-in-as, .entry-content, .comment-content {
         a {
             color: $warning;
         } 
     }
 
     .plyr__control--overlaid {
-        background:  $warning;
+        background: $warning;
+    }
+
+    .comment-edit-link, .url {
+        color: $warning !important;
     }
 }
