@@ -237,7 +237,7 @@ function firstling_related_posts( $display = 'category', $qty = 4, $title = '', 
 			$layout .= ( $thumb ) ? '</div>' : '</ul>';
 			$layout .= '</div>';
 
-			echo apply_filters('the_content', $layout);
+			echo apply_filters('firstling_escape_html', $layout);
 		}
 		wp_reset_postdata();
 	}
@@ -355,7 +355,7 @@ function firstling_paging_nav()
 	$show = false;
 	// Show all items.
 	$str = firstling_pagination($mid, $end, false);
-	echo apply_filters('the_content', $str);
+	echo apply_filters('firstling_escape_html', $str);
 }
 
 function firstling_carrossel_total()
@@ -423,3 +423,13 @@ body.custom-color .plyr__control--overlaid {
 	endif;
 }
 add_action('wp_head', 'firstling_hook_css');
+
+
+
+//adicionando os filtros de html
+//https://themehybrid.com/weblog/how-to-apply-content-filters
+add_filter( 'firstling_escape_html', 'wptexturize'       );
+add_filter( 'firstling_escape_html', 'convert_smilies'   );
+add_filter( 'firstling_escape_html', 'convert_chars'     );
+add_filter( 'firstling_escape_html', 'wpautop'           );
+

@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="col-12 col-md-8 wrap">
 			<div class="content-home">
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'firstling'), get_search_query() ); ?></h1>
+					<h1 class="page-title"><?php esc_attr_e( 'Search Results for:', 'firstling'); ?>&nbsp;<strong><?php echo get_search_query(true); ?></strong></h1>
 				</header><!-- .page-header -->
 				<?php 
 					if ( have_posts() ) : 

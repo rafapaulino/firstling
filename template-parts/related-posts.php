@@ -10,52 +10,52 @@
 if ( ! defined('ABSPATH')) exit('restricted access');
 
 global $post;
-$myId = $post->ID;
-$myPostType = get_post_type( $myId );
+$firstling_id = $post->ID;
+$firstling_post_type = get_post_type( $firstling_id );
 
-$args = array(
-    'post__not_in' => array( $myId ),
+$firstling_args = array(
+    'post__not_in' => array( $firstling_id ),
     'posts_per_page' => 5,
-    'post_type' => $myPostType,
+    'post_type' => $firstling_post_type,
     'ignore_sticky_posts' => 1,
     'orderby' => 'rand',
     'order'   => 'ASC'
 );
 
-$related = new WP_Query( $args );
-if ( $related->have_posts() ):
+$firstling_related = new WP_Query( $firstling_args );
+if ( $firstling_related->have_posts() ):
 ?>
 <div class="relatedPosts d-print-none">
     <h3 class="titulosChamada"><?php esc_attr_e("Related Content", "firstling"); ?></h3>
     <div class="jcarousel-wrapper" itemscope itemtype="http://schema.org/Article">
         <div class="jcarousel jcarousel-related-posts">
-            <ul id="carrossel<?php echo intval($myId); ?>">
+            <ul id="carrossel<?php echo intval($firstling_id); ?>">
             <?php 
-                while ( $related->have_posts() ):
-                $related->the_post();
+                while ( $firstling_related->have_posts() ):
+                $firstling_related->the_post();
                 
-                $myLink = esc_url( get_permalink() );
-                $myTitle =  esc_attr( get_the_title() );
-                $myId = get_the_ID();
-                $img = firstling_image_src($myId, 'news-sidebar');
+                $firstling_link = esc_url( get_permalink() );
+                $firstling_title = esc_attr( get_the_title() );
+                $firstling_id = get_the_ID();
+                $firstling_img = firstling_image_src($firstling_id, 'news-sidebar');
             ?>
                 <li>
-                    <a href="<?php echo esc_url($myLink); ?>" title="<?php echo esc_attr($myTitle); ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
+                    <a href="<?php echo esc_url($firstling_link); ?>" title="<?php echo esc_attr($firstling_title); ?>" itemprop="url" class="ui-box topBottom-leftRightCorner">
                         <span class="ui-border-element">
-                            <img src="<?php echo esc_url($img); ?>" alt="<?php echo esc_attr($myTitle); ?>" itemprop="image" class="img-fluid">
+                            <img src="<?php echo esc_url($firstling_img); ?>" alt="<?php echo esc_attr($firstling_title); ?>" itemprop="image" class="img-fluid">
                         </span>
                     </a>
 
                     <?php 
-                        $categories = get_the_category(); 
-                        if ( ! empty( $categories ) ):
+                        $firstling_categories = get_the_category(); 
+                        if ( ! empty( $firstling_categories ) ):
                     ?>
-                        <a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ); ?>" class="category" title="<?php echo esc_attr( $categories[0]->name ); ?>" itemprop="about">
-                            <?php echo esc_attr( $categories[0]->name ); ?>
+                        <a href="<?php echo esc_url( get_category_link( $firstling_categories[0]->term_id ) ); ?>" class="category" title="<?php echo esc_attr( $firstling_categories[0]->name ); ?>" itemprop="about">
+                            <?php echo esc_attr( $firstling_categories[0]->name ); ?>
                         </a>
                     <?php endif; ?>
 
-                    <h2 itemprop="headline"><a href="<?php echo esc_url($myLink); ?>" title="<?php echo esc_attr($myTitle); ?>" itemprop="url"><?php echo esc_attr($myTitle); ?></a></h2>
+                    <h2 itemprop="headline"><a href="<?php echo esc_url($firstling_link); ?>" title="<?php echo esc_attr($firstling_title); ?>" itemprop="url"><?php echo esc_attr($firstling_title); ?></a></h2>
                 </li>
             <?php endwhile; ?>          
             </ul>

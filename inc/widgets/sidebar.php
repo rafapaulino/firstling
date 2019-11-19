@@ -6,7 +6,7 @@
  */
 if ( ! defined('ABSPATH')) exit('restricted access');
 
-function remove_widgets()
+function firstling_remove_widgets()
 {
     unregister_widget( 'WP_Widget_Archives' );
 	unregister_widget( 'WP_Widget_Calendar' );
@@ -23,7 +23,7 @@ function remove_widgets()
 
 function firstling_load_widget() 
 {
-	remove_widgets();
+	firstling_remove_widgets();
 	
     //entidades do topo
     register_sidebar(
