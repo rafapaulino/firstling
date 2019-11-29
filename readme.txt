@@ -36,6 +36,9 @@ firstling includes support for Infinite Scroll in Jetpack.
 = 1.0.5 - Ago 01 2019 =
 * Adjustments to follow WordPress standards
 
+= 1.1.0 - Nov 29 2019 =
+* Adjustments to follow WordPress standards
+
 == Resources ==
 
 * Firstling Theme © 2019 Rafael Paulino, GPLv2 or later
